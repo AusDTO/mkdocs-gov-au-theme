@@ -2,3 +2,15 @@ aside .local-nav h1.nav-sub-heading {
   font-size: 1.2rem;
   margin-top: 2rem;
 }
+
+.search-section {
+  background-color: #f4f4f4;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .search-section input {
+    width: 33%;
+  }
+}
