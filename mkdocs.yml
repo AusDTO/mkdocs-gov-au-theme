@@ -1,13 +1,17 @@
 site_name: cloud.gov.au docs
 repo_url: https://github.com/AusDTO/mkdocs-gov-au-theme
 extra:
-  feedback_url: f
-  feedback_title: Support request
   phase: beta
   search: true
-  license_url: f
-
-
+  feedback_link:
+    - 'title': 'Support request'
+      'url': 'https://www.support-url'
+  footer_links:
+    - 'title': 'Status'
+      'url': 'http://status.cloud.gov.au'
+      'external': 'true'
+    - 'title': 'B'
+      'url': 'text again'
 theme_dir: 'gov_au_theme'
 markdown_extensions:
   - toc:

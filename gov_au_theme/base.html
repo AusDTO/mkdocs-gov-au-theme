@@ -78,10 +78,12 @@
         <div class="govau--logo">
           <a href="/" class="logo">{{ site_name }}</a>{% if config.extra.phase %} <span class="badge--default">{{config.extra.phase}}</span>{% endif%}
         </div>
-        {% if config.extra.feedback_title and config.extra.feedback_url %}
+        {% if config.extra.feedback_link %}
+        {% for feedback in config.extra.feedback_link %}
         <div class="feedback">
-          <a href="{{ config.extra.feedback_url }}" class="button--feedback" role="button">{{config.extra.feedback_title}}</a>
+          <a href="{{ feedback.url }}" class="button--feedback" role="button">{{feedback.title}}</a>
         </div>
+        {% endfor %}
         {% endif %}
       </div>
     </section>
@@ -147,16 +149,15 @@
         </div>
         <div class="footer-links">
           <nav>
-            <ul>
-              <li><a rel="external" href="https://www.dto.gov.au/privacy-statement/">Privacy Statement</a></li>
-              {% if repo_url and current_page %}
-                <li><a rel="external" href="{{ repo_url }}/tree/master/docs{{ current_page.abs_url.rstrip('index.html').rstrip('/') }}.md">Edit this page</a></li>
-              {% endif %}
-              <li><a href="http://status.cloud.gov.au/">Status</a></li>
-            </ul>
+            {% if config.extra.footer_links %}
+              <ul>
+              {% for footer_link in config.extra.footer_links %}
+                <li><a {% if footer_link.external == 'true' %}rel="external"{% endif %}href="{{ footer_link.url }}">{{ footer_link.title }}</a></li>
+              {% endfor %}
+              </ul>
+            {% endif %}
           </nav>
-          <p>&copy; Commonwealth of Australia <br>
-          <a rel="external license" href="#">Licensed under the MIT License.</a></p>
+          <p>&copy; Commonwealth of Australia
         </div>
       </section>
     </div>
