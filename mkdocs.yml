@@ -1,1 +1,29 @@
-site_name: My Docs
+site_name: cloud.gov.au docs
+repo_url: https://github.com/AusDTO/mkdocs-gov-au-theme
+feedback_url: f
+theme: null
+theme_dir: 'gov_au_theme'
+markdown_extensions:
+  - toc:
+      permalink: True
+pages:
+  - Home: index.md
+  - Usage:
+      - 'Requesting Access': 'usage/requesting_access.md'
+      - 'Setup': 'usage/setup.md'
+      - CF-CLI:
+        - 'Intro': usage/cfcli/index.md
+        - 'Install': usage/cfcli/install.md
+        - 'Login': usage/cfcli/login.md
+        - 'Application Deployment': usage/cfcli/application_deployment.md
+        - 'Application Deletion': usage/cfcli/application_delete.md
+        - 'Log Access': usage/cfcli/log_access.md
+      - 'Your First Deploy': 'usage/your_first_deploy.md'
+      - 'Getting your app ready for launch': 'usage/orca.md'
+  - Support:
+    - 'Incident response': 'support/incident_response.md'
+    - 'Incident reports':
+      - 'Intro': 'support/incident_reports/index.md'
+      - '2016-08-12': 'support/incident_reports/2016-08-12.md'
+      - '2016-06-05': 'support/incident_reports/2016-06-05.md'
+      - '2016-02-11': 'support/incident_reports/2016-02-11.md'

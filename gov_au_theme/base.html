@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+  <title>{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}</title>
+
+  <!--
+    Support custom favicon support.
+    http://www.mkdocs.org/user-guide/configuration/#site_favicon
+  -->
+  {% if favicon %}
+    <link rel="shortcut icon" href="{{ favicon }}">
+  {% else %}
+    <link rel="shortcut icon" href="{{ base_url }}/img/favicon.ico">
+  {% endif %}
+
+  <!--
+    You can include external assets of course, but be aware that it means the
+    documentation may not work well offline.
+  -->
+  <link rel="stylesheet" type="text/css" href="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
+
+  <!--
+    extra_css contains paths to CSS files in the users
+    documentation directory or a list of CSS files defined in
+    their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_css
+  -->
+  {% for path in extra_css %}
+    <link href="{{ path }}" rel="stylesheet">
+  {% endfor %}
+
+  <!--
+    To include static assets from our theme, just add
+    {{ base_url }} beforehand which will be the relative path to
+    the root of the documentation.
+  -->
+  <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"></script>
+
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  {% for path in extra_javascript %}
+    <script src="{{ path }}"></script>
+  {% endfor %}
+
+</head>
+
+<body>
+
+  <nav class="skip-to">
+  <a href="#content">Skip to main content</a>
+  <a href="#nav">Skip to section navigation</a>
+  </nav>
+
+  <header role="banner">
+    <section class="govau--header">
+      <div class="wrapper">
+        <div class="govau--logo">
+          <a href="/" class="logo">{{ site_name }}</a> <span class="badge--default"></span>
+        </div>
+        {% if feedback_url %}
+        <div class="feedback">
+          <a href="{{ feedback_url }}" class="button--feedback" role="button">Give feedback</a>
+        </div>
+        {% endif %}
+      </div>
+    </section>
+  </header>
+  <main role="main">
+    <aside id="nav" class="sidebar">
+      <nav class="local-nav" aria-label="main navigation">
+        <ul>
+        {% for nav_item in nav %}
+          {% include "nav.html" %}
+        {% endfor %}
+        </ul>
+      </nav>
+    </aside>
+
+    <article id="content" class="content-main">
+
+      {% if current_page %}
+        {% if current_page.is_homepage %}
+          <h1>{{ site_name }}</h1>
+        {% else %}
+          <h1>{{ page_title }}</h1>
+        {% endif %}
+      {% endif %}
+
+
+      <nav class="index-links">
+      <h2>In this section</h2>
+        <ul>
+        {% for toc_item in toc %}
+            <li><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+            {% for toc_item in toc_item.children %}
+                <li><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+            {% endfor %}
+        {% endfor %}
+        </ul>
+      </nav>
+
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </article>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrapper">
+      <section>
+        <div class="footer-logo">
+          <img src="{{ base_url }}/assets/coat-of-arms.png" alt="Australian Government Coat of Arms">
+        </div>
+        <div class="footer-links">
+          <nav>
+            <ul>
+              <li><a rel="external" href="https://www.dto.gov.au/privacy-statement/">Privacy Statement</a></li>
+              {% if repo_url and current_page %}
+
+                <a rel="external" href="{{ repo_url }}/tree/master/docs{{ current_page.abs_url.rstrip('index.html').rstrip('/') }}.md">Edit on GitHub</a>
+              {% endif %}
+            </ul>
+          </nav>
+          <p>&copy; Commonwealth of Australia <br>
+          <a rel="external license" href="#">Licensed under the MIT License.</a></p>
+        </div>
+      </section>
+    </div>
+  </footer>
+
+</body>
+</html>
