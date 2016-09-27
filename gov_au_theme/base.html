@@ -18,6 +18,7 @@
   -->
   <link rel="stylesheet" type="text/css" href="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
   <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application.css">
+  <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/highlight.css">
   <!--
     extra_css contains paths to CSS files in the users
     documentation directory or a list of CSS files defined in
@@ -35,7 +36,8 @@
     the root of the documentation.
   -->
   <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"></script>
-
+  <script src="{{ base_url }}/assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <!--
     extra_javascript contains paths to JavaScript files in the
     users documentation directory or a list of JavaScript files

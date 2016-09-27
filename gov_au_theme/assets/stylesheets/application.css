@@ -4,7 +4,7 @@ aside .local-nav h1.nav-sub-heading {
 }
 
 .search-section {
-  background-color: #f4f4f4;
+  background-color: #f0f3f5;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
@@ -13,4 +13,11 @@ aside .local-nav h1.nav-sub-heading {
   .search-section input {
     width: 33%;
   }
+}
+
+pre {
+  background-color: #f0f3f5;
+  margin: 0 0 1.6em;
+  padding: 0.8em;
+  white-space: pre;
 }
