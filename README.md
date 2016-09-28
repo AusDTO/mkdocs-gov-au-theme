@@ -1,21 +1,21 @@
 # MkDocs UI Kit theme
 
+[![PyPI version](https://badge.fury.io/py/mkdocs-gov-au-theme.svg)](https://badge.fury.io/py/mkdocs-gov-au-theme)
+
 A Digital Transformation Office UI Kit theme for [MkDocs](http://www.mkdocs.org/)
 
 ## Quick start
 
-** Still working on a packaging approach - stay tuned **
-
 Install with `pip`:
 
 ```
-pip install ''
+pip install mkdocs-gov-au-theme
 ```
 
 Add the following line to `mkdocs.yml`:
 
 ```
-theme: ''
+theme: 'gov-au-theme'
 ```
 
 ## Customise page template
@@ -94,4 +94,4 @@ You can specify your GitHub repo by adding the following line to `mkdocs.yml`:
 repo_url: https://github.com/AusDTO/mkdocs-gov-au-theme
 ```
 
-** You *do not* specify the repo_url within the `extra:` YML array **
+**You *do not* specify the repo_url within the `extra:` YML array**
