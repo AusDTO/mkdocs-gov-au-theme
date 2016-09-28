@@ -1,5 +1,6 @@
 site_name: cloud.gov.au docs
 repo_url: https://github.com/AusDTO/mkdocs-gov-au-theme
+#google_analytics: ['UA-36723568-3', 'gov.au']
 extra:
   badge: beta
   search: true
@@ -12,10 +13,11 @@ extra:
       'external': 'true'
     - 'title': 'B'
       'url': 'text again'
+
 theme_dir: 'gov_au_theme'
 markdown_extensions:
   - toc:
-      permalink: True
+      #permalink: True
 pages:
   - Home: index.md
   - Usage:
