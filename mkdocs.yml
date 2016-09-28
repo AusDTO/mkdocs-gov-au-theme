@@ -1,7 +1,7 @@
 site_name: cloud.gov.au docs
 repo_url: https://github.com/AusDTO/mkdocs-gov-au-theme
 extra:
-  phase: beta
+  badge: beta
   search: true
   feedback_link:
     - 'title': 'Support request'
