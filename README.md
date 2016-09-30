@@ -2,7 +2,7 @@
 
 [![PyPI version](https://badge.fury.io/py/mkdocs-gov-au-theme.svg)](https://badge.fury.io/py/mkdocs-gov-au-theme)
 
-A Digital Transformation Office UI Kit theme for [MkDocs](http://www.mkdocs.org/)
+A Digital Transformation Office UI Kit theme for [MkDocs](http://www.mkdocs.org/). View a [demo of this theme](http://docs.cloud.gov.au/)
 
 ## Quick start
 
@@ -95,3 +95,7 @@ repo_url: https://github.com/AusDTO/mkdocs-gov-au-theme
 ```
 
 **You *do not* specify the repo_url within the `extra:` YML array**
+
+## Projects currently using MkDocs UI Kit theme
+
+- [docs.cloud.gov.au](https://github.com/AusDTO/cga_docs)
