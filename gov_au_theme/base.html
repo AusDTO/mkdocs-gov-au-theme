@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}</title>
+  {% if site_description %}
+  <meta content="{{ site_description }}" name="description">
+  {% endif %}
 
   <!--
     Support custom favicon support.
