@@ -96,6 +96,18 @@ repo_url: https://github.com/AusDTO/mkdocs-gov-au-theme
 
 **You *do not* specify the repo_url within the `extra:` YML array**
 
+## Even more configuration options
+
+This theme also allows you to add and modify tags in your sites `<head>`.
+
+### Add Google Analytics
+
+Add the following lines to `mkdocs.yml`:
+
+```
+google_analytics: ['UA-12345678-9', 'name']
+```
+
 ## Projects currently using MkDocs UI Kit theme
 
 - [docs.cloud.gov.au](https://github.com/AusDTO/cga_docs)
