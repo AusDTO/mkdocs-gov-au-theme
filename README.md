@@ -111,3 +111,25 @@ google_analytics: ['UA-12345678-9', 'name']
 ## Projects currently using MkDocs UI Kit theme
 
 - [docs.cloud.gov.au](https://github.com/AusDTO/cga_docs)
+
+## Run accessibility tests
+
+This project uses [pa11y CI](https://www.npmjs.com/package/pa11y-ci) for accessibility testing.
+
+If you want to run tests, first install dependencies with:
+
+```
+make pa11y-install
+```
+
+Make sure you have the site running locally with:
+
+```
+mkdocs serve
+```
+
+Then run the tests and results will be displayed in the terminal.
+
+```
+make pa11y-test
+```
