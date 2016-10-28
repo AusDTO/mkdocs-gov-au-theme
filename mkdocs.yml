@@ -1,4 +1,5 @@
 site_name: cloud.gov.au docs
+site_url: http://127.0.0.1:8000
 repo_url: https://github.com/AusDTO/mkdocs-gov-au-theme
 #google_analytics: ['UA-36723568-3', 'gov.au']
 extra:
