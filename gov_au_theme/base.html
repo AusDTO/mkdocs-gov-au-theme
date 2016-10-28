@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -98,7 +99,8 @@
     <section role="search" class="search-section">
       <div class="wrapper">
         <form action="{{ base_url }}/search.html" method="get">
-          <input type="text" name="q" placeholder="Search {{ site_name }}" />
+          <input class="search-input" type="text" name="q" title="Search" placeholder="Search {{ site_name }}" />
+          <input class="submit" value="Search" type="submit">
         </form>
       </div>
     </section>

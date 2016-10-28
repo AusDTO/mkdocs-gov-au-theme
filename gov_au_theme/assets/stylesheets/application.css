@@ -21,3 +21,22 @@ pre {
   padding: 0.8em;
   white-space: pre;
 }
+
+.search-section .submit {
+    background-color: #f0f3f5;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    border: 2px solid #bbb;
+    padding: 0.4em;
+    position: relative;
+    width: 3em;
+    z-index: 1;
+    margin-left: -3em;
+    text-indent: -99em;
+    background-image: url("https://raw.githubusercontent.com/AusDTO/mkdocs-gov-au-theme/master/gov_au_theme/assets/images/search-icon.png");
+}
+
+.search-section .search-input {
+  padding-right: 3em;
+}
