@@ -12,4 +12,4 @@ pa11y-install:
 # Run pa11y against the site
 pa11y-test:
 	@echo "Run pa11y test on site"
-	@pa11y-ci --sitemap "http://$(HOST)/sitemap.xml" --sitemap-find "^/" --sitemap-replace "http://$(HOST)/"
+	@pa11y-ci --sitemap "http://$(HOST)/sitemap.xml"
