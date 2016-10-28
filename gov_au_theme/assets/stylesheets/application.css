@@ -37,6 +37,14 @@ pre {
     background-image: url("https://raw.githubusercontent.com/AusDTO/mkdocs-gov-au-theme/master/gov_au_theme/assets/images/search-icon.png");
 }
 
+.search-section .submit:focus {
+  outline: 2px solid #5bcbe3;
+}
+
 .search-section .search-input {
   padding-right: 3em;
+}
+
+code, kbd, pre, samp {
+  font-size: 100%;
 }
