@@ -1,0 +1,50 @@
+aside .local-nav h1.nav-sub-heading {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.search-section {
+  background-color: #f0f3f5;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .search-section input {
+    width: 33%;
+  }
+}
+
+pre {
+  background-color: #f0f3f5;
+  margin: 0 0 1.6em;
+  padding: 0.8em;
+  white-space: pre;
+}
+
+.search-section .submit {
+    background-color: #f0f3f5;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    border: 2px solid #bbb;
+    padding: 0.4em;
+    position: relative;
+    width: 3em;
+    z-index: 1;
+    margin-left: -3em;
+    text-indent: -99em;
+    background-image: url("https://raw.githubusercontent.com/AusDTO/mkdocs-gov-au-theme/master/gov_au_theme/assets/images/search-icon.png");
+}
+
+.search-section .submit:focus {
+  outline: 2px solid #5bcbe3;
+}
+
+.search-section .search-input {
+  padding-right: 3em;
+}
+
+code, kbd, pre, samp {
+  font-size: 100%;
+}

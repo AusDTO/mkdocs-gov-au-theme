@@ -1,17 +1,31 @@
-# Welcome to MkDocs
+# The platform for building the future.
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+cloud.gov.au is a place to run web apps, freeing up teams to focus on writing code that meets user needs. It provides a faster, safer, standard way to change web apps without impacting the user. It also provides real-time visibility and insight into web app usage, performance, and behaviour.
 
-## Commands
+Combined, **this makes it easy for government to release, monitor and grow user-facing digital services.**
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+# Industry standard technology, best-practice approach
 
-## Project layout
+cloud.gov.au is built with the industry leading Platform as a Service (PaaS) technology [Cloud Foundry](http://cloudfoundry.org/), running on top of [Amazon Web Services](http://aws.amazon.com/) in the Sydney region.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+To help teams release changes faster and more safely, all changes to production are done through a fully automated Continuous Delivery pipeline:
+
+> Myth: Organisations must choose between speed and reliability.
+>
+> Fact: High-performing IT organizations deploy 30x more frequently, with 200x shorter lead times; they have 60x fewer failures and recover 168x faster.
+>
+> – [2015 State of DevOps report](https://puppet.com/resources/white-paper/2015-state-devops-report)
+
+# Secure and scalable
+
+AWS is IRAP certified by accredited by the Australian Signals Directorate up to Unclassified DLM, and are listed on the ASD [Certified Cloud Services List (CCSL)](http://www.asd.gov.au/infosec/irap/certified_clouds.htm).
+
+ASD provide [extensive written advice](http://www.asd.gov.au/publications/protect/cloud-security-tenants.htm) about using public cloud infrastructure.
+
+The cloud.gov.au team follow [AWS best practices for DDoS resilency](https://d0.awsstatic.com/whitepapers/Security/DDoS_White_Paper.pdf).
+
+**Found out more about [risks, myths, and misconceptions](https://speakerdeck.com/auxesis/aws-in-government-myths-risks-and-misconceptions) about using IaaS providers like AWS in government.**
+
+# Start on cloud.gov.au today
+
+Check out [how to request access](/usage/requesting_access/).

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Getting your app ready for launch - cloud.gov.au docs</title>
+  
+
+  <!--
+    Support custom favicon support.
+    http://www.mkdocs.org/user-guide/configuration/#site_favicon
+  -->
+  
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+  
+
+  <!--
+    You can include external assets of course, but be aware that it means the
+    documentation may not work well offline.
+  -->
+  <link rel="stylesheet" type="text/css" href="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
+  <link rel="stylesheet" href="../../assets/stylesheets/application.css">
+  <link rel="stylesheet" href="../../assets/stylesheets/prism.css">
+  <!--
+    extra_css contains paths to CSS files in the users
+    documentation directory or a list of CSS files defined in
+    their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_css
+  -->
+  
+
+  <!--
+    To include static assets from our theme, just add
+    ../.. beforehand which will be the relative path to
+    the root of the documentation.
+  -->
+  <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"></script>
+  <script src="../../assets/js/prism.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+
+  
+
+  
+  
+
+</head>
+
+<body>
+
+  <nav class="skip-to">
+  <a href="#content">Skip to main content</a>
+  <a href="#nav">Skip to section navigation</a>
+  </nav>
+
+  <header role="banner">
+    <section class="govau--header">
+      <div class="wrapper">
+        <div class="govau--logo">
+          <a href="/" class="logo">cloud.gov.au docs</a> <span class="badge--default">beta</span>
+        </div>
+        
+        
+        <div class="feedback">
+          <a href="https://www.support-url" class="button--feedback" role="button">Support request</a>
+        </div>
+        
+        
+      </div>
+    </section>
+
+    
+    <section role="search" class="search-section">
+      <div class="wrapper">
+        <form action="../../search.html" method="get">
+          <input class="search-input" type="text" name="q" title="Search" placeholder="Search cloud.gov.au docs" />
+          <input class="submit" value="Search" type="submit">
+        </form>
+      </div>
+    </section>
+    
+
+  </header>
+  <main role="main">
+    <aside id="nav" class="sidebar">
+      <nav class="local-nav" aria-label="main navigation">
+        <ul>
+        
+          <!--
+
+-->
+
+<li>
+    <a href="../.." >Home</a>
+</li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <h1 class="nav-sub-heading">Usage</h1>
+    <ul>
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../requesting_access/" >Requesting Access</a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../setup/" >Setup</a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../your_first_deploy/" >Your First Deploy</a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+    <a href="./" class="is-current is-active">Getting your app ready for launch</a>
+</li>
+
+        
+            <!--
+
+-->
+
+  <li>
+    <h1 class="nav-sub-heading">CF-CLI</h1>
+    <ul>
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../cfcli/" >Intro</a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../cfcli/install/" >Install</a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../cfcli/login/" >Login</a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../cfcli/application_deployment/" >Application Deployment</a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../cfcli/application_delete/" >Application Deletion</a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../cfcli/log_access/" >Log Access</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+        
+          <!--
+
+-->
+
+  <li>
+    <h1 class="nav-sub-heading">Support</h1>
+    <ul>
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../../support/incident_response/" >Incident response</a>
+</li>
+
+        
+            <!--
+
+-->
+
+  <li>
+    <h1 class="nav-sub-heading">Incident reports</h1>
+    <ul>
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../../support/incident_reports/" >Intro</a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../../support/incident_reports/2016-08-12/" >2016-08-12</a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../../support/incident_reports/2016-06-05/" >2016-06-05</a>
+</li>
+
+        
+            <!--
+
+-->
+
+<li>
+    <a href="../../support/incident_reports/2016-02-11/" >2016-02-11</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+        
+    </ul>
+  </li>
+
+        
+        </ul>
+      </nav>
+    </aside>
+
+    <article id="content" class="content-main">
+
+      
+        
+          <h1>Getting your app ready for launch</h1>
+        
+      
+
+      
+      <nav class="index-links">
+      <h2>In this section</h2>
+        <ul>
+        
+            <li><a href="#orca-operations-readiness-checklist-of-amazement">ORCA - Operations Readiness Checklist of Amazement</a></li>
+            
+                <li><a href="#moratorium">Moratorium</a></li>
+            
+                <li><a href="#what-is-the-url-your-application-will-be-served-from">What is the URL your application will be served from?</a></li>
+            
+                <li><a href="#what-domain-names-do-you-need-registered-to-host-your-application">What domain names do you need registered to host your application?</a></li>
+            
+                <li><a href="#is-your-application-built-in-ruby-python-node-java-or-go">Is your application built in Ruby, Python, Node, Java, or Go?</a></li>
+            
+                <li><a href="#what-automated-software-testing-do-you-do">What automated software testing do you do?</a></li>
+            
+                <li><a href="#will-your-application-send-email">Will your application send email?</a></li>
+            
+                <li><a href="#will-your-application-receive-email">Will your application receive email?</a></li>
+            
+                <li><a href="#what-one-off-or-recurring-tasks-does-your-application-need-to-run">What one off or recurring tasks does your application need to run?</a></li>
+            
+                <li><a href="#who-will-have-access-to-your-application-during-its-private-beta-phase">Who will have access to your application during its private beta phase?</a></li>
+            
+                <li><a href="#who-will-have-access-to-your-application-during-its-public-beta-phase">Who will have access to your application during its public beta phase?</a></li>
+            
+                <li><a href="#how-are-users-authenticated">How are users authenticated?</a></li>
+            
+                <li><a href="#do-you-plan-to-implement-multi-factor-authentication">Do you plan to implement multi factor authentication?</a></li>
+            
+                <li><a href="#how-many-users-will-be-using-this-service-at-peak">How many users will be using this service at peak?</a></li>
+            
+                <li><a href="#what-is-the-maximum-number-of-requests-per-second-to-your-web-tier-do-you-expect-to-receive">What is the maximum number of requests per second to your web tier do you expect to receive?</a></li>
+            
+                <li><a href="#is-your-data-classified-at-unclassified-or-protected">Is your data classified at UNCLASSIFIED or PROTECTED?</a></li>
+            
+                <li><a href="#how-do-you-log-what-users-accessed-what-resources">How do you log what users accessed what resources?</a></li>
+            
+                <li><a href="#what-external-systems-are-you-interfacing-with">What external systems are you interfacing with?</a></li>
+            
+                <li><a href="#do-you-use-mysql-or-postgresql-for-your-database">Do you use MySQL or PostgreSQL for your database?</a></li>
+            
+                <li><a href="#do-you-use-rabbitmq-for-queuing">Do you use RabbitMQ for queuing?</a></li>
+            
+                <li><a href="#do-you-use-memcache-or-redis-for-caching">Do you use memcache or Redis for caching?</a></li>
+            
+                <li><a href="#are-users-able-to-upload-files-where-will-you-store-them">Are users able to upload files? Where will you store them?</a></li>
+            
+                <li><a href="#what-is-the-uptime-requirement-of-your-application">What is the uptime requirement of your application?</a></li>
+            
+                <li><a href="#what-failure-conditions-in-your-application-are-considered-an-outage">What failure conditions in your application are considered an outage?</a></li>
+            
+                <li><a href="#how-will-you-continue-to-provide-your-service-during-an-outage">How will you continue to provide your service during an outage?</a></li>
+            
+                <li><a href="#how-will-you-communicate-availability-status-to-your-users">How will you communicate availability status to your users?</a></li>
+            
+                <li><a href="#how-will-your-users-contact-you-for-support">How will your users contact you for support?</a></li>
+            
+                <li><a href="#how-will-your-users-provide-feedback-to-you-for-your-application">How will your users provide feedback to you for your application?</a></li>
+            
+                <li><a href="#where-is-your-source-code-hosted">Where is your source code hosted?</a></li>
+            
+        
+        </ul>
+      </nav>
+      
+
+      
+        <h1 id="orca-operations-readiness-checklist-of-amazement">ORCA - Operations Readiness Checklist of Amazement</h1>
+<p><img alt="whale whale whale, what have we got here?" src="http://i.imgur.com/Brl42KH.jpg" /></p>
+<p>Status: <em>DRAFT</em>  <br />
+Last Updated: 5 September 2016</p>
+<p>cloud.gov.au is a best of breed hosting platform for applications written to the <a href="https://www.dto.gov.au/standard/">Digital Service Standard</a>.</p>
+<p>This list represents a distillation of questions and issues encountered by service delivery teams as building applications on cloud.gov.au.</p>
+<p>Some of these questions, like which URL or domain name your application will be hosted at, should be resolved early in the inception of your transformation project.
+Other questions should be revisited as part of the regular assessment of your project.</p>
+<h2 id="moratorium">Moratorium</h2>
+<p>A <a href="https://www.dto.gov.au/standard/moratorium/">Moratorium</a> on service investment is in place to limit the fragmentation of the user experience of Australian Government services. However, investments are automatically exempt if the service delivery team can demonstrate they are applying the Digital Service Standard.</p>
+<p>Consult with your agency's Digital Transformation Coordinator or the Digital Transformation Office for further information.</p>
+<h2 id="what-is-the-url-your-application-will-be-served-from">What is the URL your application will be served from?</h2>
+<p><strong>Assessment criteria:</strong> onboarding
+<strong>DSS Criteria:</strong> 4</p>
+<p>Your application or service will most likely have a web presence.
+You will need to choose a URL at which your application will be hosted.
+Choosing a URL is an important decision that touches many departments, and, because of the way HTTP cookies work, has security implications.</p>
+<p>You should seek advice on, and choose, a URL early in the life of your project to allow for lead times for arrangements to be made to host your application.</p>
+<h2 id="what-domain-names-do-you-need-registered-to-host-your-application">What domain names do you need registered to host your application?</h2>
+<p><strong>Assessment criteria:</strong> onboarding
+<strong>DSS Criteria:</strong> 4</p>
+<p>To use a dedicated domain, consult with your agency CIO / IT Manager / Web Manager to determine if this an appropropriate solution and to arrange for an application for a new domain to be submitted. Note that applications should be accompanied by a stated purpose outlining why a new domain, separate from an existing agency/topic domain, is required to support the initiative, and demonstrating compliance with the <a href="http://www.domainname.gov.au/domain-policies/eligibility-and-allocation-policy/">gov.au Eligibility and Allocation Policy</a>. </p>
+<p>Due to the way SSL certificates work, each new domain name carries with it a cost to purchase and maintain an SSL certificate for the life of your project.</p>
+<p>As with the choice of URL, you should decide on your domain name early in your project timeline.</p>
+<p>Please contact the <a href="http://www.domainname.gov.au/contact-us/">Domain Provider for your jurisdiction</a> if you need any further information.</p>
+<h3 id="subdomain-options">Subdomain options</h3>
+<p>To use a subdomain of an existing agency/topic domain, consult with the <a href="http://whois.ausregistry.net.au/whois/whois_local.jsp?">Registrant contact</a> of the intended domain to determine if this an appropropriate solution and to arrange its creation in the DNS zone file.  </p>
+<h2 id="is-your-application-built-in-ruby-python-node-java-or-go">Is your application built in Ruby, Python, Node, Java, or Go?</h2>
+<p><strong>Assessment criteria:</strong> onboarding
+<strong>DSS Criteria:</strong> 4</p>
+<p>Cloud Foundry, the hosting technology that underpins cloud.gov.au, supports the following languages:</p>
+<ul>
+<li>Ruby</li>
+<li>Python</li>
+<li>Node</li>
+<li>Java</li>
+<li>Go</li>
+</ul>
+<p>If you are planning to write your application in a language that is not on this list you should discuss this with the cloud.gov.au team by sending a support request to support@cloud.gov.au.
+Please understand that the choice of languages is limited because each supported language represents a significant investment of resources to maintain, support, and patch bugs and security issues.
+Adding a new supported language is not something taken lightly by the cloud.gov.au team as this represents an ongoing commitment for the life of all projects delivered in that language.</p>
+<p>Depending on your answer to this question, the following questions may be appropriate:</p>
+<h3 id="if-java-do-you-use-springboot-play-or-grails">If Java, do you use SpringBoot, Play, or Grails?</h3>
+<p>The Java ecosystem contains many ways to write and deploy applications, not all of which are supported.
+If your Java application will not use one of the following:</p>
+<ul>
+<li>SpringBoot</li>
+<li>Play</li>
+<li>Grails</li>
+</ul>
+<p>Before proceeding, you should discuss your requirements with cloud.gov.au by sending a support request to support@cloud.gov.au.</p>
+<h3 id="if-ruby-do-you-use-rails-or-sinatra">If Ruby, do you use Rails or Sinatra?</h3>
+<p>The Ruby ecosystem contains many ways to write and deploy applications, not all of which are supported.
+If your Ruby application will not use one of the following:</p>
+<ul>
+<li>Rails</li>
+<li>Sinatra</li>
+</ul>
+<p>Before proceeding, you should discuss your requirements with cloud.gov.au by sending a support request to support@cloud.gov.au.</p>
+<h3 id="if-python-do-you-use-django-or-flask">If Python, do you use Django or Flask?</h3>
+<p>The Python ecosystem contains many ways to write and deploy applications, not all of which are supported.
+If your Python application will not use one of the following:</p>
+<ul>
+<li>Django</li>
+<li>Flask</li>
+</ul>
+<p>Before proceeding, you should discuss your requirements with cloud.gov.au by sending a support request to support@cloud.gov.au.</p>
+<h2 id="what-automated-software-testing-do-you-do">What automated software testing do you do?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 10</p>
+<p>Automated testing is an important part of the Digital Service Standard.
+You should consider how you will build automated tests for all parts of your application, what external resources you may need, including scratch or mock items like databases and message queues, and how you will populate those with test data.</p>
+<h2 id="will-your-application-send-email">Will your application send email?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4, 5</p>
+<p>Sending email from a government application is complicated.
+For example, some types of email correspondence, like account creation or password reset notifications, represent a potential security risk as the contents of email are not considered private.</p>
+<p>What address or addresses do you plan to be the <em>sender</em> of an email from your application?
+All email has a sender, and recipients of the email from your system will attempt to reply to it.
+You should consider how you will handle ad-hoc replies to automated messages.</p>
+<h2 id="will-your-application-receive-email">Will your application receive email?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4, 5</p>
+<p>Receiving email is also complicated as the correspondence may need to be archived.</p>
+<p>Does you application need to process incoming email?
+If so, how much, and how long does it need to be stored?</p>
+<h2 id="what-one-off-or-recurring-tasks-does-your-application-need-to-run">What one off or recurring tasks does your application need to run?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4</p>
+<p>Will your application need to run recurrent or batch jobs?
+These might be one off tasks to perform a database migration, or periodic tasks.</p>
+<p>If yes, how will you monitor these tasks' status?</p>
+<h2 id="who-will-have-access-to-your-application-during-its-private-beta-phase">Who will have access to your application during its private beta phase?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4, 9, 10</p>
+<p>When building a digital service it is common to do a beta release to a limited number of beta users.</p>
+<ul>
+<li>Who will have access to your application during your private beta?</li>
+<li>How will you grant them access?</li>
+<li>How will you implement this access?</li>
+<li>How will you revoke their access if they are removed from the beta program?</li>
+<li>How will you audit the use of your application while in private beta?</li>
+</ul>
+<h2 id="who-will-have-access-to-your-application-during-its-public-beta-phase">Who will have access to your application during its public beta phase?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4, 9, 10</p>
+<p>When building a digital service it is common to move from a private beta phase to a limited public beta.</p>
+<ul>
+<li>If you plan to restrict access to your application during your public beta, who should have access to your application?</li>
+<li>How will you grant them access?</li>
+<li>How will you implement this access?</li>
+<li>How will you revoke their access if they are removed from the beta program?</li>
+<li>Do you need to audit the use of your application while in public beta, and if so now?</li>
+</ul>
+<h2 id="how-are-users-authenticated">How are users authenticated?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4, 5</p>
+<p>Authentication is a critical element of the security of your application.</p>
+<h2 id="do-you-plan-to-implement-multi-factor-authentication">Do you plan to implement multi factor authentication?</h2>
+<p>Multi factor authentication, sometimes called two factor authentication, is an additional security measure above traditional usernames and passwords by combining something you know (username, password), with something you have (usually a one time code)</p>
+<p>Depending on the security requirements of your application you may need to consider implementing multi factor authentication for some or all of the actions that require authorisation.</p>
+<h2 id="how-many-users-will-be-using-this-service-at-peak">How many users will be using this service at peak?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4, 10, 11</p>
+<p>Having a firm estimate of the number of concurrent users is crucial to designing your application to perform well under peak loads and to ensure sufficient resources are available to meet peak demand.</p>
+<ul>
+<li>How many users do you expect to use your service?</li>
+<li>What is the peak number of users do you expect to use your service at one time?</li>
+</ul>
+<h2 id="what-is-the-maximum-number-of-requests-per-second-to-your-web-tier-do-you-expect-to-receive">What is the maximum number of requests per second to your web tier do you expect to receive?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4, 10, 11</p>
+<p>Most applications will generate many HTTP requests per user action.</p>
+<ul>
+<li>How many HTTP requests per second do you expect your application to receive?</li>
+<li>If you application provides an API, how will you rate limit aggressive clients of your service?</li>
+<li>What is the maximum acceptable processing time for a HTTP request?</li>
+<li>Do some requests take longer than others? If so, how will you identify them?</li>
+</ul>
+<h2 id="is-your-data-classified-at-unclassified-or-protected">Is your data classified at UNCLASSIFIED or PROTECTED?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 5</p>
+<p>cloud.gov.au is able to handle data classified at UNCLASSIFIED level.
+If your application will handle PROTECTED data this will require provisioning of resources in a data center with a higher security rating.
+This process has a long lead time.</p>
+<p>Before proceeding, you should discuss your requirements with cloud.gov.au by sending a support request to support@cloud.gov.au.</p>
+<h2 id="how-do-you-log-what-users-accessed-what-resources">How do you log what users accessed what resources?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 5</p>
+<p>If you application contains resources that are protected, you should record who accessed what, and when, for audit purposes.
+You may be required to archive these audit logs.</p>
+<h2 id="what-external-systems-are-you-interfacing-with">What external systems are you interfacing with?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4</p>
+<p>If your application relies on other systems to deliver its service, what are they and how are they accessed?
+Components like databases and message queues deployed specifically for your application are usually excluded from this list.</p>
+<h3 id="how-will-you-communicate-the-availability-of-those-external-systems-to-your-users">How will you communicate the availability of those external systems to your users?</h3>
+<p>If an external system that your application needs to perform its work is performing slowly or is unavailable, how will you inform your users of this?</p>
+<h3 id="do-these-external-systems-require-credentials">Do these external systems require credentials?</h3>
+<p>If those external systems require credentials or other security tokens for authentication, how will those credentials be protected and managed by your application?</p>
+<h2 id="do-you-use-mysql-or-postgresql-for-your-database">Do you use MySQL or PostgreSQL for your database?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4</p>
+<p>cloud.gov.au supports the following databases:</p>
+<ul>
+<li>MySQL</li>
+<li>PostgresSQL</li>
+</ul>
+<p>If you are planning to use a database that is not on this list you should discuss this with the cloud.gov.au team by sending a support request to support@cloud.gov.au.</p>
+<h3 id="how-much-data-do-you-plan-to-store-in-your-database">How much data do you plan to store in your database?</h3>
+<h2 id="do-you-use-rabbitmq-for-queuing">Do you use RabbitMQ for queuing?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4</p>
+<p>cloud.gov.au supports the following message queues:</p>
+<ul>
+<li>RabbitMQ</li>
+</ul>
+<p>If you are planning to use a message queue that is not on this list you should discuss this with the cloud.gov.au team by sending a support request to support@cloud.gov.au.</p>
+<h3 id="how-much-data-do-you-plan-to-store-in-your-queue">How much data do you plan to store in your queue?</h3>
+<h2 id="do-you-use-memcache-or-redis-for-caching">Do you use memcache or Redis for caching?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4</p>
+<p>cloud.gov.au supports the following caching products:</p>
+<ul>
+<li>memcache</li>
+<li>Redis</li>
+</ul>
+<p>If you are planning to use a cache that is not on this list you should discuss this with the cloud.gov.au team by sending a support request to support@cloud.gov.au.</p>
+<h3 id="how-much-data-do-you-plan-to-store-in-your-cache">How much data do you plan to store in your cache?</h3>
+<h2 id="are-users-able-to-upload-files-where-will-you-store-them">Are users able to upload files? Where will you store them?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4</p>
+<p>If your application allows users to upload files, where do you plan to store this data, and how much of it will there be?</p>
+<h2 id="what-is-the-uptime-requirement-of-your-application">What is the uptime requirement of your application?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4</p>
+<p>What is the uptime requirement for your application?</p>
+<h2 id="what-failure-conditions-in-your-application-are-considered-an-outage">What failure conditions in your application are considered an outage?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 4</p>
+<p>Applications should be written to degrade gracefully under load or when a failure occurs.</p>
+<ul>
+<li>What failure conditions can your application handle without intervention?</li>
+<li>What failure conditions can your application handle by temporarily disabling a feature or function?</li>
+<li>What failure conditions in your application will require someone to be notified to fix it?</li>
+</ul>
+<h2 id="how-will-you-continue-to-provide-your-service-during-an-outage">How will you continue to provide your service during an outage?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 10</p>
+<p>Depending on the length of your outage, unplanned or otherwise, you may have to revert to an alternative or manual process.
+How will that work?</p>
+<h2 id="how-will-you-communicate-availability-status-to-your-users">How will you communicate availability status to your users?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 3, 4</p>
+<p>Most services experience some level of downtime, either scheduled or unplanned.
+How will you communicate scheduled or unplanned downtime to your users?</p>
+<h2 id="how-will-your-users-contact-you-for-support">How will your users contact you for support?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 3</p>
+<p>If you users need to contact you with a support request, how will they do so?</p>
+<h2 id="how-will-your-users-provide-feedback-to-you-for-your-application">How will your users provide feedback to you for your application?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 3</p>
+<p>If you users wish to provide you with feedback, how will they do so?</p>
+<h2 id="where-is-your-source-code-hosted">Where is your source code hosted?</h2>
+<p><strong>Assessment criteria:</strong> onboarding and continued
+<strong>DSS Criteria:</strong> 8</p>
+<p>Will the source code to your application be publicly available under an appropriate Open Source licence.
+If not, where do you plan to host your source code?</p>
+      
+
+      
+        <a rel="external" href="https://github.com/AusDTO/mkdocs-gov-au-theme/tree/master/docs/usage/orca.md">Edit this page on GitHub</a>
+      
+    </article>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrapper">
+      <section>
+        <div class="footer-logo">
+          <img src="https://raw.githubusercontent.com/AusDTO/mkdocs-gov-au-theme/master/gov_au_theme/assets/images/coat-of-arms.png" alt="Australian Government Coat of Arms">
+        </div>
+        <div class="footer-links">
+          <nav>
+            
+              <ul>
+              
+                <li><a rel="external"href="http://status.cloud.gov.au">Status</a></li>
+              
+                <li><a href="text again">B</a></li>
+              
+              </ul>
+            
+          </nav>
+          <p>&copy; Commonwealth of Australia
+        </div>
+      </section>
+    </div>
+  </footer>
+
+</body>
+</html>

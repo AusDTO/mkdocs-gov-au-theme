@@ -1,0 +1,23 @@
+aside .local-nav h1.nav-sub-heading {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.search-section {
+  background-color: #f0f3f5;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .search-section input {
+    width: 33%;
+  }
+}
+
+pre {
+  background-color: #f0f3f5;
+  margin: 0 0 1.6em;
+  padding: 0.8em;
+  white-space: pre;
+}
