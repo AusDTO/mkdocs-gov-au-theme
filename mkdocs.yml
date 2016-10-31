@@ -12,8 +12,6 @@ extra:
     - 'title': 'Status'
       'url': 'http://status.cloud.gov.au'
       'external': 'true'
-    - 'title': 'B'
-      'url': 'text again'
 
 theme_dir: 'gov_au_theme'
 markdown_extensions:
