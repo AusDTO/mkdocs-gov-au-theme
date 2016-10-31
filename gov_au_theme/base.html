@@ -44,7 +44,6 @@
   -->
   <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"></script>
   <script src="{{ base_url }}/assets/js/prism.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
   <!--
     extra_javascript contains paths to JavaScript files in the
     users documentation directory or a list of JavaScript files
@@ -74,16 +73,16 @@
 
 <body>
 
-  <nav class="skip-to">
+  <div class="skip-to">
   <a href="#content">Skip to main content</a>
   <a href="#nav">Skip to section navigation</a>
-  </nav>
+  </div>
 
-  <header role="banner">
-    <section class="govau--header">
+  <header role="banner" >
+    <div class="govau--header">
       <div class="wrapper">
         <div class="govau--logo">
-          <a href="/" class="logo">{{ site_name }}</a>{% if config.extra.badge %} <span class="badge--default">{{config.extra.badge}}</span>{% endif%}
+          <h1 class="logo"><a href="/" class="logo">{{ site_name }}</a></h1>{% if config.extra.badge %} <span class="badge--default">{{config.extra.badge}}</span>{% endif%}
         </div>
         {% if config.extra.feedback_link %}
         {% for feedback in config.extra.feedback_link %}
@@ -93,33 +92,38 @@
         {% endfor %}
         {% endif %}
       </div>
-    </section>
+    </div>
 
     {% if config.extra.search %}
-    <section role="search" class="search-section">
+    <div class="search-section">
       <div class="wrapper">
         <form action="{{ base_url }}/search.html" method="get">
           <input class="search-input" type="text" name="q" title="Search" placeholder="Search {{ site_name }}" />
           <input class="submit" value="Search" type="submit">
         </form>
       </div>
-    </section>
+    </div>
     {% endif %}
 
   </header>
-  <main role="main">
-    <aside id="nav" class="sidebar">
-      <nav class="local-nav" aria-label="main navigation">
-        <ul>
-        {% for nav_item in nav %}
-          {% include "nav.html" %}
-        {% endfor %}
-        </ul>
-      </nav>
-    </aside>
+
+<main role="main">
+
+  <div id="nav" class="sidebar">
+    <nav class="local-nav" aria-label="main navigation">
+      <h2 class="visuallyhidden">Main navigation</h2>
+
+      <ul>
+      {% for nav_item in nav %}
+        {% include "nav.html" %}
+      {% endfor %}
+      </ul>
+    </nav>
+  </div>
 
     <article id="content" class="content-main">
 
+      <header>
       {% if current_page %}
         {% if current_page.is_homepage %}
           <h1>{{ site_name }}</h1>
@@ -127,7 +131,7 @@
           <h1>{{ page_title }}</h1>
         {% endif %}
       {% endif %}
-
+    </header>
       {% if toc %}
       <nav class="index-links">
       <h2>In this section</h2>
@@ -155,23 +159,22 @@
 
   <footer role="contentinfo">
     <div class="wrapper">
-      <section>
-        <div class="footer-logo">
-          <img src="https://raw.githubusercontent.com/AusDTO/mkdocs-gov-au-theme/master/gov_au_theme/assets/images/coat-of-arms.png" alt="Australian Government Coat of Arms">
-        </div>
-        <div class="footer-links">
-          <nav>
-            {% if config.extra.footer_links %}
-              <ul>
-              {% for footer_link in config.extra.footer_links %}
-                <li><a {% if footer_link.external == 'true' %}rel="external"{% endif %}href="{{ footer_link.url }}">{{ footer_link.title }}</a></li>
-              {% endfor %}
-              </ul>
-            {% endif %}
-          </nav>
-          <p>&copy; Commonwealth of Australia
-        </div>
-      </section>
+      <div class="footer-logo">
+        <img src="https://raw.githubusercontent.com/AusDTO/mkdocs-gov-au-theme/master/gov_au_theme/assets/images/coat-of-arms.png" alt="Australian Government Coat of Arms">
+      </div>
+      <div class="footer-links">
+        <nav>
+          <h2 class="visuallyhidden">Main footer navigation</h2>
+          {% if config.extra.footer_links %}
+            <ul>
+            {% for footer_link in config.extra.footer_links %}
+              <li><a {% if footer_link.external == 'true' %}rel="external"{% endif %} href="{{ footer_link.url }}">{{ footer_link.title }}</a></li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        </nav>
+        <p>&copy; Commonwealth of Australia
+      </div>
     </div>
   </footer>
 

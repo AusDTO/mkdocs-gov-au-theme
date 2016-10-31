@@ -34,6 +34,9 @@ pre {
     z-index: 1;
     margin-left: -3em;
     text-indent: -99em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     background-image: url("https://raw.githubusercontent.com/AusDTO/mkdocs-gov-au-theme/master/gov_au_theme/assets/images/search-icon.png");
 }
 
@@ -47,4 +50,10 @@ pre {
 
 code, kbd, pre, samp {
   font-size: 100%;
+}
+
+.govau--header .logo {
+  display: inline-block;
+  margin: 0;
+  line-height: 2;
 }
