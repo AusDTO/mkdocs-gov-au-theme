@@ -20,15 +20,17 @@ markdown_extensions:
 pages:
   - Home: index.md
   - Usage:
-      - 'Requesting Access': 'usage/requesting_access.md'
-      - 'Setup': 'usage/setup.md'
-      - 'Sending Emails': 'usage/sending_emails.md'
-      - 'Your First Deploy': 'usage/your_first_deploy.md'
-      - 'Getting your app ready for launch': 'usage/orca.md'
+    - 'Setup a new project': 'usage/start_new_project.md'
+    - 'Install command line tools': 'usage/setup.md'
+    - 'Login and target your project': 'usage/login.md'
+    - 'Sending Emails': 'usage/sending_emails.md'
+    - 'Your First Deploy': 'usage/your_first_deploy.md'
+    - 'Getting your app ready for launch': 'usage/orca.md'
+    - 'Setup CircleCI': 'usage/setup_circle.md'
+    - 'Setup Continuous deployment': 'usage/ci_cd.md'
   - CF-CLI:
     - 'Intro': usage/cfcli/index.md
-    - 'Install': usage/cfcli/install.md
-    - 'Login': usage/cfcli/login.md
+    - 'Create manifest.yml': usage/create_manifest.md
     - 'Application Deployment': usage/cfcli/application_deployment.md
     - 'Application Deletion': usage/cfcli/application_delete.md
     - 'Log Access': usage/cfcli/log_access.md
