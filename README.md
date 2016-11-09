@@ -28,6 +28,13 @@ Add an abstract to the top of your page by adding the following to the start of 
 abstract: Your abstract here
 ```
 
+### Disable the Table of Content on individual pages
+
+The table of contents will automatically display on any page that has multiple headings in the content. If you would like to hide the Table of contents add this to the top of the relevant Markdown file:
+
+```
+hide_toc: true
+```
 ## Customise page template
 
 This theme allows you to add certain components to the page by specifying configuration options in the `mkdocs.yml` file. All the custom components must be listed as key value pairs within the `extra` YAML array.
