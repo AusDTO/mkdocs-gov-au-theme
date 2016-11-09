@@ -18,6 +18,16 @@ Add the following line to `mkdocs.yml`:
 theme: 'gov-au-theme'
 ```
 
+## Customise page specific elemets
+
+### Add page abstract
+
+Add an abstract to the top of your page by adding the following to the start of your Markdown file:
+
+```
+abstract: Your abstract here
+```
+
 ## Customise page template
 
 This theme allows you to add certain components to the page by specifying configuration options in the `mkdocs.yml` file. All the custom components must be listed as key value pairs within the `extra` YAML array.

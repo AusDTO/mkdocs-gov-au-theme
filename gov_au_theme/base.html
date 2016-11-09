@@ -82,7 +82,7 @@
     <div class="govau--header">
       <div class="wrapper">
         <div class="govau--logo">
-          <h1 class="logo"><a href="/" class="logo">{{ site_name }}</a></h1>{% if config.extra.badge %} <span class="badge--default">{{config.extra.badge}}</span>{% endif%}
+          <h1><a href="/" class="logo">{{ site_name }}</a></h1>{% if config.extra.badge %} <span class="badge--default">{{config.extra.badge}}</span>{% endif%}
         </div>
         {% if config.extra.feedback_link %}
         {% for feedback in config.extra.feedback_link %}
@@ -94,6 +94,7 @@
       </div>
     </div>
 
+    <!--
     {% if config.extra.search %}
     <div class="search-section">
       <div class="wrapper">
@@ -104,6 +105,7 @@
       </div>
     </div>
     {% endif %}
+  -->
 
   </header>
 
@@ -132,6 +134,11 @@
         {% endif %}
       {% endif %}
     </header>
+
+      {% if current_page and meta.abstract %}
+        <p class="abstract">{{ meta.abstract[0] }}</p>
+      {% endif %}
+
       {% if toc and toc|list|length > 0 %}
       <nav class="index-links">
       <h2>In this section</h2>
