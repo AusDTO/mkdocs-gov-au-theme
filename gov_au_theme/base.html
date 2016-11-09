@@ -132,7 +132,7 @@
         {% endif %}
       {% endif %}
     </header>
-      {% if toc %}
+      {% if toc and toc|list|length > 0 %}
       <nav class="index-links">
       <h2>In this section</h2>
         <ul>
