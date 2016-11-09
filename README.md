@@ -18,7 +18,7 @@ Add the following line to `mkdocs.yml`:
 theme: 'gov-au-theme'
 ```
 
-## Customise page specific elemets
+## Customise page specific elements
 
 ### Add page abstract
 
@@ -124,6 +124,25 @@ Add the following lines to `mkdocs.yml`:
 ```
 google_analytics: ['UA-12345678-9', 'name']
 ```
+
+## Extend page templates
+
+You can extend template block components by creating a new `theme_dir` in your project and adding a main.html with the following markup:
+
+```
+{% extends "base.html" %}
+
+{% block block_name %}
+  Add your custom stuff here
+{% endblock %}
+```
+
+The following template block components exist:
+
+- `content`
+- `article_footer_content`
+- `page_footer`
+- `head_meta`
 
 ## Projects currently using MkDocs UI Kit theme
 
