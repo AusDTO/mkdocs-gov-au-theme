@@ -150,3 +150,14 @@ Then run the tests and results will be displayed in the terminal.
 ```
 make pa11y-test
 ```
+
+## Packaging theme for distribution
+
+Read the [pip distribution guide](https://packaging.python.org/distributing/#packaging-your-project)
+
+1. Update the version number in `setup.py`
+2. `python setup.py bdist_wheel --universal`
+3. [Install twine](https://packaging.python.org/key_projects/#twine)
+4. Login to PyPI
+5. `twine upload dist/*`
+6. Draft a 'New release' on GitHub
