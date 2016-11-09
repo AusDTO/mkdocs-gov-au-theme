@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Incident response - cloud.gov.au docs</title>
+  
+
+  <!--
+    Support custom favicon support.
+    http://www.mkdocs.org/user-guide/configuration/#site_favicon
+  -->
+  
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+  
+
+  <!--
+    You can include external assets of course, but be aware that it means the
+    documentation may not work well offline.
+  -->
+  <link rel="stylesheet" type="text/css" href="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
+  <link rel="stylesheet" href="../../assets/stylesheets/application.css">
+  <link rel="stylesheet" href="../../assets/stylesheets/prism.css">
+  <!--
+    extra_css contains paths to CSS files in the users
+    documentation directory or a list of CSS files defined in
+    their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_css
+  -->
+  
+
+  <!--
+    To include static assets from our theme, just add
+    ../.. beforehand which will be the relative path to
+    the root of the documentation.
+  -->
+  <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"></script>
+  <script src="../../assets/js/prism.js"></script>
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+
+  
+
+  
+  
+
+</head>
+
+<body>
+
+  <div class="skip-to">
+  <a href="#content">Skip to main content</a>
+  <a href="#nav">Skip to section navigation</a>
+  </div>
+
+  <header role="banner" >
+    <div class="govau--header">
+      <div class="wrapper">
+        <div class="govau--logo">
+          <h1 class="logo"><a href="/" class="logo">cloud.gov.au docs</a></h1> <span class="badge--default">beta</span>
+        </div>
+        
+        
+        <div class="feedback">
+          <a href="https://www.support-url" class="button--feedback" role="button">Support request</a>
+        </div>
+        
+        
+      </div>
+    </div>
+
+    
+    <div class="search-section">
+      <div class="wrapper">
+        <form action="../../search.html" method="get">
+          <input class="search-input" type="text" name="q" title="Search" placeholder="Search cloud.gov.au docs" />
+          <input class="submit" value="Search" type="submit">
+        </form>
+      </div>
+    </div>
+    
+
+  </header>
+
+<main role="main">
+
+  <div id="nav" class="sidebar">
+    <nav class="local-nav" aria-label="main navigation">
+      <h2 class="visuallyhidden">Main navigation</h2>
+
+      <ul>
+      
+        
+<li>
+    <a href="../.." >Home</a>
+</li>
+
+      
+        
+  <li>
+    <h3 class="nav-sub-heading">Usage</h3>
+    <ul>
+        
+            
+<li>
+    <a href="../../usage/requesting_access/" >Requesting Access</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../usage/setup/" >Setup</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../usage/sending_emails/" >Sending Emails</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../usage/your_first_deploy/" >Your First Deploy</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../usage/orca/" >Getting your app ready for launch</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <h3 class="nav-sub-heading">CF-CLI</h3>
+    <ul>
+        
+            
+<li>
+    <a href="../../usage/cfcli/" >Intro</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../usage/cfcli/install/" >Install</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../usage/cfcli/login/" >Login</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../usage/cfcli/application_deployment/" >Application Deployment</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../usage/cfcli/application_delete/" >Application Deletion</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../usage/cfcli/log_access/" >Log Access</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <h3 class="nav-sub-heading">Support</h3>
+    <ul>
+        
+            
+<li>
+    <a href="./" class="is-current is-active">Incident response</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <h3 class="nav-sub-heading">Incident reports</h3>
+    <ul>
+        
+            
+<li>
+    <a href="../incident_reports/" >Intro</a>
+</li>
+
+        
+            
+<li>
+    <a href="../incident_reports/2016-08-12/" >2016-08-12</a>
+</li>
+
+        
+            
+<li>
+    <a href="../incident_reports/2016-06-05/" >2016-06-05</a>
+</li>
+
+        
+            
+<li>
+    <a href="../incident_reports/2016-02-11/" >2016-02-11</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+      </ul>
+    </nav>
+  </div>
+
+    <article id="content" class="content-main">
+
+      <header>
+      
+        
+          <h1>Incident response</h1>
+        
+      
+    </header>
+      
+      <nav class="index-links">
+      <h2>In this section</h2>
+        <ul>
+        
+            <li><a href="#incident-response-faq">Incident Response FAQ</a></li>
+            
+                <li><a href="#how-do-i-find-out-about-problems-with-cloudgovau">How do I find out about problems with cloud.gov.au</a></li>
+            
+                <li><a href="#triage-and-escalation-process-for-apps-on-cloudgovau">Triage and escalation process for apps on cloud.gov.au</a></li>
+            
+                <li><a href="#i-have-a-service-on-cloudgovau">I have a service on cloud.gov.au.</a></li>
+            
+                <li><a href="#im-having-an-outage">I’m having an outage.</a></li>
+            
+        
+        </ul>
+      </nav>
+      
+
+      
+        <h1 id="incident-response-faq">Incident Response FAQ</h1>
+<p>Downtime is not a matter of <em>if</em>, it's a matter of <em>when</em>.</p>
+<p>These are common questions we get from teams launching services about what cloud.gov.au provides, what your responsibilities are when launching services, and how we respond when things go wrong.</p>
+<h2 id="how-do-i-find-out-about-problems-with-cloudgovau">How do I find out about problems with cloud.gov.au</h2>
+<p>We publish status and availability for the platform and applications on <a href="http://status.cloud.gov.au">status.cloud.gov.au</a>.</p>
+<p>During incidents, we commit to delivering status updates every 15 minutes.</p>
+<h2 id="triage-and-escalation-process-for-apps-on-cloudgovau">Triage and escalation process for apps on cloud.gov.au</h2>
+<p><img alt="Triage and escalation process flowchart" src="../../support/triage_and_escalation_process.png" /></p>
+<h2 id="i-have-a-service-on-cloudgovau">I have a service on cloud.gov.au.</h2>
+<p>You're launching a service on cloud.gov.au, and you want to know where the responsibilities are.</p>
+<h3 id="what-am-i-responsible-for">What am I responsible for?</h3>
+<ul>
+<li>The availability of my service.</li>
+<li>The availability of the apps that make up my service.</li>
+<li>Making changes to my service.</li>
+<li>Security and classification of the data stored by my service.</li>
+<li>Sending emails for my service.</li>
+<li>For example, emails for user sign ups, password resets, notifications, etc. </li>
+</ul>
+<h3 id="what-am-i-not-responsible-for">What am I <em>not</em> responsible for?</h3>
+<ul>
+<li>The availability and uptime of the hosting that my service depends on.</li>
+<li>The availability and uptime of the hosting that the apps that make up my service depends on.</li>
+<li>For example, if you cannot diagnose the interruption to your service within the applications that make up your service, contact cloud.gov.au</li>
+</ul>
+<h3 id="what-is-the-cloudgovau-team-responsible-for">What is the cloud.gov.au team responsible for?</h3>
+<ul>
+<li>Providing a platform to run services on.</li>
+<li>Providing tools to make changes to those services faster, standard, and safer.</li>
+<li>Ensuring the availability and uptime of the platform, so applications can successfully serve traffic.</li>
+<li>Any backing services provided by the platform that applications depend on (like databases, caching, etc).</li>
+<li>Domain name management, load balancing, and redirection, for any apps or services running on the platform.</li>
+</ul>
+<h3 id="what-is-the-cloudgovau-team-not-responsible-for">What is the cloud.gov.au team <em>not</em> responsible for?</h3>
+<ul>
+<li>Applications running on the platform</li>
+<li>The apps that make up the services running on the platform.</li>
+</ul>
+<h2 id="im-having-an-outage">I’m having an outage.</h2>
+<p>Things are going to break. We're here to help you get back on your feet.</p>
+<h3 id="what-should-i-escalate-to-the-cloudgovau-team">What should I escalate to the cloud.gov.au team?</h3>
+<ul>
+<li>A suspected failure of the application runtime environment, that is impacting the availability of your app.</li>
+<li>A suspected failure of a backing service used by your app, provided by the cloud.gov.au platform, that is impacting the availability of your app.</li>
+</ul>
+<h3 id="what-should-i-not-escalate-to-the-cloudgovau-team">What should I <em>not</em> escalate to the cloud.gov.au team?</h3>
+<ul>
+<li>Failures in your application that are caused by configuration error, or code change.</li>
+<li>For example, if you apply an update to your service, and the service or a webpage becomes unavailable, you should investigate the root cause in your application layer before asking the cloud.gov.au team. </li>
+</ul>
+<h3 id="how-do-we-triage-incidents-that-are-a-mix-of-service-app-and-cloudgovau-problems">How do we triage incidents that are a mix of service, app, and cloud.gov.au problems?</h3>
+<ul>
+<li>Contact the cloud.gov.au team.</li>
+</ul>
+<h3 id="how-do-i-contact-the-cloudgovau-team">How do I contact the cloud.gov.au team?</h3>
+<ul>
+<li>Create a support ticket at <a href="http://support.cloud.gov.au/">support.cloud.gov.au</a>, or</li>
+<li>Send an email to <a href="mailto:incidents@cloud.gov.au">incidents@cloud.gov.au</a>.</li>
+<li>This will post a notification in #cloud-gov-au on Slack.</li>
+<li>This will alert primary on-call for cloud.gov.au, who will triage the incident.</li>
+</ul>
+<h3 id="how-do-we-run-incident-management">How do we run incident management?</h3>
+<ul>
+<li>Join the #incidents channel on Slack.</li>
+<li>We will appoint an Incident Response Commander to run the incident.</li>
+<li>The topic of the #incidents channel will be updated.</li>
+<li>We will provide 15-minutely updates on <a href="http://status.cloud.gov.au/">status.cloud.gov.au</a>.</li>
+<li>We will hold and publish a Post Incident Review</li>
+</ul>
+<p>Please refrain from posting in this channel unless you are directly working on the incident.</p>
+      
+
+      
+        <a rel="external" href="https://github.com/AusDTO/mkdocs-gov-au-theme/tree/master/docs/support/incident_response.md">Edit this page on GitHub</a>
+      
+    </article>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrapper">
+      <div class="footer-logo">
+        <img src="https://raw.githubusercontent.com/AusDTO/mkdocs-gov-au-theme/master/gov_au_theme/assets/images/coat-of-arms.png" alt="Australian Government Coat of Arms">
+      </div>
+      <div class="footer-links">
+        <nav>
+          <h2 class="visuallyhidden">Main footer navigation</h2>
+          
+            <ul>
+            
+              <li><a rel="external" href="http://status.cloud.gov.au">Status</a></li>
+            
+            </ul>
+          
+        </nav>
+        <p>&copy; Commonwealth of Australia
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Log Access - cloud.gov.au docs</title>
+  
+
+  <!--
+    Support custom favicon support.
+    http://www.mkdocs.org/user-guide/configuration/#site_favicon
+  -->
+  
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+  
+
+  <!--
+    You can include external assets of course, but be aware that it means the
+    documentation may not work well offline.
+  -->
+  <link rel="stylesheet" type="text/css" href="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
+  <link rel="stylesheet" href="../../../assets/stylesheets/application.css">
+  <link rel="stylesheet" href="../../../assets/stylesheets/prism.css">
+  <!--
+    extra_css contains paths to CSS files in the users
+    documentation directory or a list of CSS files defined in
+    their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_css
+  -->
+  
+
+  <!--
+    To include static assets from our theme, just add
+    ../../.. beforehand which will be the relative path to
+    the root of the documentation.
+  -->
+  <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"></script>
+  <script src="../../../assets/js/prism.js"></script>
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+
+  
+
+  
+  
+
+</head>
+
+<body>
+
+  <div class="skip-to">
+  <a href="#content">Skip to main content</a>
+  <a href="#nav">Skip to section navigation</a>
+  </div>
+
+  <header role="banner" >
+    <div class="govau--header">
+      <div class="wrapper">
+        <div class="govau--logo">
+          <h1 class="logo"><a href="/" class="logo">cloud.gov.au docs</a></h1> <span class="badge--default">beta</span>
+        </div>
+        
+        
+        <div class="feedback">
+          <a href="https://www.support-url" class="button--feedback" role="button">Support request</a>
+        </div>
+        
+        
+      </div>
+    </div>
+
+    
+    <div class="search-section">
+      <div class="wrapper">
+        <form action="../../../search.html" method="get">
+          <input class="search-input" type="text" name="q" title="Search" placeholder="Search cloud.gov.au docs" />
+          <input class="submit" value="Search" type="submit">
+        </form>
+      </div>
+    </div>
+    
+
+  </header>
+
+<main role="main">
+
+  <div id="nav" class="sidebar">
+    <nav class="local-nav" aria-label="main navigation">
+      <h2 class="visuallyhidden">Main navigation</h2>
+
+      <ul>
+      
+        
+<li>
+    <a href="../../.." >Home</a>
+</li>
+
+      
+        
+  <li>
+    <h3 class="nav-sub-heading">Usage</h3>
+    <ul>
+        
+            
+<li>
+    <a href="../../requesting_access/" >Requesting Access</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../setup/" >Setup</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../sending_emails/" >Sending Emails</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../your_first_deploy/" >Your First Deploy</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../orca/" >Getting your app ready for launch</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <h3 class="nav-sub-heading">CF-CLI</h3>
+    <ul>
+        
+            
+<li>
+    <a href="../" >Intro</a>
+</li>
+
+        
+            
+<li>
+    <a href="../install/" >Install</a>
+</li>
+
+        
+            
+<li>
+    <a href="../login/" >Login</a>
+</li>
+
+        
+            
+<li>
+    <a href="../application_deployment/" >Application Deployment</a>
+</li>
+
+        
+            
+<li>
+    <a href="../application_delete/" >Application Deletion</a>
+</li>
+
+        
+            
+<li>
+    <a href="./" class="is-current is-active">Log Access</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <h3 class="nav-sub-heading">Support</h3>
+    <ul>
+        
+            
+<li>
+    <a href="../../../support/incident_response/" >Incident response</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <h3 class="nav-sub-heading">Incident reports</h3>
+    <ul>
+        
+            
+<li>
+    <a href="../../../support/incident_reports/" >Intro</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../../support/incident_reports/2016-08-12/" >2016-08-12</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../../support/incident_reports/2016-06-05/" >2016-06-05</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../../support/incident_reports/2016-02-11/" >2016-02-11</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+      </ul>
+    </nav>
+  </div>
+
+    <article id="content" class="content-main">
+
+      <header>
+      
+        
+          <h1>Log Access</h1>
+        
+      
+    </header>
+      
+      <nav class="index-links">
+      <h2>In this section</h2>
+        <ul>
+        
+            <li><a href="#log-access">Log Access</a></li>
+            
+        
+        </ul>
+      </nav>
+      
+
+      
+        <h1 id="log-access">Log Access</h1>
+<p>We are able to access our application’s log output by using the cf logs command like this:
+<code>cf logs mydemoapp</code></p>
+<p>This will tail the application logs, from all Application Instances, straight to your development workstation's console.</p>
+<p>You can test it by opening up your browser and accessing <a href="http://mydemoapp.apps.staging.digital.gov.au">http://mydemoapp.apps.staging.digital.gov.au</a>.
+This will produce the following output:</p>
+<pre><code class="bash">[~/src/github.com/AusDTO/demo-app]
+lunix@boran]  (master) -&gt; cf logs mydemoapp
+Connected, tailing logs for app mydemoapp in org dto / space dtoweb as example.person@digital.gov.au...
+
+2016-02-15T14:40:11.61+1100 [RTR/0]      OUT mydemoapp.apps.staging.digital.gov.au - [15/02/2016:03:40:11 +0000] &quot;GET / HTTP/1.1&quot; 200 0 126 &quot;-&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36&quot; 10.0.0.141:14391 x_forwarded_for:&quot;1.129.96.124&quot; x_forwarded_proto:&quot;http&quot; vcap_request_id:27c111af-4ea8-4c26-696c-0e90bd3908eb response_time:0.002084462 app_id:8d1ad4e9-9607-4927-abd3-522c621953b3
+2016-02-15T14:40:11.66+1100 [APP/0]      OUT ==&gt; /home/vcap/app/nginx/logs/access.log &lt;==
+2016-02-15T14:40:11.66+1100 [APP/0]      OUT 1.129.96.124, 10.0.0.141 - - - [15/Feb/2016:03:40:11 +0000] &quot;GET / HTTP/1.1&quot; 200 126
+2016-02-15T14:40:16.76+1100 [RTR/0]      OUT mydemoapp.apps.staging.digital.gov.au - [15/02/2016:03:40:16 +0000] &quot;GET / HTTP/1.1&quot; 304 0 0 &quot;-&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36&quot; 10.0.0.141:14391 x_forwarded_for:&quot;1.129.96.124&quot; x_forwarded_proto:&quot;http&quot; vcap_request_id:9bd055fc-9717-431b-7f4d-f244c3d7c581 response_time:0.001701489 app_id:8d1ad4e9-9607-4927-abd3-522c621953b3
+2016-02-15T14:40:17.20+1100 [RTR/0]      OUT mydemoapp.apps.staging.digital.gov.au - [15/02/2016:03:40:17 +0000] &quot;GET / HTTP/1.1&quot; 304 0 0 &quot;-&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36&quot; 10.0.0.141:14391 x_forwarded_for:&quot;1.129.96.124&quot; x_forwarded_proto:&quot;http&quot; vcap_request_id:40ee6886-f0d9-46d0-7feb-628ce10a5bff response_time:0.001669128 app_id:8d1ad4e9-9607-4927-abd3-522c621953b3
+2016-02-15T14:40:17.44+1100 [RTR/0]      OUT mydemoapp.apps.staging.digital.gov.au - [15/02/2016:03:40:17 +0000] &quot;GET / HTTP/1.1&quot; 304 0 0 &quot;-&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36&quot; 10.0.0.141:14391 x_forwarded_for:&quot;1.129.96.124&quot; x_forwarded_proto:&quot;http&quot; vcap_request_id:aa887531-4bdb-474e-6768-1bbc45e09fa1 response_time:0.0016547 app_id:8d1ad4e9-9607-4927-abd3-522c621953b3
+2016-02-15T14:40:17.66+1100 [APP/0]      OUT 1.129.96.124, 10.0.0.141 - - - [15/Feb/2016:03:40:16 +0000] &quot;GET / HTTP/1.1&quot; 304 0
+2016-02-15T14:40:17.66+1100 [APP/0]      OUT 1.129.96.124, 10.0.0.141 - - - [15/Feb/2016:03:40:17 +0000] &quot;GET / HTTP/1.1&quot; 304 0
+2016-02-15T14:40:17.66+1100 [APP/0]      OUT 1.129.96.124, 10.0.0.141 - - - [15/Feb/2016:03:40:17 +0000] &quot;GET / HTTP/1.1&quot; 304 0
+2016-02-15T14:40:22.17+1100 [HEALTH/0]   OUT healthcheck passed
+2016-02-15T14:40:22.17+1100 [HEALTH/0]   OUT Exit status 0
+^C[~/src/github.com/AusDTO/demo-app]
+lunix@boran]  (master) -&gt;
+</code></pre>
+
+<p>To see logs from the past:</p>
+<pre><code class="bash">[~/src/github.com/AusDTO/demo-app]
+lunix@boran]  (master) -&gt; cf logs --recent mydemoapp
+Connected, dumping recent logs for app mydemoapp in org dto / space dtoweb as example.person@digital.gov.au...
+
+2016-02-15T14:38:23.91+1100 [STG/0]      OUT Downloading staticfile_buildpack...
+2016-02-15T14:38:23.96+1100 [STG/0]      OUT Downloaded staticfile_buildpack
+2016-02-15T14:38:23.98+1100 [STG/0]      OUT Downloaded buildpacks
+2016-02-15T14:38:23.98+1100 [STG/0]      OUT Staging...
+...
+...
+</code></pre>
+      
+
+      
+        <a rel="external" href="https://github.com/AusDTO/mkdocs-gov-au-theme/tree/master/docs/usage/cfcli/log_access.md">Edit this page on GitHub</a>
+      
+    </article>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrapper">
+      <div class="footer-logo">
+        <img src="https://raw.githubusercontent.com/AusDTO/mkdocs-gov-au-theme/master/gov_au_theme/assets/images/coat-of-arms.png" alt="Australian Government Coat of Arms">
+      </div>
+      <div class="footer-links">
+        <nav>
+          <h2 class="visuallyhidden">Main footer navigation</h2>
+          
+            <ul>
+            
+              <li><a rel="external" href="http://status.cloud.gov.au">Status</a></li>
+            
+            </ul>
+          
+        </nav>
+        <p>&copy; Commonwealth of Australia
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

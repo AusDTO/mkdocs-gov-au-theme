@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sending Emails - cloud.gov.au docs</title>
+  
+
+  <!--
+    Support custom favicon support.
+    http://www.mkdocs.org/user-guide/configuration/#site_favicon
+  -->
+  
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+  
+
+  <!--
+    You can include external assets of course, but be aware that it means the
+    documentation may not work well offline.
+  -->
+  <link rel="stylesheet" type="text/css" href="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
+  <link rel="stylesheet" href="../../assets/stylesheets/application.css">
+  <link rel="stylesheet" href="../../assets/stylesheets/prism.css">
+  <!--
+    extra_css contains paths to CSS files in the users
+    documentation directory or a list of CSS files defined in
+    their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_css
+  -->
+  
+
+  <!--
+    To include static assets from our theme, just add
+    ../.. beforehand which will be the relative path to
+    the root of the documentation.
+  -->
+  <script type="text/javascript" src="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.js"></script>
+  <script src="../../assets/js/prism.js"></script>
+  <!--
+    extra_javascript contains paths to JavaScript files in the
+    users documentation directory or a list of JavaScript files
+    defined in their mkdocs.yml.
+
+    http://www.mkdocs.org/user-guide/configuration/#extra_javascript
+  -->
+  
+
+  
+
+  
+  
+
+</head>
+
+<body>
+
+  <div class="skip-to">
+  <a href="#content">Skip to main content</a>
+  <a href="#nav">Skip to section navigation</a>
+  </div>
+
+  <header role="banner" >
+    <div class="govau--header">
+      <div class="wrapper">
+        <div class="govau--logo">
+          <h1 class="logo"><a href="/" class="logo">cloud.gov.au docs</a></h1> <span class="badge--default">beta</span>
+        </div>
+        
+        
+        <div class="feedback">
+          <a href="https://www.support-url" class="button--feedback" role="button">Support request</a>
+        </div>
+        
+        
+      </div>
+    </div>
+
+    
+    <div class="search-section">
+      <div class="wrapper">
+        <form action="../../search.html" method="get">
+          <input class="search-input" type="text" name="q" title="Search" placeholder="Search cloud.gov.au docs" />
+          <input class="submit" value="Search" type="submit">
+        </form>
+      </div>
+    </div>
+    
+
+  </header>
+
+<main role="main">
+
+  <div id="nav" class="sidebar">
+    <nav class="local-nav" aria-label="main navigation">
+      <h2 class="visuallyhidden">Main navigation</h2>
+
+      <ul>
+      
+        
+<li>
+    <a href="../.." >Home</a>
+</li>
+
+      
+        
+  <li>
+    <h3 class="nav-sub-heading">Usage</h3>
+    <ul>
+        
+            
+<li>
+    <a href="../requesting_access/" >Requesting Access</a>
+</li>
+
+        
+            
+<li>
+    <a href="../setup/" >Setup</a>
+</li>
+
+        
+            
+<li>
+    <a href="./" class="is-current is-active">Sending Emails</a>
+</li>
+
+        
+            
+<li>
+    <a href="../your_first_deploy/" >Your First Deploy</a>
+</li>
+
+        
+            
+<li>
+    <a href="../orca/" >Getting your app ready for launch</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <h3 class="nav-sub-heading">CF-CLI</h3>
+    <ul>
+        
+            
+<li>
+    <a href="../cfcli/" >Intro</a>
+</li>
+
+        
+            
+<li>
+    <a href="../cfcli/install/" >Install</a>
+</li>
+
+        
+            
+<li>
+    <a href="../cfcli/login/" >Login</a>
+</li>
+
+        
+            
+<li>
+    <a href="../cfcli/application_deployment/" >Application Deployment</a>
+</li>
+
+        
+            
+<li>
+    <a href="../cfcli/application_delete/" >Application Deletion</a>
+</li>
+
+        
+            
+<li>
+    <a href="../cfcli/log_access/" >Log Access</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <h3 class="nav-sub-heading">Support</h3>
+    <ul>
+        
+            
+<li>
+    <a href="../../support/incident_response/" >Incident response</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+        
+  <li>
+    <h3 class="nav-sub-heading">Incident reports</h3>
+    <ul>
+        
+            
+<li>
+    <a href="../../support/incident_reports/" >Intro</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../support/incident_reports/2016-08-12/" >2016-08-12</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../support/incident_reports/2016-06-05/" >2016-06-05</a>
+</li>
+
+        
+            
+<li>
+    <a href="../../support/incident_reports/2016-02-11/" >2016-02-11</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+      
+      </ul>
+    </nav>
+  </div>
+
+    <article id="content" class="content-main">
+
+      <header>
+      
+        
+          <h1>Sending Emails</h1>
+        
+      
+    </header>
+      
+      <nav class="index-links">
+      <h2>In this section</h2>
+        <ul>
+        
+            <li><a href="#sending-emails-from-your-application">Sending emails from your application</a></li>
+            
+                <li><a href="#introduction">Introduction</a></li>
+            
+                <li><a href="#requesting-access">Requesting Access</a></li>
+            
+                <li><a href="#using-the-system">Using the system</a></li>
+            
+                <li><a href="#limitations">Limitations</a></li>
+            
+        
+        </ul>
+      </nav>
+      
+
+      
+        <h1 id="sending-emails-from-your-application">Sending emails from your application</h1>
+<p><br />
+<img alt="Email Symbol" src="../../usage/email_symbol.svg" title="Email Symbol" /></p>
+<h2 id="introduction">Introduction</h2>
+<p>cloud.gov.au have a resilient, highly available (outbound only) smtp service available.<br />
+This service allows applications deployed to cloud.gov.au to send outbound emails.<br />
+There is no capability to receive emails.</p>
+<h2 id="requesting-access">Requesting Access</h2>
+<p>To use this smtp service then please lodge a request by emailing <code>support@cloud.gov.au</code>. Make sure you include the email address that all emails will be coming from.</p>
+<p>We create you an account and add your domain (if not already done) to the <a href="https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail">DKIM</a> setup and send you the credentials along with some dns TXT records for <a href="https://en.wikipedia.org/wiki/Sender_Policy_Framework">SPF</a> &amp; DKIM.
+You will need to make sure these dns records are adjusted to aid in your emails being delivered.</p>
+<h2 id="using-the-system">Using the system</h2>
+<p>You should configure your application to use the following settings:</p>
+<p><strong>Host</strong>: smtp.hasmtp.cld.gov.au<br />
+<strong>Port</strong>: 587<br />
+<strong>Encryption</strong>: STARTTLS<br />
+<strong>AUTH Type</strong>: LOGIN or PLAIN<br />
+<strong>AUTH Username</strong>: <em>whole email address</em><br />
+<strong>AUTH Pass</strong>: Your password will be sent to you via sms .  </p>
+<h2 id="limitations">Limitations</h2>
+<p>There is no access to smtp logging at this stage.<br />
+This service is for unclassified use only. No DLM markers will be applied.</p>
+      
+
+      
+        <a rel="external" href="https://github.com/AusDTO/mkdocs-gov-au-theme/tree/master/docs/usage/sending_emails.md">Edit this page on GitHub</a>
+      
+    </article>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="wrapper">
+      <div class="footer-logo">
+        <img src="https://raw.githubusercontent.com/AusDTO/mkdocs-gov-au-theme/master/gov_au_theme/assets/images/coat-of-arms.png" alt="Australian Government Coat of Arms">
+      </div>
+      <div class="footer-links">
+        <nav>
+          <h2 class="visuallyhidden">Main footer navigation</h2>
+          
+            <ul>
+            
+              <li><a rel="external" href="http://status.cloud.gov.au">Status</a></li>
+            
+            </ul>
+          
+        </nav>
+        <p>&copy; Commonwealth of Australia
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
