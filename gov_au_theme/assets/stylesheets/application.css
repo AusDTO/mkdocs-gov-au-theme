@@ -15,13 +15,6 @@
   }
 }
 
-pre {
-  background-color: #f0f3f5;
-  margin: 0 0 1.6em;
-  padding: 0.8em;
-  white-space: pre;
-}
-
 .search-section form .submit {
     background-color: #f0f3f5;
     background-position: center center;
@@ -54,8 +47,17 @@ pre {
   padding-right: 3em;
 }
 
-code, kbd, pre, samp {
-  font-size: 100%;
+pre {
+  background-color: #f0f3f5;
+  margin: 0 0 1.6em;
+  padding: 0.8em;
+  white-space: pre;
+}
+
+code {
+  background-color: #f0f3f5;
+  padding: 0.15em;
+  border-radius: .15em;
 }
 
 .govau--header h1 {
