@@ -22,7 +22,7 @@ pre {
   white-space: pre;
 }
 
-.search-section .submit {
+.search-section form .submit {
     background-color: #f0f3f5;
     background-position: center center;
     background-repeat: no-repeat;
@@ -31,6 +31,7 @@ pre {
     padding: 0.4em;
     position: relative;
     width: 3em;
+    height: 2.4em;
     z-index: 1;
     margin-left: -3em;
     text-indent: -99em;
@@ -40,8 +41,13 @@ pre {
     background-image: url("https://raw.githubusercontent.com/AusDTO/mkdocs-gov-au-theme/master/gov_au_theme/assets/images/search-icon.png");
 }
 
-.search-section .submit:focus {
+.search-section form .submit:focus {
   outline: 2px solid #5bcbe3;
+  background-color: #f0f3f5;
+}
+
+.search-section form .submit:hover {
+  background-color: #f0f3f5;
 }
 
 .search-section .search-input {
@@ -52,8 +58,9 @@ code, kbd, pre, samp {
   font-size: 100%;
 }
 
-.govau--header .logo {
-  display: inline-block;
+.govau--header h1 {
   margin: 0;
-  line-height: 2;
+  font-size: 1.625rem;
+  display: inline-block;
+  font-weight: 400;
 }

@@ -94,7 +94,6 @@
       </div>
     </div>
 
-    <!--
     {% if config.extra.search %}
     <div class="search-section">
       <div class="wrapper">
@@ -105,7 +104,6 @@
       </div>
     </div>
     {% endif %}
-  -->
 
   </header>
 
@@ -158,7 +156,11 @@
       {% endblock %}
 
       {% if repo_url and current_page %}
-        <a rel="external" href="{{ repo_url }}/tree/master/docs{{ current_page.abs_url.rstrip('index.html').rstrip('/') }}.md">Edit this page on GitHub</a>
+        {% if not current_page.is_homepage %}
+        <a rel="external" href="{{ repo_url }}/edit/master/docs{{ current_page.abs_url.rstrip('index.html').rstrip('/') }}.md">Edit this page on GitHub</a>
+        {% else %}
+        <a rel="external" href="{{ repo_url }}/edit/master/docs/index.md">Edit this page on GitHub</a>
+      {% endif %}
       {% endif %}
     </article>
 

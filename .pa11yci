@@ -1,5 +1,5 @@
 {
 	"defaults": {
-		"hideElements": ".skip-to"
+		"hideElements": ".skip-to, .visuallyhidden"
 	}
 }
