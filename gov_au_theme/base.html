@@ -98,8 +98,7 @@
     <div class="search-section">
       <div class="wrapper">
         <form action="{{ base_url }}/search.html" method="get">
-          <label for="search" class="visuallyhidden">Search:</label>
-          <input class="search-input" id="search" type="text" name="q" title="Search" placeholder="Search {{ site_name }}" />
+          <input class="search-input" type="text" name="q" title="Search" placeholder="Search {{ site_name }}" />
           <input class="submit" value="Search" type="submit">
         </form>
       </div>
@@ -156,7 +155,6 @@
         {{ content }}
       {% endblock %}
 
-      <footer class="article-footer">
       {% if repo_url and current_page %}
         {% if not current_page.is_homepage %}
         <a rel="external" href="{{ repo_url }}/edit/master/docs{{ current_page.abs_url.rstrip('index.html').rstrip('/') }}.md">Edit this page on GitHub</a>
@@ -164,7 +162,6 @@
         <a rel="external" href="{{ repo_url }}/edit/master/docs/index.md">Edit this page on GitHub</a>
       {% endif %}
       {% endif %}
-      <footer>
     </article>
 
   </main>

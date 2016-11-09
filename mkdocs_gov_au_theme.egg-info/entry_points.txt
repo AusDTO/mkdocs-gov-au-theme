@@ -1,3 +1,0 @@
-[mkdocs.themes]
-gov-au-theme = gov_au_theme
-
