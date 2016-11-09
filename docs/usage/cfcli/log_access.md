@@ -1,4 +1,4 @@
-# Log Access
+## Log Access
 
 We are able to access our application’s log output by using the cf logs command like this:
 `cf logs mydemoapp`
@@ -8,7 +8,7 @@ This will tail the application logs, from all Application Instances, straight to
 You can test it by opening up your browser and accessing [http://mydemoapp.apps.staging.digital.gov.au](http://mydemoapp.apps.staging.digital.gov.au).
 This will produce the following output:
 
-``` bash
+``` language-none
 [~/src/github.com/AusDTO/demo-app]
 lunix@boran]  (master) -> cf logs mydemoapp
 Connected, tailing logs for app mydemoapp in org dto / space dtoweb as example.person@digital.gov.au...
@@ -31,7 +31,7 @@ lunix@boran]  (master) ->
 
 To see logs from the past:
 
-``` bash
+``` language-none
 [~/src/github.com/AusDTO/demo-app]
 lunix@boran]  (master) -> cf logs --recent mydemoapp
 Connected, dumping recent logs for app mydemoapp in org dto / space dtoweb as example.person@digital.gov.au...

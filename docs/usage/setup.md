@@ -1,41 +1,41 @@
-# Setting your project up
+As a user, most of your interactions with Cloud Foundry will be through the command line.
 
-Congratulations, you should now have your cloud.gov.au accounts all setup.  
-All you need now is to scaffold out a codebase, activate circleci and push the code to github.
+<table class="content-table">
+<thead>
+<tr>
+<th>OS</th>
+<th>32 BIT</th>
+<th>64 BIT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td><a href="https://cli.run.pivotal.io/stable?release=windows32&amp;version=6.21.1&amp;source=pcf1.6">6.21.1</a></td>
+<td><a href="https://cli.run.pivotal.io/stable?release=windows64&amp;version=6.21.1&amp;source=pcf1.6">6.21.1</a></td>
+</tr>
+<tr>
+<td>Linux (deb)</td>
+<td><a href="https://cli.run.pivotal.io/stable?release=debian32&amp;version=6.21.1&amp;source=pcf1.6">6.21.1</a></td>
+<td><a href="https://cli.run.pivotal.io/stable?release=debian64&amp;version=6.21.1&amp;source=pcf1.6">6.21.1</a></td>
+</tr>
+<tr>
+<td>Linux (rpm)</td>
+<td><a href="https://cli.run.pivotal.io/stable?release=redhat32&amp;version=6.21.1&amp;source=pcf1.6">6.21.1</a></td>
+<td><a href="https://cli.run.pivotal.io/stable?release=redhat64&amp;version=6.21.1&amp;source=pcf1.6">6.21.1</a></td>
+</tr>
+<tr>
+<td>Mac OSX</td>
+<td>na</td>
+<td><a href="https://cli.run.pivotal.io/stable?release=macosx64&amp;version=6.21.1&amp;source=pcf1.6">6.21.1</a></td>
+</tr>
+</tbody>
+</table>
 
-## Requirements
+Confirm the installation was successful by running:
 
-* A workstation (preferred Linux or OSX)
-* git
-* browser
-* cf-cli
-* ruby
-* jalpha rubygem
-
-The DTO has produced a rubygem, `jalpha`, for scaffolding out an opinionated Jekyll stack for your Alpha.
-
-## Actions
-
-* `gem install jalpha`
-* `jalpha new <projectname>`
-* `cd <projectname>`
-* `bin/setup`
-* `git init`
-* `git remote add ....`
-* `git add -a`
-* `git commit -am 'initial commit'`
-* `git push -u origin master`
-* go to circleci in the browser and authorize with Github.
-* follow your new github repo
-* add some environment variables via the circleci UI
 ```
-CF_API
-CF_ORG
-CF_PASSWORD
-CF_SPACE
-CF_USER
-CF_BASIC_AUTH_USERNAME  [optional]
-CF_BASIC_AUTH_PASSWORD  [optional]
+cf -v
 ```
-
-
+<br />
+<a class="see-more" href="/usage/login/">Next step: Login and target your project</a>
