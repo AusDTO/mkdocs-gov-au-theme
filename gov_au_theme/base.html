@@ -58,8 +58,8 @@
       {% endblock %}
 
       <footer>
-      {%- block article_footer_content %}
-      {%- endblock %}
+      {% block article_footer_content %}
+      {% endblock %}
       {% if repo_url and current_page %}
         {% if not current_page.is_homepage %}
           <a rel="external" href="{{ repo_url }}/edit/master/docs{{ current_page.abs_url.rstrip('index.html').rstrip('/') }}.md">Edit this page on GitHub</a>
@@ -73,7 +73,7 @@
 
   </main>
 
-  {%- block page_footer %}
+  {% block page_footer %}
   <footer role="contentinfo">
     <div class="wrapper">
       <div class="footer-logo">
@@ -94,7 +94,7 @@
       </div>
     </div>
   </footer>
-  {%- endblock %}
+  {% endblock %}
 
 </body>
 </html>
