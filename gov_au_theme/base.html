@@ -138,7 +138,7 @@
         <p class="abstract">{{ meta.abstract[0] }}</p>
       {% endif %}
 
-      {% if toc and toc|list|length > 0 %}
+      {% if toc and toc|list|length > 0 and not meta.hide_toc %}
       <nav class="index-links">
       <h2>In this section</h2>
         <ul>
