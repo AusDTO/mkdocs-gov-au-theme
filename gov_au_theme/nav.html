@@ -1,3 +1,4 @@
+{% if not nav_item.title.startswith("_") %}
 {% if not nav_item.children %}
 <li>
     <a href="{{ nav_item.url }}" {% if nav_item.active %}class="is-current is-active"{% endif %}>{{ nav_item.title }}</a>
@@ -11,4 +12,5 @@
         {% endfor %}
     </ul>
   </li>
+{% endif %}
 {% endif %}
