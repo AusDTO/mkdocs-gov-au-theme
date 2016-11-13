@@ -9,8 +9,12 @@
   padding-bottom: 1.5em;
 }
 
+.search-section form .cgasearch--wrapper {
+  position: relative;
+}
+
 @media (min-width: 768px) {
-  .search-section input {
+  .search-section form .cgasearch--wrapper {
     width: 33%;
   }
 }
@@ -22,11 +26,13 @@
     background-size: 20px auto;
     border: 2px solid #bbb;
     padding: 0.4em;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 0;
     width: 3em;
     height: 2.4em;
     z-index: 1;
-    margin-left: -3em;
+    margin-right: 0;
     text-indent: -99em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
