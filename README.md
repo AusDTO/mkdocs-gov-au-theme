@@ -125,6 +125,20 @@ Add the following lines to `mkdocs.yml`:
 google_analytics: ['UA-12345678-9', 'name']
 ```
 
+### Hide pages from navigation menu
+
+You can hide a page from displaying in the navigation while still allowing that page to be part of the site build.
+
+Add a `_` in front on the page title in `mkdocs.yml`:
+
+```
+pages:
+  - Home: index.md
+  - A section:
+    - 'Section content page': 'section/section_content_1.md'
+    - '_Hidden section content page': 'section/section_content_2.md'
+```
+
 ## Extend page templates
 
 You can extend template block components by creating a new `theme_dir` in your project and adding a main.html with the following markup:
