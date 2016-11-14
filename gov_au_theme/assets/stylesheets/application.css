@@ -72,3 +72,15 @@ code {
   display: inline-block;
   font-weight: 400;
 }
+
+article .docs-article-footer {
+  border-top: 1px solid;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  max-width: 38rem;
+}
+
+article .docs-article-footer h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
