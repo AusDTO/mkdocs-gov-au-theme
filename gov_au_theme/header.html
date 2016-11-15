@@ -3,7 +3,7 @@
   <div class="govau--header">
     <div class="wrapper">
       <div class="govau--logo">
-        <h1><a href="/" class="logo">{{ site_name }}</a></h1>{% if config.extra.badge %} <span class="badge--default">{{config.extra.badge}}</span>{% endif%}
+        <h1><a href="/" class="logo">{{ config.site_name }}</a></h1>{% if config.extra.badge %} <span class="badge--default">{{config.extra.badge}}</span>{% endif%}
       </div>
       {% if config.extra.feedback_link %}
       {% for feedback in config.extra.feedback_link %}
@@ -21,7 +21,7 @@
       <form action="{{ base_url }}/search.html" method="get">
         <label for="search" class="visuallyhidden">Search:</label>
         <div class="cgasearch--wrapper">
-        <input class="search-input" id="search" type="text" name="q" title="Search" placeholder="Search {{ site_name }}" />
+        <input class="search-input" id="search" type="text" name="q" title="Search" placeholder="Search {{ config.site_name }}" />
         <input class="submit" value="Search" type="submit">
         </div>
       </form>
