@@ -74,27 +74,13 @@ code {
 }
 
 article .docs-article-footer {
+  border-top: 1px solid;
   margin-top: 3rem;
   padding-top: 1.5rem;
+  max-width: 38rem;
 }
 
 article .docs-article-footer h2 {
   margin-top: 0;
   font-size: 1.5rem;
-}
-
-.local-nav ul li:first-child, .primary-nav ul li:first-child {
-  border-top: 0;
-}
-
-.local-nav ul li:first-child {
-  border-top: 0;
-}
-
-.local-nav h3 + ul li:first-child {
-  border-top: 1px solid #bbb;
-}
-
-.local-nav ul li:nth-child(1) h3 {
-  margin-top: 0;
 }

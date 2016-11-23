@@ -18,26 +18,30 @@ markdown_extensions:
   - toc:
       #permalink: True
 pages:
-  - Home: index.md
-  - Usage:
-    - 'Setup a new project': 'usage/start_new_project.md'
-    - 'Install command line tools': 'usage/setup.md'
-    - 'Login and target your project': 'usage/login.md'
-    - 'Sending Emails': 'usage/sending_emails.md'
-    - 'Your First Deploy': 'usage/your_first_deploy.md'
-    - 'Getting your app ready for launch': 'usage/orca.md'
-    - 'Setup CircleCI': 'usage/setup_circle.md'
-    - 'Setup Continuous deployment': 'usage/ci_cd.md'
-  - CF-CLI:
-    - 'Intro': usage/cfcli/index.md
-    - 'Create manifest.yml': usage/create_manifest.md
-    - 'Application Deployment': usage/cfcli/application_deployment.md
-    - 'Application Deletion': usage/cfcli/application_delete.md
-    - 'Log Access': usage/cfcli/log_access.md
+  - Getting started:
+    - 'Welcome': index.md
+    - 'Join an existing project or start a new one': 'getting_started/request_access.md'
+    - 'Install command line tools': 'getting_started/install_cli.md'
+    - 'Login to CloudFoundry': 'getting_started/login.md'
+    - 'Get an app ready for launch': 'getting_started/orca.md'
+  - Deployment and configuration:
+    - 'Push an application': 'deployment_configuration/application_deployment.md'
+    - 'Delete an application': 'deployment_configuration/application_delete.md'
+    - 'Setup Continuous deployment': 'deployment_configuration/ci_cd.md'
+    - 'Setup CircleCI': 'deployment_configuration/setup_circle.md'
+    - 'Create manifest.yml': 'deployment_configuration/create_manifest.md'
+    - 'Environment variables': 'deployment_configuration/environment.md'
+    - 'Zero downtime deploys': 'deployment_configuration/zero_downtime_deploys.md'
+    - 'Deploying feature branches': 'deployment_configuration/deploying_feature_branches.md'
+    - 'User management': 'deployment_configuration/user_management.md'
+  - Services:
+    - 'Sending Emails': 'services/sending_emails.md'
+    - 'Log access': 'services/log_access.md'
   - Support:
+    - 'Get help using cloud.gov.au': 'support/help.md'
+    - 'Reset CloudFoundry password': 'support/reset_password.md'
     - 'Incident response': 'support/incident_response.md'
-  - 'Incident reports':
-    - 'Intro': 'support/incident_reports/index.md'
+    - 'Post Incident Reports': 'support/incident_reports.md'
     - '_2016-08-12': 'support/incident_reports/2016-08-12.md'
-    - '2016-06-05': 'support/incident_reports/2016-06-05.md'
-    - '2016-02-11': 'support/incident_reports/2016-02-11.md'
+    - '_2016-06-05': 'support/incident_reports/2016-06-05.md'
+    - '_2016-02-11': 'support/incident_reports/2016-02-11.md'

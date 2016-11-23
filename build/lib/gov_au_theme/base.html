@@ -8,12 +8,20 @@
   <meta charset="utf-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+  <title>{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}</title>
   {% if site_description %}
   <meta content="{{ site_description }}" name="description">
   {% endif %}
 
-  <link rel="shortcut icon" href="{{ base_url }}/img/favicon.ico">
+  <!--
+    Support custom favicon support.
+    http://www.mkdocs.org/user-guide/configuration/#site_favicon
+  -->
+  {% if favicon %}
+    <link rel="shortcut icon" href="{{ favicon }}">
+  {% else %}
+    <link rel="shortcut icon" href="{{ base_url }}/img/favicon.ico">
+  {% endif %}
 
   <!--
     You can include external assets of course, but be aware that it means the
@@ -21,6 +29,7 @@
   -->
   <link rel="stylesheet" type="text/css" href="https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/ui-kit.min.css"/>
   <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application.css">
+  <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/prism.css">
   <!--
     extra_css contains paths to CSS files in the users
     documentation directory or a list of CSS files defined in
@@ -50,13 +59,13 @@
     <script src="{{ path }}"></script>
   {% endfor %}
 
-  {% if config.google_analytics %}
+  {% if google_analytics %}
   <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{ config.google_analytics[0] }}', '{{ config.google_analytics[1] }}');
+      ga('create', '{{ google_analytics[0] }}', '{{ google_analytics[1] }}');
       ga('send', 'pageview');
   </script>
   {% endif %}
@@ -91,28 +100,28 @@
     <article id="content" class="content-main">
 
       <header>
-        {% if page and page.is_homepage %}
-          <h1>{{ config.site_name }}</h1>
+        {% if current_page and current_page.is_homepage %}
+          <h1>{{ site_name }}</h1>
         {% else %}
-          {% if page and page.title.startswith("_") %}
-            <h1>{{ page.title | replace("_", "") }}</h1>
+          {% if current_page and current_page.title.startswith("_") %}
+            <h1>{{ page_title | replace("_", "") }}</h1>
           {% else %}
-            <h1>{{ page.title }}</h1>
+            <h1>{{ page_title }}</h1>
           {% endif %}
         {% endif %}
       </header>
 
 
 
-      {% if page and page.meta.abstract %}
-        <p class="abstract">{{ page.meta.abstract[0] }}</p>
+        {% if current_page and meta.abstract %}
+        <p class="abstract">{{ meta.abstract[0] }}</p>
       {% endif %}
 
-      {% if page.toc and page.toc|list|length > 0 and not page.meta.hide_toc %}
+      {% if toc and toc|list|length > 0 and not meta.hide_toc %}
         <nav class="index-links">
           <h2>In this section</h2>
           <ul>
-          {% for toc_item in page.toc %}
+          {% for toc_item in toc %}
               <li><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
               {% for toc_item in toc_item.children %}
                 <li><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
@@ -123,17 +132,17 @@
       {% endif %}
 
       {% block content %}
-        {{ page.content }}
+        {{ content }}
       {% endblock %}
 
-      <footer class="docs-article-footer callout">
+      <footer class="docs-article-footer">
       {% block article_footer_content %}
       {% endblock %}
-      {% if config.repo_url and page %}
-        {% if not page.is_homepage %}
-          <a rel="external" href="{{ config.repo_url }}/edit/master/docs{{ page.abs_url.rstrip('index.html').rstrip('/') }}.md">Edit this page on GitHub</a>
+      {% if repo_url and current_page %}
+        {% if not current_page.is_homepage %}
+          <a rel="external" href="{{ repo_url }}/edit/master/docs{{ current_page.abs_url.rstrip('index.html').rstrip('/') }}.md">Edit this page on GitHub</a>
         {% else %}
-          <a rel="external" href="{{ config.repo_url }}/edit/master/docs/index.md">Edit this page on GitHub</a>
+          <a rel="external" href="{{ repo_url }}/edit/master/docs/index.md">Edit this page on GitHub</a>
         {% endif %}
       {% endif %}
       </footer>

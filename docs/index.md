@@ -1,6 +1,3 @@
-abstract: Abstract
-
-
 ## The platform for building the future.
 
 cloud.gov.au is a place to run web apps, freeing up teams to focus on writing code that meets user needs. It provides a faster, safer, standard way to change web apps without impacting the user. It also provides real-time visibility and insight into web app usage, performance, and behaviour.
@@ -31,4 +28,4 @@ The cloud.gov.au team follow [AWS best practices for DDoS resilency](https://d0.
 
 ## Start on cloud.gov.au today
 
-Check out [how to request access](/usage/requesting_access/).
+Check out [how to request access](/getting_started/request_access/).
