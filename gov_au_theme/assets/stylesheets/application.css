@@ -83,10 +83,6 @@ article .docs-article-footer h2 {
   font-size: 1.5rem;
 }
 
-.local-nav ul li:first-child, .primary-nav ul li:first-child {
-  border-top: 0;
-}
-
 .local-nav ul li:first-child {
   border-top: 0;
 }
