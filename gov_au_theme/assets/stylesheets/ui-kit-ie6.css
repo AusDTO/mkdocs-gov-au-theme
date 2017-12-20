@@ -1,0 +1,4882 @@
+@charset "UTF-8";
+/*
+
+UI-Kit version: 1.11.0
+
+*/
+/*! responsive-nav.js 1.0.39 by @viljamis */
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none; }
+
+.nav-collapse li {
+  width: 100%;
+  display: block; }
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1; }
+
+.nav-collapse.opened {
+  max-height: 9999px; }
+
+.nav-toggle {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+
+@media screen and (min-width: 40em) {
+  .js .nav-collapse {
+    position: relative; }
+  .js .nav-collapse.closed {
+    max-height: none; }
+  .nav-toggle {
+    display: none; } }
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1, .hero .site-title,
+.hero-sml .site-title,
+.hero-med .site-title {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 2 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/*
+Grid
+
+Collection: Foundations
+
+Style guide: Grid
+*/
+/*
+Responsive breakpoints
+
+Style guide: Grid.3 Breakpoints
+*/
+/*
+Helpers
+
+Style guide: Grid.4 Helpers
+*/
+/*
+
+Style guide: Grid.4 Helpers.1 Font stacks
+*/
+/*
+Debugging
+
+Style guide: Grid.4 Helpers.2 Debugging
+*/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+/*
+Colours
+
+A basic palette of colours that are clear and accessible.
+
+We are finalising the colours &mdash; for help <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">log a GitHub issue</a>.
+
+Collection: Foundation
+
+Style guide: Colours
+*/
+/*
+Colours palette
+
+Style guide: Colours.1 Colours palette
+*/
+/*
+Contextual colours palette
+
+Style guide: Colours.2 Contextual colours palette
+*/
+/*
+Accessibility
+
+Style guide: Colours.3 Accessibility
+*/
+/*
+IE Conditionals
+
+Based on implementation by govuk_frontend_toolkit
+https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_conditionals.scss
+
+The base css you write should be for mobile. You can
+then add desktop styles on top.
+
+Usage:
+
+  div.columns {
+    border: 1px solid;
+
+    @include media($desktop){
+      width: 30%;
+      float: left;
+    }
+    @include ie-lte(8) {
+      something to fix visual bugs in old IE
+    }
+    @include ie(6) {
+      padding: 0;
+    }
+  }
+*/
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden,
+.is-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+  Warning/notification regarding feature support
+*/
+.ua-notification {
+  display: block;
+  padding: 0.8em;
+  text-align: center;
+  background-color: #f9c642;
+  color: #313131;
+  font-size: 1.0625rem;
+  margin-bottom: 0; }
+
+.list-small a, .primary-nav ul ul ul ul a,
+.local-nav ul ul ul ul a, [class^='breadcrumbs'] ul li:not(:last-child) {
+  background-image: url("../latest/img/icons/arrow-right.svg");
+  background-image: url("../latest/img/icons/arrow-right.png"); }
+
+[class^='breadcrumbs'][class$='--inverted'] ul li:not(:last-child) {
+  background-image: url("../latest/img/icons/arrow-right--white.svg");
+  background-image: url("../latest/img/icons/arrow-right--white.png"); }
+
+header[role='banner'] .see-more::after, body > main .see-more::after, footer[role='contentinfo'] .see-more::after, .primary-nav ul .see-more::after,
+.local-nav ul .see-more::after, [class^='breadcrumbs'] .see-more::after, [class^='breadcrumbs'][class$='--inverted'] .see-more::after, .skip-to .see-more::after, [class^='controls'] .see-more::after, .govau--header .see-more::after, .prerelease-govau--header .see-more::after, .hero .see-more::after,
+.hero-sml .see-more::after,
+.hero-med .see-more::after, .tags .see-more::after {
+  background-image: url("../latest/img/icons/arrow-right--aqua.svg");
+  background-image: url("../latest/img/icons/arrow-right--aqua.png"); }
+
+.govau--header .nav-toggle::before {
+  background-image: url("../latest/img/icons/bars.svg");
+  background-image: url("../latest/img/icons/bars.png"); }
+
+.govau--header .nav-toggle.active::before {
+  background-image: url("../latest/img/icons/close.svg");
+  background-image: url("../latest/img/icons/close.png"); }
+
+.accordion-button::before,
+summary::before, .accordion--controls summary::before, .nav-toggle::before {
+  background-image: url("../latest/img/icons/chevron-down--navy.svg");
+  background-image: url("../latest/img/icons/chevron-down--navy.png"); }
+
+header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
+.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
+.hero-sml a[rel~='external']::after,
+.hero-med a[rel~='external']::after, .tags a[rel~='external']::after {
+  background-image: url("../latest/img/icons/external-link--aqua.svg");
+  background-image: url("../latest/img/icons/external-link--aqua.png"); }
+
+.icon-chevron::before {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.5em;
+  left: 0.15em;
+  position: relative;
+  vertical-align: top;
+  width: 0.5em;
+  -webkit-transition: -webkit-transform 300ms linear;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear; }
+
+.icon-chevron.top::before {
+  top: 0.75em;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+.icon-chevron.right::before {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.icon-chevron.bottom::before {
+  top: 0.5em;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg); }
+
+.icon-chevron.left::before {
+  left: 0.25em;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg); }
+
+@media print {
+  *,
+  *::before,
+  *::after,
+  *::first-letter,
+  *::first-line {
+    background: transparent;
+    color: #000;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    text-shadow: none; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]::after {
+    content: " (" attr(href) ")"; }
+  abbr[title]::after {
+    content: " (" attr(title) ")"; }
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: ''; }
+  pre,
+  blockquote {
+    border: 1px solid #bbbbbb;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100%; }
+  p,
+  h2,
+  .display,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2, .display,
+  h3 {
+    page-break-after: avoid; } }
+
+/*
+Accordions
+
+Collection: Components
+
+Style guide: Accordions
+*/
+/*
+Content accordion
+
+Markup: templates/content-accordion.html
+
+Tags: interactive, accordion, content
+
+Style guide: Accordions.1 Content accordion
+*/
+/*
+Controls accordion
+
+Markup: templates/controls-accordion.html
+
+Tags: interactive, accordion, controls
+
+Style guide: Accordions.2 Controls accordion
+*/
+/*
+Usability
+
+Style guide: Accordions.3 Usability
+*/
+details,
+.accordion, .accordion--controls {
+  display: block;
+  margin: 1.6em 0 0;
+  overflow: hidden; }
+
+.accordion-button,
+summary, .accordion--controls summary {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0.8em 3.2em 0.8em 0.8em;
+  border-radius: 1px 1px 0 0;
+  background-color: #f0f3f5;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.25rem;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out; }
+  .accordion-button:last-child,
+  summary:last-child {
+    border-bottom-width: 1px; }
+  .accordion-button:hover,
+  summary:hover, .accordion-button:focus,
+  summary:focus {
+    background-color: #bbbbbb;
+    outline: none; }
+  .accordion-button::-webkit-details-marker,
+  summary::-webkit-details-marker, .accordion--controls summary::-webkit-details-marker {
+    display: none; }
+  .accordion-button::before,
+  summary::before, .accordion--controls summary::before {
+    content: '';
+    position: absolute;
+    top: .5em;
+    bottom: .5em;
+    right: 0.8em;
+    width: 1.2em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    transition: -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; }
+    [aria-expanded='true'] .accordion-button::before, [aria-expanded='true']
+    summary::before {
+      -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg); }
+
+.accordion-panel, .accordion--controls .accordion-panel {
+  display: block;
+  height: auto;
+  overflow: hidden;
+  padding: 1.6em 1.6em 0.8em;
+  border-radius: 1px 1px 0 0; }
+  .accordion-panel :first-child {
+    margin-top: 0; }
+
+details,
+.accordion {
+  border-color: #bbbbbb;
+  border-width: 1px 0;
+  border-style: solid; }
+  details + details,
+  .accordion + details, details +
+  .accordion,
+  .accordion +
+  .accordion {
+    margin-top: 0;
+    border-top: none; }
+
+[aria-expanded='true'] .accordion-button, [aria-expanded='true']
+summary {
+  border-bottom: 1px solid #bbbbbb; }
+
+.accordion--controls {
+  margin-top: 0.8em;
+  border: none; }
+  .accordion--controls summary {
+    border: none;
+    background-color: #def4f9;
+    font-size: 87.5%; }
+    .accordion--controls summary:hover, .accordion--controls summary:focus {
+      background-color: #5bcbe3;
+      color: #115361; }
+  .accordion--controls .accordion-panel {
+    border: 0.8em solid #def4f9;
+    border-top: none; }
+
+/*
+Buttons
+
+Collection: Components
+
+Markup: templates/buttons-examples.html
+
+Style guide: Forms & buttons. 01 Buttons
+*/
+button,
+.button,
+[role='button'],
+[type='submit'],
+[type='reset'],
+[type='button'], .nav-toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  display: inline-block;
+  height: 3.2em;
+  margin: 0 1.6em 0.8em 0;
+  padding: 0.8em 1.6em;
+  border-radius: 1px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: inherit;
+  outline: 0;
+  text-decoration: none;
+  font-weight: 700; }
+  @media screen and (min-width: 768px) {
+    button,
+    .button,
+    [role='button'],
+    [type='submit'],
+    [type='reset'],
+    [type='button'], .nav-toggle {
+      height: 2.8em;
+      padding: 0.5em 1.2em; } }
+
+button[disabled], button[disabled]:hover, button[disabled]:active, button[disabled]:focus, button.disabled, button.disabled:hover, button.disabled:active, button.disabled:focus,
+.button[disabled],
+.button[disabled]:hover,
+.button[disabled]:active,
+.button[disabled]:focus,
+.button.disabled,
+.button.disabled:hover,
+.button.disabled:active,
+.button.disabled:focus,
+[role='button'][disabled],
+[role='button'][disabled]:hover,
+[role='button'][disabled]:active,
+[role='button'][disabled]:focus,
+[role='button'].disabled,
+[role='button'].disabled:hover,
+[role='button'].disabled:active,
+[role='button'].disabled:focus,
+[type='submit'][disabled],
+[type='submit'][disabled]:hover,
+[type='submit'][disabled]:active,
+[type='submit'][disabled]:focus,
+[type='submit'].disabled,
+[type='submit'].disabled:hover,
+[type='submit'].disabled:active,
+[type='submit'].disabled:focus,
+[type='reset'][disabled],
+[type='reset'][disabled]:hover,
+[type='reset'][disabled]:active,
+[type='reset'][disabled]:focus,
+[type='reset'].disabled,
+[type='reset'].disabled:hover,
+[type='reset'].disabled:active,
+[type='reset'].disabled:focus,
+[type='button'][disabled],
+[type='button'][disabled]:hover,
+[type='button'][disabled]:active,
+[type='button'][disabled]:focus,
+[type='button'].disabled,
+[type='button'].disabled:hover,
+[type='button'].disabled:active,
+[type='button'].disabled:focus {
+  cursor: not-allowed;
+  border-color: #bbbbbb;
+  background-color: #bbbbbb;
+  color: #313131; }
+
+button.inverted, button.button--feedback,
+.button.inverted,
+.button.button--feedback,
+[role='button'].inverted,
+[role='button'].button--feedback,
+[type='submit'].inverted,
+[type='submit'].button--feedback,
+[type='reset'].inverted,
+[type='reset'].button--feedback,
+[type='button'].inverted,
+[type='button'].button--feedback {
+  border-color: #fff;
+  background-color: transparent; }
+  button.inverted:hover, button.button--feedback:hover, button.inverted:active, button.button--feedback:active, button.inverted:focus, button.button--feedback:focus,
+  .button.inverted:hover,
+  .button.button--feedback:hover,
+  .button.inverted:active,
+  .button.button--feedback:active,
+  .button.inverted:focus,
+  .button.button--feedback:focus,
+  [role='button'].inverted:hover,
+  [role='button'].button--feedback:hover,
+  [role='button'].inverted:active,
+  [role='button'].button--feedback:active,
+  [role='button'].inverted:focus,
+  [role='button'].button--feedback:focus,
+  [type='submit'].inverted:hover,
+  [type='submit'].button--feedback:hover,
+  [type='submit'].inverted:active,
+  [type='submit'].button--feedback:active,
+  [type='submit'].inverted:focus,
+  [type='submit'].button--feedback:focus,
+  [type='reset'].inverted:hover,
+  [type='reset'].button--feedback:hover,
+  [type='reset'].inverted:active,
+  [type='reset'].button--feedback:active,
+  [type='reset'].inverted:focus,
+  [type='reset'].button--feedback:focus,
+  [type='button'].inverted:hover,
+  [type='button'].button--feedback:hover,
+  [type='button'].inverted:active,
+  [type='button'].button--feedback:active,
+  [type='button'].inverted:focus,
+  [type='button'].button--feedback:focus {
+    border-color: #fff;
+    background-color: #fff;
+    color: #043751; }
+
+/*
+Forms & buttons
+
+Collection: Components
+
+Style guide: Forms & buttons
+*/
+/*
+Text input
+
+Markup: templates/text-input-single-line.html
+
+Style guide: Forms & buttons.02 Text input
+*/
+form [type='text'],
+form [type='number'],
+form [type='tel'],
+form [type='email'],
+form [type='password'], form textarea, form input[type='radio'], form input[type='checkbox'] {
+  width: 100%;
+  outline-offset: 0;
+  border: 2px solid #bbbbbb;
+  border-radius: 0;
+  background-color: #fff;
+  padding: 0.4em; }
+  form [type='text']:invalid,
+  form [type='number']:invalid,
+  form [type='tel']:invalid,
+  form [type='email']:invalid,
+  form [type='password']:invalid, form textarea:invalid, form input[type='radio']:invalid, form input[type='checkbox']:invalid, form .invalid[type='text'],
+  form .invalid[type='number'],
+  form .invalid[type='tel'],
+  form .invalid[type='email'],
+  form .invalid[type='password'], form textarea.invalid, form input.invalid[type='radio'], form input.invalid[type='checkbox'] {
+    outline: 2px solid #c00; }
+  form .valid[type='text'],
+  form .valid[type='number'],
+  form .valid[type='tel'],
+  form .valid[type='email'],
+  form .valid[type='password'], form textarea.valid, form input.valid[type='radio'], form input.valid[type='checkbox'] {
+    outline: 2px solid #007554; }
+  form [type='text']:focus,
+  form [type='number']:focus,
+  form [type='tel']:focus,
+  form [type='email']:focus,
+  form [type='password']:focus, form textarea:focus, form input[type='radio']:focus, form input[type='checkbox']:focus {
+    outline: 2px solid #5bcbe3; }
+  form [type='text']:disabled,
+  form [type='number']:disabled,
+  form [type='tel']:disabled,
+  form [type='email']:disabled,
+  form [type='password']:disabled, form textarea:disabled, form input[type='radio']:disabled, form input[type='checkbox']:disabled, form [disabled][type='text'],
+  form [disabled][type='number'],
+  form [disabled][type='tel'],
+  form [disabled][type='email'],
+  form [disabled][type='password'], form textarea[disabled], form input[disabled][type='radio'], form input[disabled][type='checkbox'] {
+    cursor: not-allowed;
+    background: #f0f3f5;
+    border: 2px solid #bbbbbb; }
+
+form {
+  /*
+  Text area input
+
+  Markup: templates/textarea-input.html
+
+  Style guide: Forms & buttons.03 Text area input
+  */
+  /*
+  Radio button input
+
+  Markup: templates/radio-button-input.html
+
+  Style guide: Forms & buttons.04 Radio button input
+  */
+  /*
+Checkbox input
+
+Markup: templates/checkbox-input.html
+
+Style guide: Forms & buttons.05 Checkbox input
+*/ }
+  form fieldset,
+  form p {
+    margin: 0 0 1.2em 0;
+    padding: 0;
+    border: none; }
+  form legend {
+    margin-bottom: 0.8em; }
+  form label {
+    display: block;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em; }
+    @media screen and (min-width: 768px) {
+      form label {
+        margin-top: 0.8em;
+        margin-bottom: 0.8em; } }
+  form .hint {
+    display: block;
+    margin-bottom: 0.4em;
+    font-size: 0.875rem;
+    color: #313131; }
+  form textarea {
+    resize: vertical; }
+  form input[type='radio'], form input[type='checkbox'] {
+    height: 1px;
+    left: -10000px;
+    position: absolute;
+    visibility: visible;
+    width: 1px; }
+    form input[type='radio']:focus + label, form input[type='checkbox']:focus + label {
+      outline: 1px solid #bbbbbb; }
+    form input[type='radio']:invalid + label, form input[type='checkbox']:invalid + label {
+      color: #c00; }
+      form input[type='radio']:invalid + label::before, form input[type='checkbox']:invalid + label::before {
+        border-color: #c00; }
+    form input[type='radio'] + label, form input[type='checkbox'] + label {
+      display: inline-block;
+      float: left;
+      width: 100%;
+      margin-left: 0.8em;
+      border: 0;
+      height: 3em;
+      left: 1px;
+      margin-bottom: -4em;
+      position: relative;
+      width: 3em; }
+      form input[type='radio'] + label::before, form input[type='checkbox'] + label::before {
+        display: inline-block;
+        float: left;
+        height: 27px;
+        width: 27px;
+        text-align: center;
+        margin-right: 14px; }
+        @media screen and (min-width: 768px) {
+          form input[type='radio'] + label::before, form input[type='checkbox'] + label::before {
+            top: 9px; } }
+  form input[type='radio'] + label::before {
+    border: 2px solid #313131;
+    border-radius: 50%;
+    content: '';
+    left: 18px; }
+  form input[type='radio']:checked + label {
+    font-weight: bold; }
+    form input[type='radio']:checked + label::before {
+      border-radius: 50%;
+      content: ''; }
+    form input[type='radio']:checked + label::after {
+      width: 17px;
+      height: 17px;
+      background-color: #313131;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      content: '';
+      float: left;
+      margin-left: -36px;
+      margin-top: 5px; }
+      @media screen and (min-width: 768px) {
+        form input[type='radio']:checked + label::after {
+          top: 14px; } }
+  form input[type='checkbox'] + label::before {
+    border: 2px solid #313131;
+    content: ''; }
+  form input[type='checkbox']:checked + label {
+    font-weight: bold; }
+    form input[type='checkbox']:checked + label::before {
+      font-size: 18px;
+      content: ''; }
+    form input[type='checkbox']:checked + label::after {
+      width: 17px;
+      height: 17px;
+      background-color: #313131;
+      border: 1px solid transparent;
+      content: '';
+      float: left;
+      margin-left: -36px;
+      margin-top: 5px; }
+
+/*
+Accessibility
+
+Markup: templates/hint-text.html
+
+Style guide: Forms & buttons.06 Accessibility
+*/
+/*
+Layout
+
+Style guide: Grid.5 Layout
+*/
+/*
+Wrapper class
+
+Style guide: Grid.5 Layout.1 Wrapper
+*/
+.wrapper {
+  padding: 0 2em;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (min-width: 75em) {
+    .wrapper {
+      width: 100%;
+      min-width: 75em; } }
+  .wrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh; }
+  body header[role='banner'],
+  body footer[role='contentinfo'] {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none; }
+  body main {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; }
+
+main {
+  padding: 0 2em;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3.2em;
+  zoom: 1;
+  /*
+  Sidebar
+
+  Style guide: Grid.6 Sidebar
+  */ }
+  @media screen and (min-width: 75em) {
+    main {
+      width: 100%;
+      min-width: 75em; } }
+  main::after {
+    clear: both;
+    content: "";
+    display: table; }
+  main:after {
+    content: '';
+    display: table;
+    clear: both;
+    height: 0; }
+  main .form-wrapper {
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      main .form-wrapper {
+        float: left;
+        display: block;
+        margin-right: 5.64736%;
+        width: 64.78421%; }
+        main .form-wrapper:last-child {
+          margin-right: 0; } }
+  main .sidebar {
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      main .sidebar {
+        float: right;
+        display: block;
+        margin-left: 2.74614%;
+        width: 31.50258%; }
+        main .sidebar:last-child {
+          margin-left: 0; } }
+    @media screen and (min-width: 75em) {
+      main .sidebar {
+        float: right;
+        display: block;
+        margin-left: 2.04556%;
+        width: 23.46583%; }
+        main .sidebar:last-child {
+          margin-left: 0; } }
+  main .content-main {
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      main .content-main {
+        float: right;
+        display: block;
+        margin-left: 2.74614%;
+        width: 65.75129%;
+        margin-left: 0; }
+        main .content-main:last-child {
+          margin-left: 0; } }
+    @media screen and (min-width: 75em) {
+      main .content-main {
+        float: right;
+        display: block;
+        margin-left: 2.04556%;
+        width: 74.48861%;
+        margin-left: 0; }
+        main .content-main:last-child {
+          margin-left: 0; } }
+    main .content-main:first-child {
+      width: 100%;
+      margin-left: 0%; }
+      @media screen and (min-width: 768px) {
+        main .content-main:first-child {
+          float: left;
+          display: block;
+          margin-right: 2.74614%;
+          width: 65.75129%;
+          margin-left: 0%; }
+          main .content-main:first-child:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 75em) {
+        main .content-main:first-child {
+          float: left;
+          display: block;
+          margin-right: 2.04556%;
+          width: 61.73292%;
+          margin-left: 0%; }
+          main .content-main:first-child:last-child {
+            margin-right: 0; } }
+  main.sidebar-has-controls .sidebar {
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      main.sidebar-has-controls .sidebar {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 31.50258%;
+        margin-left: 0; }
+        main.sidebar-has-controls .sidebar:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 75em) {
+      main.sidebar-has-controls .sidebar {
+        float: left;
+        display: block;
+        margin-right: 2.04556%;
+        width: 23.46583%; }
+        main.sidebar-has-controls .sidebar:last-child {
+          margin-right: 0; } }
+  main.sidebar-has-controls .content-main {
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      main.sidebar-has-controls .content-main {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 65.75129%; }
+        main.sidebar-has-controls .content-main:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 75em) {
+      main.sidebar-has-controls .content-main {
+        float: left;
+        display: block;
+        margin-right: 2.04556%;
+        width: 55.35507%;
+        margin-left: 6.37785%; }
+        main.sidebar-has-controls .content-main:last-child {
+          margin-right: 0; } }
+
+/*
+Header & footer
+
+Style guide: Grid.7 Header & footer
+*/
+header[role='banner'] {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 100%; }
+  header[role='banner']::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+footer[role='contentinfo'] {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 8.71718%;
+  margin-top: 3.2em;
+  min-width: 100%; }
+  footer[role='contentinfo']::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+/*
+Accessibility
+
+Style guide: Grid.8 Accessibility
+*/
+figure {
+  margin: 0; }
+  figure img {
+    display: block; }
+
+img {
+  max-width: 100%; }
+
+/*
+Link styles
+
+Collection: Foundation
+
+Style guide: Link styles
+*/
+/*
+Hover, focus & external links
+
+The `:hover` and `:focus` styles are identical.
+
+Inverted colour versions of `:hover` and `:focus` are created using `@mixin link-colours` where required (for example, in the page header).
+
+The `_buttons.scss` partial includes a similar mixin: `@mixin button-colours.
+
+Markup: templates/basic-links.html
+
+Style guide: Link styles.1 Hover links
+*/
+header[role='banner'] a[rel~='external']::after, body > main a[rel~='external']::after, footer[role='contentinfo'] a[rel~='external']::after, .primary-nav ul a[rel~='external']::after,
+.local-nav ul a[rel~='external']::after, [class^='breadcrumbs'] a[rel~='external']::after, [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after, .skip-to a[rel~='external']::after, [class^='controls'] a[rel~='external']::after, .govau--header a[rel~='external']::after, .prerelease-govau--header a[rel~='external']::after, .hero a[rel~='external']::after,
+.hero-sml a[rel~='external']::after,
+.hero-med a[rel~='external']::after, .tags a[rel~='external']::after {
+  content: '';
+  position: absolute;
+  display: inline;
+  width: 1.2em;
+  height: 1.2em;
+  background-repeat: no-repeat;
+  background-position: right 0.4em;
+  border-bottom: 1px solid transparent; }
+
+.local-nav ul .placeholder-link {
+  display: block;
+  border-left: 4px solid transparent;
+  padding: 0.6em 0.8em; }
+
+.local-nav ul ul ul .placeholder-link {
+  padding-left: 1.6em; }
+
+.local-nav ul ul ul ul .placeholder-link {
+  padding-left: 2.4em; }
+
+header[role='banner'] {
+  color: #313131;
+  /*
+  See more link
+
+  Markup: templates/see-more-link.html
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+  /*
+  Placeholder links (prototyping)
+
+  Markup: templates/placeholder-link.html
+
+  Style guide: Link styles.3 Placeholder links
+  */ }
+  header[role='banner'] a {
+    color: #313131;
+    text-decoration: none;
+    outline: none;
+    border-bottom: solid 1px #5bcbe3;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+    -webkit-transition-property: background-color, border-color, color;
+    transition-property: background-color, border-color, color; }
+    header[role='banner'] a:hover, header[role='banner'] a:focus {
+      background-color: #5bcbe3;
+      color: #313131; }
+    header[role='banner'] a[rel~='external'] {
+      display: inline;
+      position: relative;
+      margin-right: 1.6em; }
+      header[role='banner'] a[rel~='external']:hover {
+        border-color: transparent; }
+      header[role='banner'] a[rel~='external']::after {
+        background-size: 0.9em auto; }
+  header[role='banner'] .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.6em;
+    font-weight: 700;
+    color: #18788d; }
+    header[role='banner'] .see-more::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1.2em;
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      background-repeat: no-repeat;
+      background-position: right 0.4em;
+      background-size: 0.64em auto; }
+    header[role='banner'] .see-more:hover, header[role='banner'] .see-more:focus {
+      color: #313131; }
+  header[role='banner'] span.placeholder-link {
+    color: rgba(49, 49, 49, 0.7);
+    border-bottom: none;
+    cursor: not-allowed; }
+    header[role='banner'] span.placeholder-link:hover {
+      cursor: not-allowed; }
+
+body > main {
+  color: #313131;
+  /*
+  See more link
+
+  Markup: templates/see-more-link.html
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+  /*
+  Placeholder links (prototyping)
+
+  Markup: templates/placeholder-link.html
+
+  Style guide: Link styles.3 Placeholder links
+  */ }
+  body > main a {
+    color: #313131;
+    text-decoration: none;
+    outline: none;
+    border-bottom: solid 1px #5bcbe3;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+    -webkit-transition-property: background-color, border-color, color;
+    transition-property: background-color, border-color, color; }
+    body > main a:hover, body > main a:focus {
+      background-color: #5bcbe3;
+      color: #313131; }
+    body > main a[rel~='external'] {
+      display: inline;
+      position: relative;
+      margin-right: 1.6em; }
+      body > main a[rel~='external']:hover {
+        border-color: transparent; }
+      body > main a[rel~='external']::after {
+        background-size: 0.9em auto; }
+  body > main .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.6em;
+    font-weight: 700;
+    color: #18788d; }
+    body > main .see-more::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1.2em;
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      background-repeat: no-repeat;
+      background-position: right 0.4em;
+      background-size: 0.64em auto; }
+    body > main .see-more:hover, body > main .see-more:focus {
+      color: #313131; }
+  body > main span.placeholder-link {
+    color: rgba(49, 49, 49, 0.7);
+    border-bottom: none;
+    cursor: not-allowed; }
+    body > main span.placeholder-link:hover {
+      cursor: not-allowed; }
+  body > main button,
+  body > main .button,
+  body > main [role='button'],
+  body > main [type='submit'],
+  body > main [type='reset'],
+  body > main [type='button'] {
+    background-color: #18788d;
+    color: #fff;
+    border-color: #115361; }
+    body > main button:hover, body > main button:focus,
+    body > main .button:hover,
+    body > main .button:focus,
+    body > main [role='button']:hover,
+    body > main [role='button']:focus,
+    body > main [type='submit']:hover,
+    body > main [type='submit']:focus,
+    body > main [type='reset']:hover,
+    body > main [type='reset']:focus,
+    body > main [type='button']:hover,
+    body > main [type='button']:focus {
+      background-color: #115361;
+      color: #fff; }
+    body > main button:active,
+    body > main .button:active,
+    body > main [role='button']:active,
+    body > main [type='submit']:active,
+    body > main [type='reset']:active,
+    body > main [type='button']:active {
+      background-color: #146577; }
+
+footer[role='contentinfo'] {
+  color: #313131;
+  /*
+  See more link
+
+  Markup: templates/see-more-link.html
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+  /*
+  Placeholder links (prototyping)
+
+  Markup: templates/placeholder-link.html
+
+  Style guide: Link styles.3 Placeholder links
+  */ }
+  footer[role='contentinfo'] a {
+    color: #313131;
+    text-decoration: none;
+    outline: none;
+    border-bottom: solid 1px #5bcbe3;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+    -webkit-transition-property: background-color, border-color, color;
+    transition-property: background-color, border-color, color; }
+    footer[role='contentinfo'] a:hover, footer[role='contentinfo'] a:focus {
+      background-color: #5bcbe3;
+      color: #313131; }
+    footer[role='contentinfo'] a[rel~='external'] {
+      display: inline;
+      position: relative;
+      margin-right: 1.6em; }
+      footer[role='contentinfo'] a[rel~='external']:hover {
+        border-color: transparent; }
+      footer[role='contentinfo'] a[rel~='external']::after {
+        background-size: 0.9em auto; }
+  footer[role='contentinfo'] .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.6em;
+    font-weight: 700;
+    color: #18788d; }
+    footer[role='contentinfo'] .see-more::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1.2em;
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      background-repeat: no-repeat;
+      background-position: right 0.4em;
+      background-size: 0.64em auto; }
+    footer[role='contentinfo'] .see-more:hover, footer[role='contentinfo'] .see-more:focus {
+      color: #313131; }
+  footer[role='contentinfo'] span.placeholder-link {
+    color: rgba(49, 49, 49, 0.7);
+    border-bottom: none;
+    cursor: not-allowed; }
+    footer[role='contentinfo'] span.placeholder-link:hover {
+      cursor: not-allowed; }
+  footer[role='contentinfo'] button,
+  footer[role='contentinfo'] .button,
+  footer[role='contentinfo'] [role='button'],
+  footer[role='contentinfo'] [type='submit'],
+  footer[role='contentinfo'] [type='reset'],
+  footer[role='contentinfo'] [type='button'] {
+    background-color: transparent;
+    color: #115361;
+    border-color: #115361; }
+    footer[role='contentinfo'] button:hover, footer[role='contentinfo'] button:focus,
+    footer[role='contentinfo'] .button:hover,
+    footer[role='contentinfo'] .button:focus,
+    footer[role='contentinfo'] [role='button']:hover,
+    footer[role='contentinfo'] [role='button']:focus,
+    footer[role='contentinfo'] [type='submit']:hover,
+    footer[role='contentinfo'] [type='submit']:focus,
+    footer[role='contentinfo'] [type='reset']:hover,
+    footer[role='contentinfo'] [type='reset']:focus,
+    footer[role='contentinfo'] [type='button']:hover,
+    footer[role='contentinfo'] [type='button']:focus {
+      background-color: #115361;
+      color: #fff; }
+    footer[role='contentinfo'] button:active,
+    footer[role='contentinfo'] .button:active,
+    footer[role='contentinfo'] [role='button']:active,
+    footer[role='contentinfo'] [type='submit']:active,
+    footer[role='contentinfo'] [type='reset']:active,
+    footer[role='contentinfo'] [type='button']:active {
+      background-color: #146577; }
+
+/*
+List styles
+
+Collection: Components
+
+Style guide: List styles
+*/
+/*
+Horizontal style
+
+Markup: templates/lists-horizontal.html
+
+Style guide: List styles.1 Horizontal style
+*/
+/*
+Vertical style
+
+By default the vertical lists are displayed in 2 columns.
+
+You can change the number of columns used:
+
+- `.vertical-list--thirds` give 3 columns of list items
+- `.vertical-list--fourths` give 4 columns of list items.
+
+For <a href="http://caniuse.com/#feat=flexbox" rel="external">browsers that don't support Flexbox layout</a> lists will appear as in horizontal style with images (if used) below each list item.
+
+Markup: templates/lists-vertical.html
+
+<details open data-label="vertical-list-styles-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: List styles.2 Vertical style
+*/
+/*
+Small list style
+
+Use small list style for large groups of list items.
+
+Markup: templates/lists-small.html
+
+<details open data-label="small-list-styles-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: List styles.3 Small list style
+*/
+/*
+Highlighted words style
+
+Use highlighted words style for a list with repeating phrases.
+
+Markup: templates/lists-highlighted.html
+
+<details open data-label="highlighted-list-styles-accessibility" aria-expanded="false">
+  <summary>Accessibility notes</summary>
+  <div class="accordion-panel">
+
+    <p>**Passed** HTML5 validation by <a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a><br/>
+    **Passed** WCAG:AA automated by <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a><br/>
+    **Untested** WCAG:AA manual compliance<br/>
+    **Untested** Supported browsers tested</p>
+  </div>
+</details>
+
+Style guide: List styles.4 Highlighted word style
+*/
+.list-horizontal, .list-vertical, .list-vertical--thirds, .list-vertical--fourths, footer[role='contentinfo'] .footer-top nav, .list-small, .list-highlighted {
+  margin-top: 2.24em;
+  padding: 0;
+  list-style: none; }
+  .list-horizontal::after, .list-vertical::after, .list-vertical--thirds::after, .list-vertical--fourths::after, footer[role='contentinfo'] .footer-top nav::after, .list-small::after, .list-highlighted::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .list-horizontal .meta, .list-vertical .meta, .list-vertical--thirds .meta, .list-vertical--fourths .meta, footer[role='contentinfo'] .footer-top nav .meta, .list-small .meta, .list-highlighted .meta {
+    font-size: 87.5%;
+    margin-bottom: 0.8em; }
+    .list-horizontal .meta time, .list-vertical .meta time, .list-vertical--thirds .meta time, .list-vertical--fourths .meta time, footer[role='contentinfo'] .footer-top nav .meta time, .list-small .meta time, .list-highlighted .meta time {
+      color: #6e6e6e; }
+  .list-horizontal > li, .list-vertical > li, .list-vertical--thirds > li, .list-vertical--fourths > li, footer[role='contentinfo'] .footer-top nav > li, .list-small > li, .list-highlighted > li {
+    padding: 2.74614% 0;
+    border-bottom: solid 1px #bbbbbb;
+    margin-bottom: 0; }
+  .list-horizontal h2, .list-vertical h2, .list-vertical--thirds h2, .list-vertical--fourths h2, footer[role='contentinfo'] .footer-top nav h2, .list-small h2, .list-highlighted h2, .list-horizontal .display, .list-vertical .display, .list-vertical--thirds .display, .list-vertical--fourths .display, footer[role='contentinfo'] .footer-top nav .display, .list-small .display, .list-highlighted .display, .list-horizontal h3, .list-vertical h3, .list-vertical--thirds h3, .list-vertical--fourths h3, footer[role='contentinfo'] .footer-top nav h3, .list-small h3, .list-highlighted h3, .list-horizontal h4, .list-vertical h4, .list-vertical--thirds h4, .list-vertical--fourths h4, footer[role='contentinfo'] .footer-top nav h4, .list-small h4, .list-highlighted h4, .list-horizontal h5, .list-vertical h5, .list-vertical--thirds h5, .list-vertical--fourths h5, footer[role='contentinfo'] .footer-top nav h5, .list-small h5, .list-highlighted h5, .list-horizontal h6, .list-vertical h6, .list-vertical--thirds h6, .list-vertical--fourths h6, footer[role='contentinfo'] .footer-top nav h6, .list-small h6, .list-highlighted h6 {
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.4; }
+  .list-horizontal img, .list-vertical img, .list-vertical--thirds img, .list-vertical--fourths img, footer[role='contentinfo'] .footer-top nav img, .list-small img, .list-highlighted img {
+    display: block; }
+
+.list-horizontal > li {
+  width: 100%;
+  max-width: none; }
+  @media screen and (min-width: 768px) {
+    .list-horizontal > li {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; } }
+  @media screen and (max-width: 420px) {
+    .list-horizontal > li figure {
+      margin-bottom: 1.2em; } }
+  @media screen and (min-width: 768px) {
+    .list-horizontal > li figure {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 35%;
+          -ms-flex: 0 0 35%;
+              flex: 0 0 35%;
+      margin-right: 1.6em; } }
+  .list-horizontal > li .meta time {
+    display: inline-block;
+    margin-right: 0.8em; }
+  .list-horizontal > li:last-child {
+    border-bottom: none; }
+  .list-horizontal > li.hero-item {
+    border-top: solid 1px #bbbbbb; }
+    @media screen and (min-width: 768px) {
+      .list-horizontal > li.hero-item figure {
+        -webkit-flex-basis: 65%;
+            -ms-flex-preferred-size: 65%;
+                flex-basis: 65%; } }
+
+.list-vertical, .list-vertical--thirds, .list-vertical--fourths, footer[role='contentinfo'] .footer-top nav {
+  /*
+  Consider how to create an equal height grid of list items.
+  Could use this for overflow http://jsfiddle.net/barney/TPP8g/
+
+  &.vertical-list--grid {
+    > li {
+      min-height: 13em;
+    }
+  }
+  */ }
+  .list-vertical:after, .list-vertical--thirds:after, .list-vertical--fourths:after, footer[role='contentinfo'] .footer-top nav:after {
+    content: '';
+    display: table;
+    clear: both;
+    height: 0; }
+  .list-vertical > li, .list-vertical--thirds > li, .list-vertical--fourths > li, footer[role='contentinfo'] .footer-top nav > li {
+    border-top: 6px solid #18788d;
+    border-bottom: none; }
+    .list-vertical > li article, .list-vertical--thirds > li article, .list-vertical--fourths > li article, footer[role='contentinfo'] .footer-top nav > li article {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+      .list-vertical > li article h3, .list-vertical--thirds > li article h3, .list-vertical--fourths > li article h3, footer[role='contentinfo'] .footer-top nav > li article h3, .list-vertical > li article div, .list-vertical--thirds > li article div, .list-vertical--fourths > li article div, footer[role='contentinfo'] .footer-top nav > li article div, .list-vertical > li article p, .list-vertical--thirds > li article p, .list-vertical--fourths > li article p, footer[role='contentinfo'] .footer-top nav > li article p {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%; }
+    .list-vertical > li p, .list-vertical--thirds > li p, .list-vertical--fourths > li p, footer[role='contentinfo'] .footer-top nav > li p {
+      min-height: auto; }
+    .list-vertical > li .meta, .list-vertical--thirds > li .meta, .list-vertical--fourths > li .meta, footer[role='contentinfo'] .footer-top nav > li .meta {
+      -webkit-box-ordinal-group: 0;
+      -webkit-order: -1;
+          -ms-flex-order: -1;
+              order: -1; }
+      .list-vertical > li .meta time, .list-vertical--thirds > li .meta time, .list-vertical--fourths > li .meta time, footer[role='contentinfo'] .footer-top nav > li .meta time {
+        display: block; }
+
+.list-vertical.no-border li:nth-child(-n+2) {
+  border-top: none;
+  padding-top: 0; }
+
+@media screen and (min-width: 768px) {
+  .list-vertical > li {
+    float: left;
+    display: block;
+    margin-right: 2.74614%;
+    width: 48.62693%;
+    width: 45%; }
+    .list-vertical > li:last-child {
+      margin-right: 0; }
+    .list-vertical > li:nth-child(2n) {
+      margin-right: 0; }
+    .list-vertical > li:nth-child(2n+1) {
+      clear: left; } }
+
+.list-vertical--thirds.no-border li:nth-child(-n+3) {
+  border-top: none;
+  padding-top: 0; }
+
+@media screen and (min-width: 768px) {
+  .list-vertical--thirds > li {
+    float: left;
+    display: block;
+    margin-right: 2.74614%;
+    width: 48.62693%;
+    width: 45%; }
+    .list-vertical--thirds > li:last-child {
+      margin-right: 0; }
+    .list-vertical--thirds > li:nth-child(2n) {
+      margin-right: 0; }
+    .list-vertical--thirds > li:nth-child(2n+1) {
+      clear: left; } }
+
+@media screen and (min-width: 75em) {
+  .list-vertical--thirds > li {
+    float: left;
+    display: block;
+    margin-right: 2.74614%;
+    width: 31.50258%;
+    width: 30%; }
+    .list-vertical--thirds > li:nth-child(2n) {
+      margin-right: 2.74614%; }
+    .list-vertical--thirds > li:nth-child(2n+1) {
+      clear: none; }
+    .list-vertical--thirds > li:last-child {
+      margin-right: 0; }
+    .list-vertical--thirds > li:nth-child(3n) {
+      margin-right: 0; }
+    .list-vertical--thirds > li:nth-child(3n+1) {
+      clear: left; } }
+
+.list-vertical--fourths.no-border li:nth-child(-n+4) {
+  border-top: none;
+  padding-top: 0; }
+
+@media screen and (min-width: 768px) {
+  .list-vertical--fourths > li {
+    float: left;
+    display: block;
+    margin-right: 2.74614%;
+    width: 48.62693%; }
+    .list-vertical--fourths > li:last-child {
+      margin-right: 0; }
+    .list-vertical--fourths > li:nth-child(2n) {
+      margin-right: 0; }
+    .list-vertical--fourths > li:nth-child(2n+1) {
+      clear: left; } }
+
+@media screen and (min-width: 75em) {
+  .list-vertical--fourths > li {
+    float: left;
+    display: block;
+    margin-right: 2.74614%;
+    width: 22.9404%;
+    width: 21%; }
+    .list-vertical--fourths > li:nth-child(2n) {
+      margin-right: 2.74614%; }
+    .list-vertical--fourths > li:nth-child(2n+1) {
+      clear: none; }
+    .list-vertical--fourths > li:last-child {
+      margin-right: 0; }
+    .list-vertical--fourths > li:nth-child(4n) {
+      margin-right: 0; }
+    .list-vertical--fourths > li:nth-child(4n+1) {
+      clear: left; } }
+
+.list-small {
+  border-top: solid 1px #bbbbbb; }
+  .list-small a {
+    display: block;
+    padding: 0.8em;
+    padding-left: 3.2em;
+    border-bottom: none;
+    background-repeat: no-repeat;
+    background-position: 1.6em 1.4em;
+    background-size: 0.4em auto;
+    -webkit-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out; }
+    .list-small a:hover, .list-small a:active {
+      background-position: 2em 1.4em;
+      background-color: #f0f3f5; }
+      .list-small a:hover span, .list-small a:active span {
+        color: #146577; }
+  .list-small span {
+    color: #313131;
+    text-decoration: none;
+    border-bottom: 1px solid; }
+  .list-small li {
+    padding: 0; }
+  .list-small .meta {
+    display: block;
+    margin: 0; }
+
+.list-highlighted li {
+  list-style: none;
+  border-bottom: 0;
+  padding-bottom: 1.6em;
+  padding-top: 0; }
+
+.list-highlighted a {
+  font-size: 150%;
+  font-weight: 700;
+  line-height: 1.4; }
+  .list-highlighted a span {
+    display: block;
+    font-size: 62.5%; }
+
+/*
+Navigation
+
+Make sure users understand where they are in the service, where they have been and where they can go.
+
+Collection: Patterns
+
+Style guide: Navigation
+*/
+/*
+Global navigation
+
+The global navigation panel is collapsed (hidden) by default.
+
+Older browsers (IE8 and lower) and those without JavaScript will get an expanded menu without a hamburger button.
+
+Markup: templates/global-navigation.html
+
+<details open data-label="global-nav-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: Navigation.1 Global navigation
+*/
+/*
+Local navigation
+
+Use local navigation to help the user go straight to the specific content that meets their needs.
+
+The framework provides a vertical navigation menu. The home page title is always at top, followed by up to 3 levels of navigation.
+
+Small screens (up to `$tablet` breakpoint) will see the menu closed (unexpanded) by default.
+
+Older browsers (IE8 and lower) and those without JavaScript will see an expanded menu. It will not be able to be closed.
+
+Use active state to show where the user is. Use `class="is-active"` for each clicked menu item. Use  `class="is-active is-current"` for the current location.
+
+Markup: templates/local-navigation.html
+
+<details open data-label="local-nav-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: Navigation.2 Local navigation
+*/
+/*
+Breadcrumbs
+
+Breadcrumbs help the user understand where they are in the service and how they got there.
+
+They appear directly under a page header or hero, from `$tablet` breakpoint upwards.
+
+Markup: templates/breadcrumbs.html
+
+<details open data-label="breadcrumb-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: Navigation.3 Breadcrumbs
+*/
+/*
+Contents links
+
+Contents links (index links) help users understand the page structure.
+
+A heading is optional &mdash; use the correct header level for the page structure.
+
+Users with modern browsers will see a smooth scroll down the page.
+
+Markup: templates/index-links.html
+
+<details open data-label="index-links-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: Navigation.4 Contents links
+*/
+/*
+Inline links block
+
+Markup: templates/inline-links.html
+
+Style guide: Navigation.5 Inline links
+*/
+/*
+Footer navigation
+
+Footers help users who reach the bottom of a page without finding what they want.
+
+This framework uses CSS Flexboxes to manage columns. It provides:
+
+- lists of links arranged horizontally
+- 2 columns for `$mobile` and `$tablet` breakpoint
+- 4 columns for `$desktop` breakpoint.
+
+Markup: templates/footer-navigation.html
+
+<details open data-label="footer-nav-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: Navigation.6 Footer navigation
+*/
+.govau--header .nav-toggle {
+  position: relative;
+  float: right;
+  height: auto;
+  width: auto;
+  margin: 0.4em 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid; }
+  .govau--header .nav-toggle::before {
+    content: '';
+    position: absolute;
+    top: .25em;
+    bottom: .25em;
+    left: -1.6em;
+    width: 1.2em;
+    background-repeat: no-repeat;
+    background-size: auto 100%; }
+  .govau--header .nav-toggle.active::before {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; }
+  .govau--header .nav-toggle, .govau--header .nav-toggle:hover {
+    background-color: transparent;
+    color: #fff; }
+
+.global-nav {
+  clear: both;
+  overflow: hidden; }
+  .global-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1.6em 0; }
+    @media screen and (min-width: 768px) {
+      .global-nav ul {
+        max-width: 75em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.6em; }
+        .global-nav ul::after {
+          clear: both;
+          content: "";
+          display: table; } }
+  .global-nav li {
+    margin: 0;
+    border-bottom: 1px solid rgba(187, 187, 187, 0.5); }
+    .global-nav li:first-child {
+      border-top: 1px solid rgba(187, 187, 187, 0.5); }
+    @media screen and (min-width: 768px) {
+      .global-nav li {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 48.62693%; }
+        .global-nav li:last-child {
+          margin-right: 0; }
+        .global-nav li:nth-child(2n) {
+          margin-right: 0; }
+        .global-nav li:nth-child(2n+1) {
+          clear: left; }
+        .global-nav li:nth-child(2) {
+          border-top: 1px solid rgba(187, 187, 187, 0.5); } }
+    @media screen and (min-width: 75em) {
+      .global-nav li {
+        float: left;
+        display: block;
+        margin-right: 2.04556%;
+        width: 48.97722%; }
+        .global-nav li:last-child {
+          margin-right: 0; } }
+    .global-nav li a {
+      display: block;
+      border: none;
+      padding: 0.8em 0 1em;
+      color: #fff; }
+      .global-nav li a:focus, .global-nav li a:hover {
+        background-color: transparent;
+        color: #fff; }
+  .global-nav .feedback {
+    display: block; }
+    @media screen and (min-width: 768px) {
+      .global-nav .feedback {
+        display: none; } }
+  .global-nav:focus {
+    outline: none; }
+
+.sidebar {
+  padding: 0 0 1.6em; }
+
+.nav-toggle {
+  position: relative;
+  width: 100%;
+  margin: 1.6em 0 0;
+  border: 0;
+  background-color: #f0f3f5;
+  text-align: left;
+  font-weight: 400;
+  color: #043751; }
+  .nav-toggle:focus, .nav-toggle:hover {
+    background-color: #bbbbbb; }
+  .nav-toggle::before {
+    content: '';
+    position: absolute;
+    top: .5em;
+    bottom: .5em;
+    right: 0.8em;
+    width: 1.2em;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    transition: -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; }
+  .nav-toggle.active {
+    margin-bottom: 0; }
+    .nav-toggle.active::before {
+      -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg); }
+  @media screen and (min-width: 768px) {
+    .nav-toggle {
+      display: none; } }
+
+.local-nav {
+  padding-top: 0; }
+  @media screen and (min-width: 768px) {
+    .local-nav {
+      padding: 1.6em 0; } }
+
+.primary-nav,
+.local-nav {
+  overflow: hidden; }
+  .primary-nav ul,
+  .local-nav ul {
+    color: #313131;
+    /*
+  See more link
+
+  Markup: templates/see-more-link.html
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+    /*
+  Placeholder links (prototyping)
+
+  Markup: templates/placeholder-link.html
+
+  Style guide: Link styles.3 Placeholder links
+  */
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .primary-nav ul a,
+    .local-nav ul a {
+      color: #313131;
+      text-decoration: none;
+      outline: none;
+      border-bottom: solid 1px #def4f9;
+      -webkit-transition-timing-function: ease-in-out;
+              transition-timing-function: ease-in-out;
+      -webkit-transition-duration: 0.1s;
+              transition-duration: 0.1s;
+      -webkit-transition-property: background-color, border-color, color;
+      transition-property: background-color, border-color, color; }
+      .primary-nav ul a:hover, .primary-nav ul a:focus,
+      .local-nav ul a:hover,
+      .local-nav ul a:focus {
+        background-color: #def4f9;
+        color: #313131; }
+      .primary-nav ul a[rel~='external'],
+      .local-nav ul a[rel~='external'] {
+        display: inline;
+        position: relative;
+        margin-right: 1.6em; }
+        .primary-nav ul a[rel~='external']:hover,
+        .local-nav ul a[rel~='external']:hover {
+          border-color: transparent; }
+        .primary-nav ul a[rel~='external']::after,
+        .local-nav ul a[rel~='external']::after {
+          background-size: 0.9em auto; }
+    .primary-nav ul .see-more,
+    .local-nav ul .see-more {
+      display: inline-block;
+      position: relative;
+      margin-right: 1.6em;
+      font-weight: 700;
+      color: #18788d; }
+      .primary-nav ul .see-more::after,
+      .local-nav ul .see-more::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -1.2em;
+        display: block;
+        width: 1.2em;
+        height: 1.2em;
+        background-repeat: no-repeat;
+        background-position: right 0.4em;
+        background-size: 0.64em auto; }
+      .primary-nav ul .see-more:hover, .primary-nav ul .see-more:focus,
+      .local-nav ul .see-more:hover,
+      .local-nav ul .see-more:focus {
+        color: #313131; }
+    .primary-nav ul span.placeholder-link,
+    .local-nav ul span.placeholder-link {
+      color: rgba(49, 49, 49, 0.7);
+      border-bottom: none;
+      cursor: not-allowed; }
+      .primary-nav ul span.placeholder-link:hover,
+      .local-nav ul span.placeholder-link:hover {
+        cursor: not-allowed; }
+    .primary-nav ul ul,
+    .local-nav ul ul {
+      font-size: 0.875rem;
+      margin: 0;
+      text-transform: none; }
+      .primary-nav ul ul li:last-child,
+      .local-nav ul ul li:last-child {
+        border-bottom: none; }
+      .primary-nav ul ul ul a,
+      .local-nav ul ul ul a {
+        padding-left: 1.6em;
+        border-bottom: 0; }
+      .primary-nav ul ul ul ul a,
+      .local-nav ul ul ul ul a {
+        padding-left: 2.4em;
+        background-repeat: no-repeat;
+        background-position: 1.6em center;
+        background-size: 0.4em auto; }
+    .primary-nav ul li,
+    .local-nav ul li {
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid #bbbbbb; }
+      .primary-nav ul li:first-child,
+      .local-nav ul li:first-child {
+        border-top: 1px solid #bbbbbb; }
+    .primary-nav ul a,
+    .local-nav ul a {
+      display: block;
+      border: none;
+      border-left: 4px solid transparent;
+      border-bottom: none;
+      padding: 0.8em;
+      text-decoration: none;
+      -webkit-transition: border-color 0.1s ease-in-out;
+      transition: border-color 0.1s ease-in-out; }
+      .primary-nav ul a:hover,
+      .local-nav ul a:hover {
+        border-color: #043751; }
+      .primary-nav ul a.is-active,
+      .local-nav ul a.is-active {
+        font-weight: 700; }
+      .primary-nav ul a.is-current,
+      .local-nav ul a.is-current {
+        background-color: #def4f9; }
+
+.primary-nav {
+  padding: 1.6em 0; }
+  .primary-nav .nav-heading {
+    color: #115361;
+    background: #f0f3f5;
+    margin: 1.6em 0; }
+    .primary-nav .nav-heading .chevron {
+      float: right; }
+
+.js .primary-nav ul {
+  margin: 0;
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .js .primary-nav ul {
+      margin: inherit;
+      display: block; } }
+
+.js .nav-heading {
+  display: block;
+  background-color: #146577;
+  color: #fff;
+  padding: 0.6em 0.8em; }
+  .js .nav-heading:hover {
+    border-color: #146577;
+    background-color: #146577; }
+  @media screen and (min-width: 768px) {
+    .js .nav-heading {
+      display: none; } }
+
+[class^='breadcrumbs'] {
+  color: #313131;
+  /*
+  See more link
+
+  Markup: templates/see-more-link.html
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+  /*
+  Placeholder links (prototyping)
+
+  Markup: templates/placeholder-link.html
+
+  Style guide: Link styles.3 Placeholder links
+  */
+  display: none;
+  width: 100%;
+  margin: 0;
+  background-color: #f0f3f5;
+  color: #313131; }
+  [class^='breadcrumbs'] a {
+    color: #313131;
+    text-decoration: none;
+    outline: none;
+    border-bottom: solid 1px #5bcbe3;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+    -webkit-transition-property: background-color, border-color, color;
+    transition-property: background-color, border-color, color; }
+    [class^='breadcrumbs'] a:hover, [class^='breadcrumbs'] a:focus {
+      background-color: #5bcbe3;
+      color: #313131; }
+    [class^='breadcrumbs'] a[rel~='external'] {
+      display: inline;
+      position: relative;
+      margin-right: 1.6em; }
+      [class^='breadcrumbs'] a[rel~='external']:hover {
+        border-color: transparent; }
+      [class^='breadcrumbs'] a[rel~='external']::after {
+        background-size: 0.9em auto; }
+  [class^='breadcrumbs'] .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.6em;
+    font-weight: 700;
+    color: #18788d; }
+    [class^='breadcrumbs'] .see-more::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1.2em;
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      background-repeat: no-repeat;
+      background-position: right 0.4em;
+      background-size: 0.64em auto; }
+    [class^='breadcrumbs'] .see-more:hover, [class^='breadcrumbs'] .see-more:focus {
+      color: #313131; }
+  [class^='breadcrumbs'] span.placeholder-link {
+    color: rgba(49, 49, 49, 0.7);
+    border-bottom: none;
+    cursor: not-allowed; }
+    [class^='breadcrumbs'] span.placeholder-link:hover {
+      cursor: not-allowed; }
+  @media screen and (min-width: 768px) {
+    [class^='breadcrumbs'] {
+      display: inline-block; } }
+  [class^='breadcrumbs'] ul {
+    margin: 0;
+    padding: 0.8em 0 0.96em;
+    line-height: 1.2em;
+    list-style: none; }
+    [class^='breadcrumbs'] ul li {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      font-size: 0.875rem; }
+      [class^='breadcrumbs'] ul li:not(:last-child) {
+        margin-right: 0.8em;
+        padding-right: 1.2em;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 0.4em auto; }
+  [class^='breadcrumbs'][class$='--inverted'] {
+    color: #fff;
+    /*
+  See more link
+
+  Markup: templates/see-more-link.html
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+    /*
+  Placeholder links (prototyping)
+
+  Markup: templates/placeholder-link.html
+
+  Style guide: Link styles.3 Placeholder links
+  */
+    background-color: transparent;
+    color: #fff; }
+    [class^='breadcrumbs'][class$='--inverted'] a {
+      color: #fff;
+      text-decoration: none;
+      outline: none;
+      border-bottom: solid 1px #fff;
+      -webkit-transition-timing-function: ease-in-out;
+              transition-timing-function: ease-in-out;
+      -webkit-transition-duration: 0.1s;
+              transition-duration: 0.1s;
+      -webkit-transition-property: background-color, border-color, color;
+      transition-property: background-color, border-color, color; }
+      [class^='breadcrumbs'][class$='--inverted'] a:hover, [class^='breadcrumbs'][class$='--inverted'] a:focus {
+        background-color: #fff;
+        color: #313131; }
+      [class^='breadcrumbs'][class$='--inverted'] a[rel~='external'] {
+        display: inline;
+        position: relative;
+        margin-right: 1.6em; }
+        [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']:hover {
+          border-color: transparent; }
+        [class^='breadcrumbs'][class$='--inverted'] a[rel~='external']::after {
+          background-size: 0.9em auto; }
+    [class^='breadcrumbs'][class$='--inverted'] .see-more {
+      display: inline-block;
+      position: relative;
+      margin-right: 1.6em;
+      font-weight: 700;
+      color: #18788d; }
+      [class^='breadcrumbs'][class$='--inverted'] .see-more::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -1.2em;
+        display: block;
+        width: 1.2em;
+        height: 1.2em;
+        background-repeat: no-repeat;
+        background-position: right 0.4em;
+        background-size: 0.64em auto; }
+      [class^='breadcrumbs'][class$='--inverted'] .see-more:hover, [class^='breadcrumbs'][class$='--inverted'] .see-more:focus {
+        color: #313131; }
+    [class^='breadcrumbs'][class$='--inverted'] span.placeholder-link {
+      color: rgba(255, 255, 255, 0.7);
+      border-bottom: none;
+      cursor: not-allowed; }
+      [class^='breadcrumbs'][class$='--inverted'] span.placeholder-link:hover {
+        cursor: not-allowed; }
+    [class^='breadcrumbs'][class$='--inverted'] ul li:not(:last-child) {
+      color: #fff; }
+
+/*
+Skip links
+
+Provide skip links to navigation and content.
+
+These are hidden visually by default but keyboard accessible.
+
+Include skip links between the opening of the `<body>` and the page `<header>`.
+
+<div class="callout">
+  <p>To test,
+    <a href="javascript:;">click to move focus to this</a> then press <kbd>Tab</kbd> to show:
+  </p>
+  <ul>
+    <li>Skip to main content</li>
+    <li>Skip to section navigation</li>
+  </ul>
+  <p>(The example space will be visually empty until the skip links receive focus.)</p>
+</div>
+
+Markup: templates/skip-link.html
+
+<details open data-label="skip-links-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: Navigation.7 Skip links
+*/
+.skip-to {
+  color: #313131;
+  /*
+  See more link
+
+  Markup: templates/see-more-link.html
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+  /*
+  Placeholder links (prototyping)
+
+  Markup: templates/placeholder-link.html
+
+  Style guide: Link styles.3 Placeholder links
+  */
+  position: relative;
+  z-index: 99; }
+  .skip-to a {
+    color: #313131;
+    text-decoration: none;
+    outline: none;
+    border-bottom: solid 1px #5bcbe3;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+    -webkit-transition-property: background-color, border-color, color;
+    transition-property: background-color, border-color, color; }
+    .skip-to a:hover, .skip-to a:focus {
+      background-color: #5bcbe3;
+      color: #313131; }
+    .skip-to a[rel~='external'] {
+      display: inline;
+      position: relative;
+      margin-right: 1.6em; }
+      .skip-to a[rel~='external']:hover {
+        border-color: transparent; }
+      .skip-to a[rel~='external']::after {
+        background-size: 0.9em auto; }
+  .skip-to .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.6em;
+    font-weight: 700;
+    color: #18788d; }
+    .skip-to .see-more::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1.2em;
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      background-repeat: no-repeat;
+      background-position: right 0.4em;
+      background-size: 0.64em auto; }
+    .skip-to .see-more:hover, .skip-to .see-more:focus {
+      color: #313131; }
+  .skip-to span.placeholder-link {
+    color: rgba(49, 49, 49, 0.7);
+    border-bottom: none;
+    cursor: not-allowed; }
+    .skip-to span.placeholder-link:hover {
+      cursor: not-allowed; }
+  .skip-to a {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    border-radius: 1px; }
+    .skip-to a:active, .skip-to a:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: absolute;
+      width: auto;
+      top: 10px;
+      left: 10px;
+      padding: 0.4em 0.8em; }
+
+.index-links {
+  margin: 3.2em 0 1.6em 0;
+  border-left: 0.4em solid #f0f3f5;
+  padding: 0 0 1.2em 1.2em; }
+  .index-links h2, .index-links .display,
+  .index-links h3,
+  .index-links h4,
+  .index-links h5,
+  .index-links h6 {
+    font-size: 1.0625rem;
+    margin-top: 1.6em;
+    color: #6e6e6e;
+    font-weight: 400; }
+  .index-links ul,
+  .index-links ol {
+    list-style-type: none;
+    margin: 1.6em 0 0;
+    padding: 0; }
+  .index-links li {
+    margin-bottom: 1.2em;
+    font-weight: 700; }
+    .index-links li:last-child {
+      margin-bottom: 0; }
+
+[class^='inline-links'] {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0.8em 0; }
+  [class^='inline-links'] li {
+    display: inline-block;
+    margin: 0 0.4em; }
+  [class^='inline-links'][class$='--inverted'] a {
+    color: #fff; }
+
+/*
+Groups of links
+
+Markup: templates/groups-links.html
+
+Style guide: Navigation.8 Group of links
+*/
+.links-group {
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto; }
+  .links-group::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .links-group:after {
+    content: '';
+    display: table;
+    clear: both;
+    height: 0; }
+  .links-group ul {
+    padding: 0;
+    list-style: none; }
+    .links-group ul li {
+      float: left;
+      display: block;
+      margin-right: 8.71718%;
+      width: 100%;
+      float: left;
+      margin-top: 0.5em; }
+      .links-group ul li:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 767px) {
+        .links-group ul li {
+          float: left;
+          display: block;
+          margin-right: 8.71718%;
+          width: 45.64141%; }
+          .links-group ul li:last-child {
+            margin-right: 0; }
+          .links-group ul li:nth-child(2n) {
+            margin-right: 0; }
+          .links-group ul li:nth-child(2n+1) {
+            clear: left; } }
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        .links-group ul li {
+          float: left;
+          display: block;
+          margin-right: 2.74614%;
+          width: 22.9404%; }
+          .links-group ul li:last-child {
+            margin-right: 0; }
+          .links-group ul li:nth-child(4n) {
+            margin-right: 0; }
+          .links-group ul li:nth-child(4n+1) {
+            clear: left; } }
+      @media screen and (min-width: 75em) {
+        .links-group ul li {
+          float: left;
+          display: block;
+          margin-right: 2.04556%;
+          width: 23.46583%;
+          width: 21%; }
+          .links-group ul li:last-child {
+            margin-right: 0; }
+          .links-group ul li:nth-child(4n) {
+            margin-right: 0; }
+          .links-group ul li:nth-child(4n+1) {
+            clear: left; } }
+
+/*
+Tab navigation (experimental)
+
+Use tab navigation to style a links list as horizontal tabs. Tabs wrap on top of each other for smaller breakpoints.
+
+Use tab navigation in the main content area only.
+
+Client-side context is not affected by the tabs.
+
+Set current location using `class="is-current"`.
+
+Markup: templates/tab-style-nav.html
+
+Style guide: Navigation.07 Tab navigation
+*/
+.inline-tab-nav {
+  border-bottom: solid 1px #6e6e6e;
+  margin: 3.2em 0; }
+  .inline-tab-nav h1, .inline-tab-nav .hero .site-title, .hero .inline-tab-nav .site-title, .inline-tab-nav
+  .hero-sml .site-title,
+  .hero-sml .inline-tab-nav .site-title, .inline-tab-nav
+  .hero-med .site-title,
+  .hero-med .inline-tab-nav .site-title,
+  .inline-tab-nav h2,
+  .inline-tab-nav .display,
+  .inline-tab-nav h3,
+  .inline-tab-nav h4,
+  .inline-tab-nav h5,
+  .inline-tab-nav h6 {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+    padding: 0.8em 1.5em;
+    padding-left: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-bottom: solid 4px transparent; }
+    @media screen and (min-width: 768px) {
+      .inline-tab-nav h1, .inline-tab-nav .hero .site-title, .hero .inline-tab-nav .site-title, .inline-tab-nav
+      .hero-sml .site-title,
+      .hero-sml .inline-tab-nav .site-title, .inline-tab-nav
+      .hero-med .site-title,
+      .hero-med .inline-tab-nav .site-title,
+      .inline-tab-nav h2,
+      .inline-tab-nav .display,
+      .inline-tab-nav h3,
+      .inline-tab-nav h4,
+      .inline-tab-nav h5,
+      .inline-tab-nav h6 {
+        display: table-cell; } }
+  .inline-tab-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    border-top: solid 1px #6e6e6e; }
+    .inline-tab-nav ul::after {
+      clear: both;
+      content: "";
+      display: table; }
+    @media screen and (min-width: 768px) {
+      .inline-tab-nav ul {
+        display: table-cell;
+        border-top: none; } }
+  .inline-tab-nav li {
+    float: left;
+    margin: 0;
+    padding: 0; }
+  .inline-tab-nav a {
+    background: transparent;
+    display: block;
+    float: left;
+    vertical-align: bottom;
+    padding: 0.8em 1.5em;
+    border-bottom: solid 4px transparent; }
+    .inline-tab-nav a:hover, .inline-tab-nav a:focus {
+      color: #313131;
+      border-bottom-color: #18788d; }
+    .inline-tab-nav a.is-current, .inline-tab-nav a.is-active {
+      color: #146577;
+      background-color: #def4f9;
+      border-bottom-color: #18788d; }
+
+/*
+Accessibility
+
+- All navigation must be keyboard accessible and include ARIA tags.
+- Use the HTML `<nav>` element for controls and the given state classes to show which page the user is on.
+- Use short navigation links. They don't have to be the full page title.
+- Test with users to ensure the navigation hierarchy is not too long or too deep.
+- Use the [correct colour contrast](section-colours.html#guide-colours-3-colour-contrast) for breadcrumbs and inline links.
+
+Style guide: Navigation.10 Accessibility
+*/
+footer[role='contentinfo'] {
+  padding: 1.6em 0;
+  background-color: #f0f3f5;
+  border-top: 6px solid #043751; }
+  footer[role='contentinfo']:after {
+    content: '';
+    display: table;
+    clear: both;
+    height: 0; }
+  footer[role='contentinfo'] ul {
+    margin-bottom: 2.4em;
+    padding: 0; }
+  footer[role='contentinfo'] li {
+    list-style: none; }
+  footer[role='contentinfo'] .feedback {
+    display: block;
+    margin-bottom: 1.6em; }
+    @media screen and (min-width: 768px) {
+      footer[role='contentinfo'] .feedback {
+        display: none; } }
+  footer[role='contentinfo'] .button--feedback {
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 30em;
+    background-color: transparent; }
+  footer[role='contentinfo'] .footer-logo {
+    margin-bottom: 3.2em; }
+    @media screen and (min-width: 768px) {
+      footer[role='contentinfo'] .footer-logo {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 22.9404%; }
+        footer[role='contentinfo'] .footer-logo:last-child {
+          margin-right: 0; } }
+    footer[role='contentinfo'] .footer-logo img {
+      max-height: 7em;
+      display: block;
+      margin: 0 auto; }
+      @media screen and (min-width: 768px) {
+        footer[role='contentinfo'] .footer-logo img {
+          margin: 0; } }
+  footer[role='contentinfo'] .footer-links {
+    text-align: center;
+    margin: 0 auto; }
+    @media screen and (min-width: 768px) {
+      footer[role='contentinfo'] .footer-links {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 74.31347%;
+        margin: 0;
+        text-align: left; }
+        footer[role='contentinfo'] .footer-links:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 768px) {
+      footer[role='contentinfo'] .footer-links ul {
+        margin-top: 0; } }
+    footer[role='contentinfo'] .footer-links li {
+      display: block;
+      margin-right: 0.8em; }
+      @media screen and (min-width: 768px) {
+        footer[role='contentinfo'] .footer-links li {
+          display: inline-block; } }
+    footer[role='contentinfo'] .footer-links a {
+      display: inline-block; }
+  footer[role='contentinfo'] .footer-top {
+    margin-bottom: 3.2em;
+    padding-bottom: 3.2em;
+    border-bottom: 1px solid #bbbbbb; }
+    @media screen and (min-width: 768px) {
+      footer[role='contentinfo'] .footer-top nav .footer-menu {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 48.62693%; }
+        footer[role='contentinfo'] .footer-top nav .footer-menu:last-child {
+          margin-right: 0; }
+        footer[role='contentinfo'] .footer-top nav .footer-menu:nth-child(2n) {
+          margin-right: 0; }
+        footer[role='contentinfo'] .footer-top nav .footer-menu:nth-child(2n+1) {
+          clear: left; } }
+    @media screen and (min-width: 75em) {
+      footer[role='contentinfo'] .footer-top nav .footer-menu {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 22.9404%;
+        width: 21%; }
+        footer[role='contentinfo'] .footer-top nav .footer-menu:nth-child(2n) {
+          margin-right: 2.74614%; }
+        footer[role='contentinfo'] .footer-top nav .footer-menu:nth-child(2n+1) {
+          clear: none; }
+        footer[role='contentinfo'] .footer-top nav .footer-menu:last-child {
+          margin-right: 0; }
+        footer[role='contentinfo'] .footer-top nav .footer-menu:nth-child(5n) {
+          margin-right: 0; }
+        footer[role='contentinfo'] .footer-top nav .footer-menu:nth-child(5n+1) {
+          clear: left; } }
+    footer[role='contentinfo'] .footer-top nav .footer-menu h1, footer[role='contentinfo'] .footer-top nav .footer-menu .hero .site-title, .hero footer[role='contentinfo'] .footer-top nav .footer-menu .site-title, footer[role='contentinfo'] .footer-top nav .footer-menu
+    .hero-sml .site-title,
+    .hero-sml footer[role='contentinfo'] .footer-top nav .footer-menu .site-title, footer[role='contentinfo'] .footer-top nav .footer-menu
+    .hero-med .site-title,
+    .hero-med footer[role='contentinfo'] .footer-top nav .footer-menu .site-title,
+    footer[role='contentinfo'] .footer-top nav .footer-menu h2,
+    footer[role='contentinfo'] .footer-top nav .footer-menu .display,
+    footer[role='contentinfo'] .footer-top nav .footer-menu h3,
+    footer[role='contentinfo'] .footer-top nav .footer-menu h4 {
+      font-size: 1rem;
+      font-weight: 700; }
+    footer[role='contentinfo'] .footer-top nav .footer-menu li {
+      line-height: 1.5em;
+      list-style: none; }
+
+[class^='controls'] {
+  color: #fff;
+  /*
+  See more link
+
+  Markup: templates/see-more-link.html
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+  /*
+  Placeholder links (prototyping)
+
+  Markup: templates/placeholder-link.html
+
+  Style guide: Link styles.3 Placeholder links
+  */
+  padding: 0.4em 0;
+  background-color: #021620;
+  color: #fff; }
+  [class^='controls'] a {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    border-bottom: solid 1px #fff;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+    -webkit-transition-property: background-color, border-color, color;
+    transition-property: background-color, border-color, color; }
+    [class^='controls'] a:hover, [class^='controls'] a:focus {
+      background-color: #fff;
+      color: #021620; }
+    [class^='controls'] a[rel~='external'] {
+      display: inline;
+      position: relative;
+      margin-right: 1.6em; }
+      [class^='controls'] a[rel~='external']:hover {
+        border-color: transparent; }
+      [class^='controls'] a[rel~='external']::after {
+        background-size: 0.9em auto; }
+  [class^='controls'] .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.6em;
+    font-weight: 700;
+    color: #18788d; }
+    [class^='controls'] .see-more::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1.2em;
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      background-repeat: no-repeat;
+      background-position: right 0.4em;
+      background-size: 0.64em auto; }
+    [class^='controls'] .see-more:hover, [class^='controls'] .see-more:focus {
+      color: #021620; }
+  [class^='controls'] span.placeholder-link {
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: none;
+    cursor: not-allowed; }
+    [class^='controls'] span.placeholder-link:hover {
+      cursor: not-allowed; }
+  [class^='controls'] button,
+  [class^='controls'] .button,
+  [class^='controls'] [role='button'],
+  [class^='controls'] [type='submit'],
+  [class^='controls'] [type='reset'],
+  [class^='controls'] [type='button'] {
+    background-color: transparent;
+    color: #021620;
+    border-color: #fff; }
+    [class^='controls'] button:hover, [class^='controls'] button:focus,
+    [class^='controls'] .button:hover,
+    [class^='controls'] .button:focus,
+    [class^='controls'] [role='button']:hover,
+    [class^='controls'] [role='button']:focus,
+    [class^='controls'] [type='submit']:hover,
+    [class^='controls'] [type='submit']:focus,
+    [class^='controls'] [type='reset']:hover,
+    [class^='controls'] [type='reset']:focus,
+    [class^='controls'] [type='button']:hover,
+    [class^='controls'] [type='button']:focus {
+      background-color: #fff;
+      color: #021620; }
+    [class^='controls'] button:active,
+    [class^='controls'] .button:active,
+    [class^='controls'] [role='button']:active,
+    [class^='controls'] [type='submit']:active,
+    [class^='controls'] [type='reset']:active,
+    [class^='controls'] [type='button']:active {
+      background-color: #fff; }
+  [class^='controls'] section {
+    float: left;
+    display: block;
+    margin-right: 8.71718%;
+    width: 100%; }
+    [class^='controls'] section:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 768px) {
+      [class^='controls'] section {
+        float: left;
+        display: block;
+        margin-right: 2.74614%;
+        width: 48.62693%; }
+        [class^='controls'] section:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 75em) {
+      [class^='controls'] section {
+        float: left;
+        display: block;
+        margin-right: 2.04556%;
+        width: 48.97722%; }
+        [class^='controls'] section:last-child {
+          margin-right: 0; } }
+    [class^='controls'] section:first-child:last-child {
+      float: left;
+      display: block;
+      margin-right: 8.71718%;
+      width: 100%; }
+      [class^='controls'] section:first-child:last-child:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 768px) {
+        [class^='controls'] section:first-child:last-child {
+          float: left;
+          display: block;
+          margin-right: 2.74614%;
+          width: 100%; }
+          [class^='controls'] section:first-child:last-child:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 75em) {
+        [class^='controls'] section:first-child:last-child {
+          float: left;
+          display: block;
+          margin-right: 2.04556%;
+          width: 100%; }
+          [class^='controls'] section:first-child:last-child:last-child {
+            margin-right: 0; } }
+    @media screen and (min-width: 768px) {
+      [class^='controls'] section.right {
+        text-align: right; } }
+  [class^='controls'] [class^='breadcrumbs'] {
+    width: auto;
+    margin-right: 0.8em;
+    background-color: transparent; }
+  [class^='controls'] [role='button'] {
+    margin: 0; }
+  [class^='controls'][class$='--contrast'] {
+    background-color: #880e48; }
+    [class^='controls'][class$='--contrast'] button,
+    [class^='controls'][class$='--contrast'] .button,
+    [class^='controls'][class$='--contrast'] [role='button'],
+    [class^='controls'][class$='--contrast'] [type='submit'],
+    [class^='controls'][class$='--contrast'] [type='reset'],
+    [class^='controls'][class$='--contrast'] [type='button'] {
+      background-color: #880e48;
+      color: #fff;
+      border-color: #fff; }
+      [class^='controls'][class$='--contrast'] button:hover, [class^='controls'][class$='--contrast'] button:focus,
+      [class^='controls'][class$='--contrast'] .button:hover,
+      [class^='controls'][class$='--contrast'] .button:focus,
+      [class^='controls'][class$='--contrast'] [role='button']:hover,
+      [class^='controls'][class$='--contrast'] [role='button']:focus,
+      [class^='controls'][class$='--contrast'] [type='submit']:hover,
+      [class^='controls'][class$='--contrast'] [type='submit']:focus,
+      [class^='controls'][class$='--contrast'] [type='reset']:hover,
+      [class^='controls'][class$='--contrast'] [type='reset']:focus,
+      [class^='controls'][class$='--contrast'] [type='button']:hover,
+      [class^='controls'][class$='--contrast'] [type='button']:focus {
+        background-color: #fff;
+        color: #880e48; }
+      [class^='controls'][class$='--contrast'] button:active,
+      [class^='controls'][class$='--contrast'] .button:active,
+      [class^='controls'][class$='--contrast'] [role='button']:active,
+      [class^='controls'][class$='--contrast'] [type='submit']:active,
+      [class^='controls'][class$='--contrast'] [type='reset']:active,
+      [class^='controls'][class$='--contrast'] [type='button']:active {
+        background-color: #fff; }
+    [class^='controls'][class$='--contrast'] [role='button']:hover,
+    [class^='controls'][class$='--contrast'] [role='button']:focus {
+      color: #880e48; }
+
+/*
+Page header
+
+Use clear and consistent page headers to help users know where they are.
+
+The header should help the user navigate to the main sections of the site.
+
+Style guide: Page header
+*/
+/*
+Header contents
+
+Use 1 header at the top of the page containing:
+
+- branding
+- [site navigation](section-navigation.html#guide-navigation-02-site-navigation)
+
+Markup: templates/page-header.html
+
+Style guide: Page header.01 Header
+*/
+.page-header {
+  background-color: #f0f3f5;
+  background-image: -webkit-linear-gradient(bottom, #f0f3f5, #fff);
+  background-image: -webkit-gradient(linear,left bottom, left top,from(#f0f3f5), to(#fff));
+  background-image: -webkit-linear-gradient(bottom,#f0f3f5, #fff);
+  background-image: linear-gradient(to top,#f0f3f5, #fff);
+  padding-top: 1.6em;
+  -webkit-box-shadow: 0 -6px #bbbbbb inset;
+          box-shadow: 0 -6px #bbbbbb inset; }
+
+.page-header__logo {
+  padding: 0.8em 0; }
+  .page-header__logo a {
+    border-bottom: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 26px; }
+    @media screen and (min-width: 768px) {
+      .page-header__logo a {
+        font-size: 1.625rem; } }
+
+.govau--header .links-group,
+.prerelease-govau--header .links-group {
+  margin: 2.4em 0;
+  margin-bottom: 0;
+  padding-bottom: 2.4em; }
+  .govau--header .links-group h2, .govau--header .links-group .display,
+  .prerelease-govau--header .links-group h2,
+  .prerelease-govau--header .links-group .display {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    margin-top: 0;
+    padding: 0; }
+  .govau--header .links-group a,
+  .prerelease-govau--header .links-group a {
+    color: #fff; }
+
+.govau--header {
+  color: #fff;
+  /*
+  See more link
+
+  Markup: templates/see-more-link.html
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+  /*
+  Placeholder links (prototyping)
+
+  Markup: templates/placeholder-link.html
+
+  Style guide: Link styles.3 Placeholder links
+  */
+  position: relative;
+  padding: 1.2em 0 4.8em;
+  padding-bottom: 1.2em;
+  margin-bottom: 0;
+  background-color: #043751;
+  color: #fff;
+  margin-bottom: 0;
+  padding-bottom: 2.4em; }
+  .govau--header a {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    border-bottom: solid 1px #fff;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+    -webkit-transition-property: background-color, border-color, color;
+    transition-property: background-color, border-color, color; }
+    .govau--header a:hover, .govau--header a:focus {
+      background-color: #fff;
+      color: #313131; }
+    .govau--header a[rel~='external'] {
+      display: inline;
+      position: relative;
+      margin-right: 1.6em; }
+      .govau--header a[rel~='external']:hover {
+        border-color: transparent; }
+      .govau--header a[rel~='external']::after {
+        background-size: 0.9em auto; }
+  .govau--header .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.6em;
+    font-weight: 700;
+    color: #18788d; }
+    .govau--header .see-more::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1.2em;
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      background-repeat: no-repeat;
+      background-position: right 0.4em;
+      background-size: 0.64em auto; }
+    .govau--header .see-more:hover, .govau--header .see-more:focus {
+      color: #313131; }
+  .govau--header span.placeholder-link {
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: none;
+    cursor: not-allowed; }
+    .govau--header span.placeholder-link:hover {
+      cursor: not-allowed; }
+  .govau--header button,
+  .govau--header .button,
+  .govau--header [role='button'],
+  .govau--header [type='submit'],
+  .govau--header [type='reset'],
+  .govau--header [type='button'] {
+    background-color: #043751;
+    color: #fff;
+    border-color: #fff; }
+    .govau--header button:hover, .govau--header button:focus,
+    .govau--header .button:hover,
+    .govau--header .button:focus,
+    .govau--header [role='button']:hover,
+    .govau--header [role='button']:focus,
+    .govau--header [type='submit']:hover,
+    .govau--header [type='submit']:focus,
+    .govau--header [type='reset']:hover,
+    .govau--header [type='reset']:focus,
+    .govau--header [type='button']:hover,
+    .govau--header [type='button']:focus {
+      background-color: #fff;
+      color: #043751; }
+    .govau--header button:active,
+    .govau--header .button:active,
+    .govau--header [role='button']:active,
+    .govau--header [type='submit']:active,
+    .govau--header [type='reset']:active,
+    .govau--header [type='button']:active {
+      background-color: #fff; }
+  @media screen and (min-width: 768px) {
+    .govau--header {
+      padding-bottom: 1.2em; } }
+  .govau--header:after {
+    content: '';
+    display: table;
+    clear: both;
+    height: 0; }
+  .govau--header .govau--logo {
+    float: left; }
+    @media screen and (min-width: 768px) {
+      .govau--header .govau--logo {
+        padding-bottom: 0; } }
+  .govau--header .logo {
+    font-size: 1.5rem;
+    padding-bottom: 2px;
+    border-bottom: 0;
+    color: #fff;
+    font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif; }
+  .govau--header [class^='badge'] {
+    vertical-align: text-bottom;
+    margin-left: 0.4em; }
+
+.prerelease-govau--header {
+  color: #fff;
+  /*
+  See more link
+
+  Markup: templates/see-more-link.html
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+  /*
+  Placeholder links (prototyping)
+
+  Markup: templates/placeholder-link.html
+
+  Style guide: Link styles.3 Placeholder links
+  */
+  position: relative;
+  padding: 1.6em 0 4.8em;
+  padding-bottom: 1.2em;
+  margin-bottom: 0;
+  color: #fff;
+  background-color: #043751;
+  background-image: url("../latest/img/header-bg.jpg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  /* Note: do not use variables in above IE filter. */ }
+  .prerelease-govau--header a {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    border-bottom: solid 1px #fff;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+    -webkit-transition-property: background-color, border-color, color;
+    transition-property: background-color, border-color, color; }
+    .prerelease-govau--header a:hover, .prerelease-govau--header a:focus {
+      background-color: #fff;
+      color: #313131; }
+    .prerelease-govau--header a[rel~='external'] {
+      display: inline;
+      position: relative;
+      margin-right: 1.6em; }
+      .prerelease-govau--header a[rel~='external']:hover {
+        border-color: transparent; }
+      .prerelease-govau--header a[rel~='external']::after {
+        background-size: 0.9em auto; }
+  .prerelease-govau--header .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.6em;
+    font-weight: 700;
+    color: #18788d; }
+    .prerelease-govau--header .see-more::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1.2em;
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      background-repeat: no-repeat;
+      background-position: right 0.4em;
+      background-size: 0.64em auto; }
+    .prerelease-govau--header .see-more:hover, .prerelease-govau--header .see-more:focus {
+      color: #313131; }
+  .prerelease-govau--header span.placeholder-link {
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: none;
+    cursor: not-allowed; }
+    .prerelease-govau--header span.placeholder-link:hover {
+      cursor: not-allowed; }
+  .prerelease-govau--header button,
+  .prerelease-govau--header .button,
+  .prerelease-govau--header [role='button'],
+  .prerelease-govau--header [type='submit'],
+  .prerelease-govau--header [type='reset'],
+  .prerelease-govau--header [type='button'] {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff; }
+    .prerelease-govau--header button:hover, .prerelease-govau--header button:focus,
+    .prerelease-govau--header .button:hover,
+    .prerelease-govau--header .button:focus,
+    .prerelease-govau--header [role='button']:hover,
+    .prerelease-govau--header [role='button']:focus,
+    .prerelease-govau--header [type='submit']:hover,
+    .prerelease-govau--header [type='submit']:focus,
+    .prerelease-govau--header [type='reset']:hover,
+    .prerelease-govau--header [type='reset']:focus,
+    .prerelease-govau--header [type='button']:hover,
+    .prerelease-govau--header [type='button']:focus {
+      background-color: #fff;
+      color: #043751; }
+    .prerelease-govau--header button:active,
+    .prerelease-govau--header .button:active,
+    .prerelease-govau--header [role='button']:active,
+    .prerelease-govau--header [type='submit']:active,
+    .prerelease-govau--header [type='reset']:active,
+    .prerelease-govau--header [type='button']:active {
+      background-color: #fff; }
+  @media screen and (min-width: 768px) {
+    .prerelease-govau--header {
+      padding-bottom: 0; } }
+  .prerelease-govau--header .govau--logo {
+    display: inline-block;
+    position: relative;
+    display: inline; }
+    @media screen and (min-width: 768px) {
+      .prerelease-govau--header .govau--logo {
+        padding-bottom: 0; } }
+    .prerelease-govau--header .govau--logo .brandbar {
+      position: absolute;
+      top: 42px;
+      right: 66px;
+      width: 50px;
+      height: 5px; }
+  .prerelease-govau--header .govau--text {
+    display: block;
+    background-image: url("../latest/img/icons/logo-gov-au-2x.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    max-width: 337px;
+    height: 51px;
+    background-image: url("../latest/img/icons/logo-gov-au-1x.png"); }
+    .prerelease-govau--header .govau--text.dusk {
+      background-image: url("../latest/img/icons/logo-gov-au-2x-dusk.png"); }
+    .prerelease-govau--header .govau--text.dawn {
+      background-image: url("../latest/img/icons/logo-gov-au-2x-dawn.png"); }
+    .prerelease-govau--header .govau--text.night {
+      background-image: url("../latest/img/icons/logo-gov-au-2x-night.png"); }
+  .prerelease-govau--header .logo {
+    font-size: 1.5rem;
+    padding-bottom: 2px;
+    border-bottom: 0;
+    color: #fff;
+    font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif; }
+  .prerelease-govau--header [class^='badge'] {
+    vertical-align: text-bottom;
+    margin-left: 0.4em; }
+  .prerelease-govau--header .breadcrumbs,
+  .prerelease-govau--header .breadcrumbs--inverted {
+    margin-top: 1.2em; }
+
+.homeintro p {
+  font-size: 1.5rem; }
+
+.feedback {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .feedback {
+      display: block;
+      float: right;
+      margin-left: 1.6em; } }
+
+.button--feedback {
+  margin: 0;
+  width: 100%;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .button--feedback {
+      width: auto;
+      text-align: initial; } }
+
+.hero,
+.hero-sml,
+.hero-med {
+  color: #313131;
+  /*
+  See more link
+
+  Markup: templates/see-more-link.html
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+  /*
+  Placeholder links (prototyping)
+
+  Markup: templates/placeholder-link.html
+
+  Style guide: Link styles.3 Placeholder links
+  */
+  padding: 3.2em 0;
+  margin-bottom: 0;
+  background-color: #f0f3f5;
+  color: #043751; }
+  .hero a,
+  .hero-sml a,
+  .hero-med a {
+    color: #313131;
+    text-decoration: none;
+    outline: none;
+    border-bottom: solid 1px #5bcbe3;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+    -webkit-transition-property: background-color, border-color, color;
+    transition-property: background-color, border-color, color; }
+    .hero a:hover, .hero a:focus,
+    .hero-sml a:hover,
+    .hero-sml a:focus,
+    .hero-med a:hover,
+    .hero-med a:focus {
+      background-color: #5bcbe3;
+      color: #313131; }
+    .hero a[rel~='external'],
+    .hero-sml a[rel~='external'],
+    .hero-med a[rel~='external'] {
+      display: inline;
+      position: relative;
+      margin-right: 1.6em; }
+      .hero a[rel~='external']:hover,
+      .hero-sml a[rel~='external']:hover,
+      .hero-med a[rel~='external']:hover {
+        border-color: transparent; }
+      .hero a[rel~='external']::after,
+      .hero-sml a[rel~='external']::after,
+      .hero-med a[rel~='external']::after {
+        background-size: 0.9em auto; }
+  .hero .see-more,
+  .hero-sml .see-more,
+  .hero-med .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.6em;
+    font-weight: 700;
+    color: #18788d; }
+    .hero .see-more::after,
+    .hero-sml .see-more::after,
+    .hero-med .see-more::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1.2em;
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      background-repeat: no-repeat;
+      background-position: right 0.4em;
+      background-size: 0.64em auto; }
+    .hero .see-more:hover, .hero .see-more:focus,
+    .hero-sml .see-more:hover,
+    .hero-sml .see-more:focus,
+    .hero-med .see-more:hover,
+    .hero-med .see-more:focus {
+      color: #313131; }
+  .hero span.placeholder-link,
+  .hero-sml span.placeholder-link,
+  .hero-med span.placeholder-link {
+    color: rgba(49, 49, 49, 0.7);
+    border-bottom: none;
+    cursor: not-allowed; }
+    .hero span.placeholder-link:hover,
+    .hero-sml span.placeholder-link:hover,
+    .hero-med span.placeholder-link:hover {
+      cursor: not-allowed; }
+  .hero.corporate,
+  .hero-sml.corporate,
+  .hero-med.corporate {
+    background-color: #0098b0;
+    color: #fff; }
+  .hero h1, .hero .site-title,
+  .hero-sml h1, .hero-sml .site-title,
+  .hero-med h1, .hero-med .site-title {
+    font-size: 1.75rem;
+    margin-top: 0;
+    max-width: 20em; }
+    @media screen and (min-width: 768px) {
+      .hero h1, .hero .site-title,
+      .hero-sml h1, .hero-sml .site-title,
+      .hero-med h1, .hero-med .site-title {
+        font-size: 2.375rem; } }
+  .hero p,
+  .hero-sml p,
+  .hero-med p {
+    font-size: 1.5rem;
+    max-width: 30em;
+    margin-bottom: 0.8em; }
+  .hero .site-title,
+  .hero-sml .site-title,
+  .hero-med .site-title {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0.4em; }
+  .hero .tagline,
+  .hero-sml .tagline,
+  .hero-med .tagline {
+    font-size: 150%; }
+  .hero .wrapper > :first-child,
+  .hero-sml .wrapper > :first-child,
+  .hero-med .wrapper > :first-child {
+    margin-top: 0; }
+  .hero .wrapper > :last-child,
+  .hero-sml .wrapper > :last-child,
+  .hero-med .wrapper > :last-child {
+    margin-bottom: 0; }
+
+.hero-sml {
+  padding: 1.2em 0; }
+  .hero-sml p {
+    font-size: 1.1875rem;
+    font-weight: 700; }
+
+.hero-med {
+  padding: 2.4em 0; }
+
+/*
+  Prototype branding bar. Work in progress
+*/
+.brandbar {
+  background-color: #00a1bb;
+  height: 8px;
+  position: relative; }
+  .brandbar .b1 {
+    position: absolute;
+    left: 25%;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: #b2e5ff; }
+  .brandbar .b2 {
+    position: absolute;
+    left: 75%;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    background-color: #44c2ef; }
+  .brandbar.dusk {
+    background-color: #a62355; }
+    .brandbar.dusk .b1 {
+      background-color: #f16a6a; }
+    .brandbar.dusk .b2 {
+      background-color: #9c0009; }
+  .brandbar.night {
+    background-color: #005ba8; }
+    .brandbar.night .b1 {
+      background-color: #3e83c5; }
+    .brandbar.night .b2 {
+      background-color: #002a42; }
+  .brandbar.dawn {
+    background-color: #e63426; }
+    .brandbar.dawn .b1 {
+      background-color: #f38c22; }
+    .brandbar.dawn .b2 {
+      background-color: #fbc515; }
+
+/*
+Site navigation
+
+Markup: templates/site-navigation.html
+
+Use the site navigation to help the user to navigate between main sections.
+
+The menu will collapse by default on small screens.
+
+Older browsers (IE8 and lower) and those without JavaScript will get an expanded menu.
+
+Style guide: Navigation.02 Site navigation
+*/
+.site-nav .nav-toggle {
+  margin-left: 60%;
+  width: 40%;
+  background-color: transparent;
+  border-bottom: none; }
+  .site-nav .nav-toggle:hover {
+    background-color: #bbbbbb; }
+
+.site-nav__wrapper {
+  margin-bottom: 0.4em; }
+  @media screen and (min-width: 768px) {
+    .site-nav__wrapper {
+      margin-bottom: 0; } }
+  .site-nav__wrapper ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-top: 2px solid #bbbbbb; }
+    @media screen and (min-width: 768px) {
+      .site-nav__wrapper ul {
+        border-top: none; }
+        .site-nav__wrapper ul::after {
+          clear: both;
+          content: "";
+          display: table; }
+        .site-nav__wrapper ul:after {
+          content: '';
+          display: table;
+          clear: both;
+          height: 0; } }
+  .site-nav__wrapper.nav-collapse li {
+    width: auto !important; }
+  .site-nav__wrapper li {
+    margin: 0; }
+    @media screen and (max-width: 767px) {
+      .site-nav__wrapper li:last-child a {
+        border-bottom: none; } }
+    @media screen and (min-width: 768px) {
+      .site-nav__wrapper li {
+        float: left;
+        text-align: center; } }
+    @media screen and (min-width: 75em) {
+      .site-nav__wrapper li {
+        padding-left: 2em;
+        padding-right: 2em; } }
+    .site-nav__wrapper li:first-child {
+      padding-left: 0; }
+    .site-nav__wrapper li:last-child {
+      padding-right: 0; }
+    .site-nav__wrapper li a {
+      display: block;
+      border-color: #bbbbbb;
+      border-width: 2px;
+      padding: 1.2em 0;
+      font-weight: 700;
+      font-size: 1rem; }
+      .site-nav__wrapper li a:hover, .site-nav__wrapper li a.is-active {
+        border-color: #18788d;
+        color: #313131; }
+      @media screen and (max-width: 420px) {
+        .site-nav__wrapper li a {
+          padding-left: 1em;
+          padding-right: 1em; } }
+      @media screen and (min-width: 768px) {
+        .site-nav__wrapper li a {
+          border-bottom: 6px solid transparent;
+          padding: 1.2em 0.4em; }
+          .site-nav__wrapper li a:hover {
+            background-color: transparent;
+            border-color: #18788d;
+            color: #313131; } }
+
+/*
+Tables
+
+Tables make data content easier to scan.
+
+This framework uses striped/zebra tables (alternating row colours).
+
+Use `<thead>`, `<tbody>` and `<tfoot>` to improve how browsers display tables. They don't make tables more accessible.
+
+There is
+<a href="https://www.w3.org/WAI/tutorials/tables/" rel="external">guidance on making tables</a> provided by the W3C.
+
+***
+
+This guidance is in part adapted from <a href="http://govuk-elements.herokuapp.com/" rel="external">GOV.UK elements</a> under <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="external">Open Government Licence v3.0</a>, and <a href="https://standards.usa.gov/getting-started/" rel="external">18F Draft US Web Design Standards</a> under <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode" rel="external">CC0 1.0 Universal</a>.
+
+Style guide: Tables
+*/
+/*
+Basic table
+
+Markup: templates/table-examples.html
+
+<details open data-label="table-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: Tables.1 Basic tables
+*/
+table {
+  margin-bottom: 1.6em; }
+
+.content-table {
+  width: 100%;
+  border-collapse: collapse; }
+  .content-table tr:nth-child(even) {
+    background-color: #f0f3f5; }
+  .content-table td,
+  .content-table th {
+    border-bottom: solid 1px #bbbbbb;
+    padding: 0.4em;
+    text-align: left; }
+    @media screen and (min-width: 768px) {
+      .content-table td,
+      .content-table th {
+        padding: 0.8em;
+        font-size: initial; } }
+  .content-table thead {
+    border-bottom: solid 2px #6e6e6e; }
+
+/*
+Calendar table
+
+Markup: templates/table-calendar.html
+
+<details open data-label="table-calendar-style-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: Tables.2 Calendar table variant
+*/
+.calendar-table {
+  width: 100%;
+  margin-top: 3.2em; }
+  .calendar-table caption {
+    margin: 0 0 0.8em;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left; }
+  .calendar-table tr {
+    border-bottom: 0.4em solid #fff; }
+  .calendar-table th {
+    display: block;
+    width: 100%;
+    padding: 0.8em 1.6em;
+    text-transform: uppercase;
+    color: #18788d; }
+    @media screen and (min-width: 768px) {
+      .calendar-table th {
+        display: table-cell;
+        width: 9.6em; } }
+    .calendar-table th span {
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.4;
+      display: block;
+      margin: 0; }
+  .calendar-table td {
+    display: block;
+    margin: 0;
+    padding: 0 1.6em 0.8em;
+    font-size: 1.1875rem;
+    font-weight: 700;
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      .calendar-table td {
+        display: table-cell;
+        padding-top: 0.8em;
+        border-left: 0.4em solid #fff;
+        text-align: left; } }
+    .calendar-table td .date-info {
+      display: block;
+      margin-top: 0;
+      font-weight: 300;
+      font-size: 1rem; }
+  .calendar-table th,
+  .calendar-table td {
+    background-color: #f0f3f5; }
+
+/*
+Accessibility
+
+Tables should be used for data, never design.
+
+Consider more accessible ways to format content before using a table:
+
+- bullet points lists
+- numbered lists
+- definition lists.
+
+Avoid tables with multiple header levels and spanned cells.
+
+### Headers & captions
+
+Title tables using the <a href="https://www.w3.org/wiki/HTML/Elements/caption" rel="external">`<caption>` element</a> inside the `<table>` element.
+
+Row and column headers should be set with the <a href="https://www.w3.org/TR/html401/struct/tables.html#adef-scope" rel="external">`scope` attribute</a>.
+
+Style guide: Tables.3 Accessibility
+*/
+/*
+Accordions
+
+Collection: Components
+
+Style guide: Accordions
+*/
+/*
+Content accordion
+
+Markup: templates/content-accordion.html
+
+Tags: interactive, accordion, content
+
+Style guide: Accordions.1 Content accordion
+*/
+/*
+Controls accordion
+
+Markup: templates/controls-accordion.html
+
+Tags: interactive, accordion, controls
+
+Style guide: Accordions.2 Controls accordion
+*/
+/*
+Usability
+
+Style guide: Accordions.3 Usability
+*/
+details,
+.accordion, .accordion--controls {
+  display: block;
+  margin: 1.6em 0 0;
+  overflow: hidden; }
+
+.accordion-button,
+summary, .accordion--controls summary {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0.8em 3.2em 0.8em 0.8em;
+  border-radius: 1px 1px 0 0;
+  background-color: #f0f3f5;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.25rem;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out; }
+  .accordion-button:last-child,
+  summary:last-child {
+    border-bottom-width: 1px; }
+  .accordion-button:hover,
+  summary:hover, .accordion-button:focus,
+  summary:focus {
+    background-color: #bbbbbb;
+    outline: none; }
+  .accordion-button::-webkit-details-marker,
+  summary::-webkit-details-marker, .accordion--controls summary::-webkit-details-marker {
+    display: none; }
+  .accordion-button::before,
+  summary::before, .accordion--controls summary::before {
+    content: '';
+    position: absolute;
+    top: .5em;
+    bottom: .5em;
+    right: 0.8em;
+    width: 1.2em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    transition: -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; }
+    [aria-expanded='true'] .accordion-button::before, [aria-expanded='true']
+    summary::before {
+      -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg); }
+
+.accordion-panel, .accordion--controls .accordion-panel {
+  display: block;
+  height: auto;
+  overflow: hidden;
+  padding: 1.6em 1.6em 0.8em;
+  border-radius: 1px 1px 0 0; }
+  .accordion-panel :first-child {
+    margin-top: 0; }
+
+details,
+.accordion {
+  border-color: #bbbbbb;
+  border-width: 1px 0;
+  border-style: solid; }
+  details + details,
+  .accordion + details, details +
+  .accordion,
+  .accordion +
+  .accordion {
+    margin-top: 0;
+    border-top: none; }
+
+[aria-expanded='true'] .accordion-button, [aria-expanded='true']
+summary {
+  border-bottom: 1px solid #bbbbbb; }
+
+.accordion--controls {
+  margin-top: 0.8em;
+  border: none; }
+  .accordion--controls summary {
+    border: none;
+    background-color: #def4f9;
+    font-size: 87.5%; }
+    .accordion--controls summary:hover, .accordion--controls summary:focus {
+      background-color: #5bcbe3;
+      color: #115361; }
+  .accordion--controls .accordion-panel {
+    border: 0.8em solid #def4f9;
+    border-top: none; }
+
+/*
+Typography
+
+This framework uses basic styling and good typographic defaults for clear and consistent content.
+
+The types sizes are based on a perfect fourth modular scale.
+
+This guidance may change to apply to only content inside an `article`.
+
+```
+$base-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
+$base-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
+$base-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
+```
+
+The font stacks should achieve roughly 95% coverage across a range of browsers and operating systems.
+
+This supports modern browsers and older versions of Internet Explorer.
+
+The base font's leading (`line-height`) is set using the variable `$base-leading` (`$base-leading: 1.6`).
+
+Don’t apply a <code>font-size</code> to a container element (eg a <code>footer</code>).
+
+`$base-leading` is used to calculate 5 spacing values in ems:
+
+- `$base-spacing: $base-leading * 1em`
+- `$large-spacing: $base-spacing * 2`
+- `$medium-spacing: $base-spacing * 0.75`
+- `$small-spacing: $base-spacing / 2`
+- `$tiny-spacing: $base-spacing / 4`.
+
+We may change:
+
+- `$base-spacing` to a figure that is easier to multiply and divide
+- to using rems instead of ems, for consistency in calculations (in preference to relational proportionality in sizing).
+
+Collection: Foundations
+
+Style guide: Typography
+*/
+/*
+Typeface
+
+Style guide: Typography.1 Typeface
+*/
+html {
+  color: #313131;
+  line-height: 1.6;
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  font-weight: 400; }
+
+body {
+  font-size: 1rem; }
+  @media screen and (min-width: 768px) {
+    body {
+      font-size: 1.0625rem; } }
+
+/*
+Headings
+
+Markup: templates/heading-styles.html
+
+Style guide: Typography.2 Headings
+*/
+/*
+Body copy
+
+Markup: templates/body-styles.html
+
+Style guide: Typography.3 Body copy
+*/
+h1, .hero .site-title,
+.hero-sml .site-title,
+.hero-med .site-title,
+h2,
+.display,
+h3,
+h4 {
+  line-height: 1.4;
+  font-weight: 400;
+  margin-bottom: 0.4em;
+  margin-top: 1.6em; }
+
+h1, .hero .site-title,
+.hero-sml .site-title,
+.hero-med .site-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.8em;
+  font-size: 32px; }
+  @media screen and (min-width: 768px) {
+    h1, .hero .site-title,
+    .hero-sml .site-title,
+    .hero-med .site-title {
+      font-size: 1.75rem; } }
+  @media screen and (min-width: 75em) {
+    h1, .hero .site-title,
+    .hero-sml .site-title,
+    .hero-med .site-title {
+      font-size: 2.5rem; } }
+  h1:first-of-type, .hero .site-title:first-of-type,
+  .hero-sml .site-title:first-of-type,
+  .hero-med .site-title:first-of-type {
+    margin-top: 0.4em; }
+
+h2, .display {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-top: 1.6em;
+  margin-bottom: 1em;
+  font-size: 44px; }
+  @media screen and (min-width: 768px) {
+    h2, .display {
+      font-size: 2.5rem; } }
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.46667em;
+  margin-bottom: 0.8em;
+  font-size: 26px; }
+  @media screen and (min-width: 768px) {
+    h3 {
+      font-size: 1.625rem; } }
+
+h4,
+h5,
+h6 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-size: 18px; }
+
+.gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak
+.hero-sml .site-title,
+.hero-sml .gov-speak .site-title, .gov-speak
+.hero-med .site-title,
+.hero-med .gov-speak .site-title,
+.gov-speak h2,
+.gov-speak .display,
+.gov-speak h3,
+.gov-speak h4,
+.gov-speak h5,
+.gov-speak h6 {
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 0.4em;
+  margin-top: 1.6em; }
+
+.gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak
+.hero-sml .site-title,
+.hero-sml .gov-speak .site-title, .gov-speak
+.hero-med .site-title,
+.hero-med .gov-speak .site-title {
+  font-size: 2rem;
+  line-height: 1.2; }
+  @media screen and (min-width: 768px) {
+    .gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak
+    .hero-sml .site-title,
+    .hero-sml .gov-speak .site-title, .gov-speak
+    .hero-med .site-title,
+    .hero-med .gov-speak .site-title {
+      font-size: 2.75rem; } }
+  @media screen and (min-width: 75em) {
+    .gov-speak h1, .gov-speak .hero .site-title, .hero .gov-speak .site-title, .gov-speak
+    .hero-sml .site-title,
+    .hero-sml .gov-speak .site-title, .gov-speak
+    .hero-med .site-title,
+    .hero-med .gov-speak .site-title {
+      font-size: 2.5rem; } }
+  .gov-speak h1:first-of-type, .gov-speak .hero .site-title:first-of-type, .hero .gov-speak .site-title:first-of-type, .gov-speak
+  .hero-sml .site-title:first-of-type,
+  .hero-sml .gov-speak .site-title:first-of-type, .gov-speak
+  .hero-med .site-title:first-of-type,
+  .hero-med .gov-speak .site-title:first-of-type {
+    margin-top: 0.4em; }
+
+.gov-speak h2, .gov-speak .display {
+  font-size: 1.75rem;
+  line-height: 1.2; }
+  @media screen and (min-width: 768px) {
+    .gov-speak h2, .gov-speak .display {
+      font-size: 2rem; } }
+
+.gov-speak h3 {
+  font-size: 1.5rem;
+  font-weight: 700; }
+  @media screen and (min-width: 768px) {
+    .gov-speak h3 {
+      font-size: 1.625rem; } }
+
+.gov-speak h4 {
+  font-size: 1.1875rem;
+  font-weight: 700; }
+  @media screen and (min-width: 768px) {
+    .gov-speak h4 {
+      font-size: 1.375rem; } }
+
+.gov-speak h5 {
+  font-size: 1.0625rem;
+  font-weight: 700; }
+
+.gov-speak h6 {
+  font-size: 1.0625rem;
+  font-weight: 700; }
+
+/*
+Line length
+
+UI Kit applies a maximum width to typographic elements that appear within the main content container. This maintains a readable line length.
+
+A max-width of 38rem (about 70 characters) is applied to these elements:
+
+- h1 - h5
+- p
+- li
+- dl
+
+If you'd like to include an element that spans across the maximum available space, apply the class `.content-full-width.`
+
+*/
+@media screen and (min-width: 75em) {
+  .content-main h1, .content-main .hero .site-title, .hero .content-main .site-title, .content-main
+  .hero-sml .site-title,
+  .hero-sml .content-main .site-title, .content-main
+  .hero-med .site-title,
+  .hero-med .content-main .site-title,
+  .content-main h2,
+  .content-main .display,
+  .content-main h3,
+  .content-main h4,
+  .content-main h5,
+  .content-main p,
+  .content-main li,
+  .content-main dl {
+    max-width: 38rem; }
+  .content-main .content-full-width {
+    max-width: none;
+    width: 100%; } }
+
+code,
+pre,
+samp,
+kbd {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 87.5%; }
+
+kbd {
+  display: inline-block;
+  border: solid 1px #5bcbe3;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 0 0 #5bcbe3;
+          box-shadow: 0 1px 0 0 #5bcbe3;
+  background-color: #f0f3f5;
+  color: #146577;
+  text-align: center;
+  font-size: 87.5%;
+  padding: 0 0.8em;
+  margin: 0 0.4em; }
+
+strong {
+  font-weight: 700; }
+  strong.very-bold {
+    font-weight: 700; }
+
+.abstract,
+.lede {
+  margin: 1.2em 0 2em;
+  border-bottom: 1px solid #bbbbbb; }
+  .abstract p,
+  .lede p {
+    font-size: 1.1875rem;
+    font-weight: 400; }
+    @media screen and (min-width: 768px) {
+      .abstract p,
+      .lede p {
+        font-size: 1.3125rem; } }
+    @media screen and (min-width: 75em) {
+      .abstract p,
+      .lede p {
+        font-size: 1.5rem; } }
+
+p.abstract {
+  margin: 0.8em 0 1.5em;
+  padding-bottom: 1.2em;
+  border-bottom: 1px solid #bbbbbb;
+  font-size: 1.1875rem; }
+  @media screen and (min-width: 768px) {
+    p.abstract {
+      font-size: 1.3125rem; } }
+  @media screen and (min-width: 75em) {
+    p.abstract {
+      font-size: 1.5rem; } }
+
+hr {
+  border-color: #bbbbbb;
+  border-style: solid;
+  border-bottom: none;
+  margin-top: 1.6em;
+  margin-bottom: 1.6em; }
+
+/*
+Links
+
+Markup: templates/basic-links.html
+
+Style guide: Typography.4 Links
+*/
+/*
+Lists
+
+Markup: templates/list-examples.html
+
+Style guide: Typography.5 Lists
+*/
+ul,
+ol {
+  padding-left: 2.4em; }
+  ul ul,
+  ol ul {
+    list-style-type: disc; }
+
+ul,
+ol,
+dl,
+p,
+dt,
+dd {
+  margin-top: 0;
+  margin-bottom: 1.2em;
+  line-height: 1.6em; }
+
+li {
+  margin-bottom: 0.53333em; }
+  li ul,
+  li ol {
+    margin-top: 0.4em;
+    margin-bottom: 0; }
+
+dt {
+  display: inline-block;
+  font-weight: 700;
+  margin-top: 0.4em; }
+  dt:first-of-type {
+    margin-top: 0; }
+
+/*
+Callouts & warnings
+
+There are 6 classes for drawing the user's attention:
+
+- `.callout`
+- `.callout--warning` for warnings
+- `.callout--error` for errors
+- `.callout--info` for information
+- `.callout--success` for success
+- `.callout--calendar-event` for dates.
+
+You can use these on paragraphs (`<p>`), or on a wrapping element, like a `<div>` or an `<aside>`.
+
+Markup: templates/callouts-examples.html
+
+<details open data-label="callouts-accessibility" aria-expanded="false">
+  <summary>Accessibility &amp; browser testing</summary>
+  <div class="accordion-panel">
+  <strong>Passed</strong>:
+    <ul>
+      <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+      <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+    </ul>
+  <strong>Untested</strong>:
+    <ul>
+      <li>WCAG:AA manual</li>
+      <li>Browser support &mdash; automated and manual</li>
+    </ul>
+  </div>
+</details>
+
+Style guide: Typography.7 Callouts & warnings
+*/
+.callout, [class^='callout--'],
+[class*=' callout--'], .callout--calendar-event {
+  margin: 1.6em 0.8em;
+  padding: 1.2em 1.2em 1.2em 1.6em;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 0 8px #bbbbbb;
+          box-shadow: 0 0 8px #bbbbbb; }
+
+[class^='callout--'],
+[class*=' callout--'] {
+  padding-left: 1.2em;
+  border-left-width: 0.4em;
+  border-left-style: solid; }
+
+.callout--warning {
+  border-left-color: #f9c642; }
+
+.callout--info {
+  border-left-color: #00bfe9; }
+
+.callout--error {
+  border-left-color: #c00; }
+
+.callout--success {
+  border-left-color: #007554; }
+
+.callout--calendar-event {
+  margin-left: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding-bottom: 0.8em;
+  background-color: #def4f9; }
+  .callout--calendar-event time,
+  .callout--calendar-event .event-name {
+    font-size: 2rem;
+    line-height: 1.2; }
+  .callout--calendar-event time {
+    display: block;
+    font-weight: 700; }
+  .callout--calendar-event .event-name {
+    font-weight: 400; }
+  .callout--calendar-event .next-event {
+    display: block;
+    font-size: 1.0625rem;
+    font-weight: 400;
+    margin-bottom: 0.4em; }
+
+/*
+Badges
+
+Markup: templates/badges.html
+
+Style guide: Typography.8 Badges
+*/
+.badge--default {
+  display: inline-block;
+  background-color: #6e6e6e;
+  border-radius: 12px;
+  padding: 0.4em 0.8em;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 0.875rem; }
+
+.badge--alpha {
+  display: inline-block;
+  background-color: #313131;
+  border-radius: 12px;
+  padding: 0.4em 0.8em;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  font-size: 0.875rem; }
+
+.badge--beta {
+  display: inline-block;
+  background-color: #880e48;
+  border-radius: 12px;
+  padding: 0.4em 0.8em;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 0.875rem; }
+
+.badge--error {
+  display: inline-block;
+  background-color: #c00;
+  border-radius: 12px;
+  padding: 0.4em 0.8em;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 0.875rem; }
+
+.badge--success {
+  display: inline-block;
+  background-color: #007554;
+  border-radius: 12px;
+  padding: 0.4em 0.8em;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: #f5fffc;
+  font-size: 0.875rem; }
+
+/*
+Quotations
+
+Markup: templates/quotation-examples.html
+
+Style guide: Typography.5 Quotations
+*/
+blockquote {
+  margin: 1.2em 0;
+  padding: 1.6em 2.4em 0.4em;
+  background-color: #f0f3f5;
+  quotes: none; }
+  blockquote.pullquote {
+    padding: 0;
+    background-color: #fff; }
+    blockquote.pullquote p {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      text-align: center;
+      font-weight: 400;
+      margin-top: 1.2em; }
+      @media screen and (min-width: 768px) {
+        blockquote.pullquote p {
+          font-size: 1.625rem; } }
+  blockquote footer {
+    display: block;
+    margin-top: 1.2em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    border-top: 1px solid #bbbbbb; }
+  blockquote cite {
+    display: inline-block;
+    font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif; }
+    blockquote cite::before {
+      content: 'Citation: ';
+      text-transform: lowercase;
+      font-variant: small-caps;
+      letter-spacing: 1px;
+      color: #313131; }
+  blockquote blockquote {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0; }
+
+cite {
+  font-style: normal; }
+
+article h1:first-of-type, article .hero .site-title:first-of-type, .hero article .site-title:first-of-type, article
+.hero-sml .site-title:first-of-type,
+.hero-sml article .site-title:first-of-type, article
+.hero-med .site-title:first-of-type,
+.hero-med article .site-title:first-of-type {
+  margin-top: 0; }
+
+.tags {
+  color: #18788d;
+  /*
+  See more link
+
+  Markup: templates/see-more-link.html
+
+  <details open data-label="placeholder-link-accessibility" aria-expanded="false">
+    <summary>Accessibility &amp; browser testing</summary>
+    <div class="accordion-panel">
+    <strong>Passed</strong>:
+      <ul>
+        <li>HTML5 validation (<a href="http://validator.github.io/validator/" rel="external">Nu Html Checker</a>)</li>
+        <li>WCAG:AA automated (<a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/" rel="external">HTML_CodeSniffer</a>)</li>
+      </ul>
+    <strong>Untested</strong>:
+      <ul>
+        <li>WCAG:AA manual</li>
+        <li>Browser support &mdash; automated and manual</li>
+      </ul>
+    </div>
+  </details>
+
+  Style guide: Link styles.2 See more link
+  */
+  /*
+  Placeholder links (prototyping)
+
+  Markup: templates/placeholder-link.html
+
+  Style guide: Link styles.3 Placeholder links
+  */
+  color: #6e6e6e; }
+  .tags a {
+    color: #18788d;
+    text-decoration: none;
+    outline: none;
+    border-bottom: solid 1px #5bcbe3;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+    -webkit-transition-property: background-color, border-color, color;
+    transition-property: background-color, border-color, color; }
+    .tags a:hover, .tags a:focus {
+      background-color: #5bcbe3;
+      color: #313131; }
+    .tags a[rel~='external'] {
+      display: inline;
+      position: relative;
+      margin-right: 1.6em; }
+      .tags a[rel~='external']:hover {
+        border-color: transparent; }
+      .tags a[rel~='external']::after {
+        background-size: 0.9em auto; }
+  .tags .see-more {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.6em;
+    font-weight: 700;
+    color: #18788d; }
+    .tags .see-more::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1.2em;
+      display: block;
+      width: 1.2em;
+      height: 1.2em;
+      background-repeat: no-repeat;
+      background-position: right 0.4em;
+      background-size: 0.64em auto; }
+    .tags .see-more:hover, .tags .see-more:focus {
+      color: #313131; }
+  .tags span.placeholder-link {
+    color: rgba(24, 120, 141, 0.7);
+    border-bottom: none;
+    cursor: not-allowed; }
+    .tags span.placeholder-link:hover {
+      cursor: not-allowed; }
+  .tags dl,
+  .tags dt,
+  .tags dd {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 2.1; }
+  .tags dt,
+  .tags dd {
+    margin-right: 0.4em;
+    font-size: 87.5%; }
+  .tags a {
+    padding: 2px 0.4em;
+    border: 1px solid #18788d;
+    border-radius: 2px; }
+    .tags a:hover, .tags a:focus {
+      border-color: #5bcbe3; }
+
+.video {
+  margin-bottom: 1.6em; }
+  .video .video-wrapper {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative; }
+    .video .video-wrapper embed,
+    .video .video-wrapper object,
+    .video .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border: none; }
