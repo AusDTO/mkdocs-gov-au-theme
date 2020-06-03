@@ -94,3 +94,15 @@ article .docs-article-footer h2 {
 .local-nav ul li:nth-child(1) h3 {
   margin-top: 0;
 }
+
+/* Custom styles for Database Export Tool - https://db-export.system.d.cld.gov.au/  START*/
+header.au-header { padding: 10px 0px; margin-bottom: 20px;}
+h1.au-header__heading { margin-left: 45px; color: #fff; }
+.au-header__text a { text-decoration: none; }            
+h1.au-header__heading::before {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAlCAYAAAAjt+tHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAKUSURBVFhH7Zg7axRRGIZ3NII3sioiQQVFQTEoKFiIICkUtbSzEbwgFnb6AyxSWgj+AME2nVoJahAEIWqQoHgDo4KmiBKTeMVLxuc5O6ObTWbN4u5MCl949pydHc737Zk57zdzolKG4jhuo9kM22ATrIdVsAKWwCKYB+o7fIJRGIY3MAiP4D48jKLoB219EbQdjsIVGINmaRwc8xi0J+H+iINlOAue2GoZw1hlY0d0NtJehbUeyFEvYb8J3KWzPRzKX/dMYIJO5s3YYsVz+CgquIpMoFCZgJegKE2YQG+lX4h69YAO6IO8dQc6Qhp02uAkDEKrZQxjBRt3GZbx6bEkES9JFxyAPWAN+NdVEsMTuA6X4Cbxwn0XYvMxRL8bLvLDV39QHLdZClvBRNbBaphJMXoNL8BiNAAjjE1TEWPPpzkCZ/yS6i2chy5IB26aHDMZ2xjDEOQMhL9ao3HoA236ATyDV/A+nb4sMZyX0RlaA9aZLaDV74AplTArgSx9gRHwnvkMTr1yxhaCFW4ZLIAZqdEEmq5ZYcWFygRcOkVp1AT0gKLUHQwHDoM+kJeMZcwkD8QXn4hPwQC0So5tjN9+4DI8QXsBg/lZORSS0XZ3w07wvUBD0T4bkbaugflecBtuEOM5bRAxvPzHUx/Qs89BDyd9pJ0kTplLsxKqa4HGU10LNKbqWjBU/adSMdZimoNwGjprjciCcg18TL8FT6cbpBElyTuDu2Af7AULWdDfnPADODtOpc/xVs53oBVry9VWrP1qxcvB2bIWbIBOmPo2lOi/Fc+KBIq8BGEt9lf6hajfBA6Bd3jeMqaxw1otbH9gkjiY7pBchmbukDjWtDskjewR1Xss/wa1Vuwe0WOos0dUKv0CxO1x2DcQDcMAAAAASUVORK5CYII=');
+    padding: 0px 0px 0px 0px;
+    margin: 6px 0px 0px -45px;
+    position: absolute;
+}
+/* Custom styles for Database Export Tool - https://db-export.system.d.cld.gov.au/  START*/
